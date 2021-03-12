@@ -1,0 +1,524 @@
+DX_GRP,DX,DX_TYPE,SCORE
+Myocardial infarction,410.,09,1
+Myocardial infarction,412.,09,1
+Myocardial infarction,I21.,10,1
+Myocardial infarction,I22.,10,1
+Myocardial infarction,I25.2,10,1
+Congestive heart failure,398.91,09,1
+Congestive heart failure,402.01,09,1
+Congestive heart failure,402.11,09,1
+Congestive heart failure,402.91,09,1
+Congestive heart failure,404.01,09,1
+Congestive heart failure,404.03,09,1
+Congestive heart failure,404.11,09,1
+Congestive heart failure,404.13,09,1
+Congestive heart failure,404.91,09,1
+Congestive heart failure,404.93,09,1
+Congestive heart failure,425.4,09,1
+Congestive heart failure,425.5,09,1
+Congestive heart failure,425.6,09,1
+Congestive heart failure,425.7,09,1
+Congestive heart failure,425.8,09,1
+Congestive heart failure,425.9,09,1
+Congestive heart failure,428.,09,1
+Congestive heart failure,I09.9,10,1
+Congestive heart failure,I11.0,10,1
+Congestive heart failure,I13.0,10,1
+Congestive heart failure,I13.2,10,1
+Congestive heart failure,I25.5,10,1
+Congestive heart failure,I42.0,10,1
+Congestive heart failure,I42.5,10,1
+Congestive heart failure,I42.6,10,1
+Congestive heart failure,I42.7,10,1
+Congestive heart failure,I42.8,10,1
+Congestive heart failure,I42.9,10,1
+Congestive heart failure,I43.,10,1
+Congestive heart failure,I50.,10,1
+Congestive heart failure,P29.0,10,1
+Peripheral vascular disease,093.0,09,1
+Peripheral vascular disease,437.3,09,1
+Peripheral vascular disease,440.,09,1
+Peripheral vascular disease,441.,09,1
+Peripheral vascular disease,443.1,09,1
+Peripheral vascular disease,443.2,09,1
+Peripheral vascular disease,443.3,09,1
+Peripheral vascular disease,443.4,09,1
+Peripheral vascular disease,443.5,09,1
+Peripheral vascular disease,443.6,09,1
+Peripheral vascular disease,443.7,09,1
+Peripheral vascular disease,443.8,09,1
+Peripheral vascular disease,443.9,09,1
+Peripheral vascular disease,447.1,09,1
+Peripheral vascular disease,557.1,09,1
+Peripheral vascular disease,557.9,09,1
+Peripheral vascular disease,V43.4,09,1
+Peripheral vascular disease,I70.,10,1
+Peripheral vascular disease,I71.,10,1
+Peripheral vascular disease,I73.1,10,1
+Peripheral vascular disease,I73.8,10,1
+Peripheral vascular disease,I73.9,10,1
+Peripheral vascular disease,I77.1,10,1
+Peripheral vascular disease,I79.0,10,1
+Peripheral vascular disease,I79.2,10,1
+Peripheral vascular disease,K55.1,10,1
+Peripheral vascular disease,K55.8,10,1
+Peripheral vascular disease,K55.9,10,1
+Peripheral vascular disease,Z95.8,10,1
+Peripheral vascular disease,Z95.9,10,1
+Cerebral vascular disease,362.34,09,1
+Cerebral vascular disease,430.,09,1
+Cerebral vascular disease,431.,09,1
+Cerebral vascular disease,432.,09,1
+Cerebral vascular disease,433.,09,1
+Cerebral vascular disease,434.,09,1
+Cerebral vascular disease,435.,09,1
+Cerebral vascular disease,436.,09,1
+Cerebral vascular disease,437.,09,1
+Cerebral vascular disease,438.,09,1
+Cerebral vascular disease,G45.,10,1
+Cerebral vascular disease,G46.,10,1
+Cerebral vascular disease,H34.0,10,1
+Cerebral vascular disease,I60.,10,1
+Cerebral vascular disease,I61.,10,1
+Cerebral vascular disease,I62.,10,1
+Cerebral vascular disease,I63.,10,1
+Cerebral vascular disease,I64.,10,1
+Cerebral vascular disease,I65.,10,1
+Cerebral vascular disease,I66.,10,1
+Cerebral vascular disease,I67.,10,1
+Cerebral vascular disease,I68.,10,1
+Cerebral vascular disease,I69.,10,1
+Dementia,290.,09,1
+Dementia,294.1,09,1
+Dementia,331.2,09,1
+Dementia,F00.,10,1
+Dementia,F01.,10,1
+Dementia,F02.,10,1
+Dementia,F03.,10,1
+Dementia,F05.1,10,1
+Dementia,G30.,10,1
+Dementia,G31.1,10,1
+Chronic pulmonary disease,416.8,09,1
+Chronic pulmonary disease,416.9,09,1
+Chronic pulmonary disease,490.,09,1
+Chronic pulmonary disease,491.,09,1
+Chronic pulmonary disease,492.,09,1
+Chronic pulmonary disease,493.,09,1
+Chronic pulmonary disease,494.,09,1
+Chronic pulmonary disease,495.,09,1
+Chronic pulmonary disease,496.,09,1
+Chronic pulmonary disease,497.,09,1
+Chronic pulmonary disease,498.,09,1
+Chronic pulmonary disease,499.,09,1
+Chronic pulmonary disease,500.,09,1
+Chronic pulmonary disease,501.,09,1
+Chronic pulmonary disease,502.,09,1
+Chronic pulmonary disease,503.,09,1
+Chronic pulmonary disease,504.,09,1
+Chronic pulmonary disease,505.,09,1
+Chronic pulmonary disease,506.4,09,1
+Chronic pulmonary disease,508.1,09,1
+Chronic pulmonary disease,508.8,09,1
+Chronic pulmonary disease,I27.8,10,1
+Chronic pulmonary disease,I27.9,10,1
+Chronic pulmonary disease,J40.,10,1
+Chronic pulmonary disease,J41.,10,1
+Chronic pulmonary disease,J42.,10,1
+Chronic pulmonary disease,J43.,10,1
+Chronic pulmonary disease,J44.,10,1
+Chronic pulmonary disease,J45.,10,1
+Chronic pulmonary disease,J46.,10,1
+Chronic pulmonary disease,J47.,10,1
+Chronic pulmonary disease,J60.,10,1
+Chronic pulmonary disease,J61.,10,1
+Chronic pulmonary disease,J62.,10,1
+Chronic pulmonary disease,J63.,10,1
+Chronic pulmonary disease,J64.,10,1
+Chronic pulmonary disease,J65.,10,1
+Chronic pulmonary disease,J66.,10,1
+Chronic pulmonary disease,J67.,10,1
+Chronic pulmonary disease,J68.4,10,1
+Chronic pulmonary disease,J70.1,10,1
+Chronic pulmonary disease,J70.3,10,1
+Rheumatic disease,446.5,09,1
+Rheumatic disease,710.0,09,1
+Rheumatic disease,710.1,09,1
+Rheumatic disease,710.2,09,1
+Rheumatic disease,710.3,09,1
+Rheumatic disease,710.4,09,1
+Rheumatic disease,714.0,09,1
+Rheumatic disease,714.2,09,1
+Rheumatic disease,714.8,09,1
+Rheumatic disease,725.,09,1
+Rheumatic disease,M05.,10,1
+Rheumatic disease,M06.,10,1
+Rheumatic disease,M31.5,10,1
+Rheumatic disease,M32.,10,1
+Rheumatic disease,M33.,10,1
+Rheumatic disease,M34.,10,1
+Rheumatic disease,M35.1,10,1
+Rheumatic disease,M35.3,10,1
+Rheumatic disease,M36.0,10,1
+Peptic ulcer disease,531.,09,1
+Peptic ulcer disease,532.,09,1
+Peptic ulcer disease,533.,09,1
+Peptic ulcer disease,534.,09,1
+Peptic ulcer disease,K25.,10,1
+Peptic ulcer disease,K26.,10,1
+Peptic ulcer disease,K27.,10,1
+Peptic ulcer disease,K28.,10,1
+Mild liver disease,070.22,09,1
+Mild liver disease,070.23,09,1
+Mild liver disease,070.32,09,1
+Mild liver disease,070.33,09,1
+Mild liver disease,070.44,09,1
+Mild liver disease,070.54,09,1
+Mild liver disease,070.6,09,1
+Mild liver disease,070.9,09,1
+Mild liver disease,570.,09,1
+Mild liver disease,571.,09,1
+Mild liver disease,573.3,09,1
+Mild liver disease,573.4,09,1
+Mild liver disease,573.8,09,1
+Mild liver disease,573.9,09,1
+Mild liver disease,V42.7,09,1
+Mild liver disease,B18.,10,1
+Mild liver disease,K70.0,10,1
+Mild liver disease,K70.1,10,1
+Mild liver disease,K70.2,10,1
+Mild liver disease,K70.3,10,1
+Mild liver disease,K70.9,10,1
+Mild liver disease,K71.3,10,1
+Mild liver disease,K71.4,10,1
+Mild liver disease,K71.5,10,1
+Mild liver disease,K71.7,10,1
+Mild liver disease,K73.,10,1
+Mild liver disease,K74.,10,1
+Mild liver disease,K76.0,10,1
+Mild liver disease,K76.2,10,1
+Mild liver disease,K76.3,10,1
+Mild liver disease,K76.4,10,1
+Mild liver disease,K76.8,10,1
+Mild liver disease,K76.9,10,1
+Mild liver disease,Z94.4,10,1
+Diabetes without complications,250.0,09,1
+Diabetes without complications,250.1,09,1
+Diabetes without complications,250.2,09,1
+Diabetes without complications,250.3,09,1
+Diabetes without complications,250.8,09,1
+Diabetes without complications,250.9,09,1
+Diabetes without complications,E10.0,10,1
+Diabetes without complications,E10.1,10,1
+Diabetes without complications,E10.6,10,1
+Diabetes without complications,E10.8,10,1
+Diabetes without complications,E10.9,10,1
+Diabetes without complications,E11.0,10,1
+Diabetes without complications,E11.1,10,1
+Diabetes without complications,E11.6,10,1
+Diabetes without complications,E11.8,10,1
+Diabetes without complications,E11.9,10,1
+Diabetes without complications,E12.0,10,1
+Diabetes without complications,E12.1,10,1
+Diabetes without complications,E12.6,10,1
+Diabetes without complications,E12.8,10,1
+Diabetes without complications,E12.9,10,1
+Diabetes without complications,E13.0,10,1
+Diabetes without complications,E13.1,10,1
+Diabetes without complications,E13.6,10,1
+Diabetes without complications,E13.8,10,1
+Diabetes without complications,E13.9,10,1
+Diabetes without complications,E14.0,10,1
+Diabetes without complications,E14.1,10,1
+Diabetes without complications,E14.6,10,1
+Diabetes without complications,E14.8,10,1
+Diabetes without complications,E14.9,10,1
+Diabetes with complications,250.4,09,2
+Diabetes with complications,250.5,09,2
+Diabetes with complications,250.6,09,2
+Diabetes with complications,250.7,09,2
+Diabetes with complications,E10.2,10,2
+Diabetes with complications,E10.3,10,2
+Diabetes with complications,E10.4,10,2
+Diabetes with complications,E10.5,10,2
+Diabetes with complications,E10.7,10,2
+Diabetes with complications,E11.2,10,2
+Diabetes with complications,E11.3,10,2
+Diabetes with complications,E11.4,10,2
+Diabetes with complications,E11.5,10,2
+Diabetes with complications,E11.7,10,2
+Diabetes with complications,E12.2,10,2
+Diabetes with complications,E12.3,10,2
+Diabetes with complications,E12.4,10,2
+Diabetes with complications,E12.5,10,2
+Diabetes with complications,E12.7,10,2
+Diabetes with complications,E13.2,10,2
+Diabetes with complications,E13.3,10,2
+Diabetes with complications,E13.4,10,2
+Diabetes with complications,E13.5,10,2
+Diabetes with complications,E13.7,10,2
+Diabetes with complications,E14.2,10,2
+Diabetes with complications,E14.3,10,2
+Diabetes with complications,E14.4,10,2
+Diabetes with complications,E14.5,10,2
+Diabetes with complications,E14.7,10,2
+Hemiplegia or paraplegia,334.1,09,2
+Hemiplegia or paraplegia,342.,09,2
+Hemiplegia or paraplegia,343.,09,2
+Hemiplegia or paraplegia,344.0,09,2
+Hemiplegia or paraplegia,344.1,09,2
+Hemiplegia or paraplegia,344.2,09,2
+Hemiplegia or paraplegia,344.3,09,2
+Hemiplegia or paraplegia,344.4,09,2
+Hemiplegia or paraplegia,344.5,09,2
+Hemiplegia or paraplegia,344.6,09,2
+Hemiplegia or paraplegia,344.9,09,2
+Hemiplegia or paraplegia,G04.1,10,2
+Hemiplegia or paraplegia,G11.4,10,2
+Hemiplegia or paraplegia,G80.1,10,2
+Hemiplegia or paraplegia,G80.2,10,2
+Hemiplegia or paraplegia,G81.,10,2
+Hemiplegia or paraplegia,G82.,10,2
+Hemiplegia or paraplegia,G83.0,10,2
+Hemiplegia or paraplegia,G83.1,10,2
+Hemiplegia or paraplegia,G83.2,10,2
+Hemiplegia or paraplegia,G83.3,10,2
+Hemiplegia or paraplegia,G83.4,10,2
+Hemiplegia or paraplegia,G83.9,10,2
+Renal disease,403.01,09,2
+Renal disease,403.11,09,2
+Renal disease,403.91,09,2
+Renal disease,404.02,09,2
+Renal disease,404.03,09,2
+Renal disease,404.12,09,2
+Renal disease,404.13,09,2
+Renal disease,404.92,09,2
+Renal disease,404.93,09,2
+Renal disease,582.,09,2
+Renal disease,583.0,09,2
+Renal disease,583.1,09,2
+Renal disease,583.2,09,2
+Renal disease,583.3,09,2
+Renal disease,583.4,09,2
+Renal disease,583.5,09,2
+Renal disease,583.6,09,2
+Renal disease,583.7,09,2
+Renal disease,585.,09,2
+Renal disease,586.,09,2
+Renal disease,588.0,09,2
+Renal disease,V42.0,09,2
+Renal disease,V45.1,09,2
+Renal disease,V56.,09,2
+Renal disease,I12.0,10,2
+Renal disease,I13.1,10,2
+Renal disease,N03.2,10,2
+Renal disease,N03.3,10,2
+Renal disease,N03.4,10,2
+Renal disease,N03.5,10,2
+Renal disease,N03.6,10,2
+Renal disease,N03.7,10,2
+Renal disease,N05.2,10,2
+Renal disease,N05.3,10,2
+Renal disease,N05.4,10,2
+Renal disease,N05.5,10,2
+Renal disease,N05.6,10,2
+Renal disease,N05.7,10,2
+Renal disease,N18.,10,2
+Renal disease,N19.,10,2
+Renal disease,N25.0,10,2
+Renal disease,Z49.0,10,2
+Renal disease,Z49.1,10,2
+Renal disease,Z49.2,10,2
+Renal disease,Z94.0,10,2
+Renal disease,Z99.2,10,2
+"Neoplasia, Leukemia, Lymphoma",140.,09,2
+"Neoplasia, Leukemia, Lymphoma",141.,09,2
+"Neoplasia, Leukemia, Lymphoma",142.,09,2
+"Neoplasia, Leukemia, Lymphoma",143.,09,2
+"Neoplasia, Leukemia, Lymphoma",144.,09,2
+"Neoplasia, Leukemia, Lymphoma",145.,09,2
+"Neoplasia, Leukemia, Lymphoma",146.,09,2
+"Neoplasia, Leukemia, Lymphoma",147.,09,2
+"Neoplasia, Leukemia, Lymphoma",148.,09,2
+"Neoplasia, Leukemia, Lymphoma",149.,09,2
+"Neoplasia, Leukemia, Lymphoma",150.,09,2
+"Neoplasia, Leukemia, Lymphoma",151.,09,2
+"Neoplasia, Leukemia, Lymphoma",152.,09,2
+"Neoplasia, Leukemia, Lymphoma",153.,09,2
+"Neoplasia, Leukemia, Lymphoma",154.,09,2
+"Neoplasia, Leukemia, Lymphoma",155.,09,2
+"Neoplasia, Leukemia, Lymphoma",156.,09,2
+"Neoplasia, Leukemia, Lymphoma",157.,09,2
+"Neoplasia, Leukemia, Lymphoma",158.,09,2
+"Neoplasia, Leukemia, Lymphoma",159.,09,2
+"Neoplasia, Leukemia, Lymphoma",160.,09,2
+"Neoplasia, Leukemia, Lymphoma",161.,09,2
+"Neoplasia, Leukemia, Lymphoma",162.,09,2
+"Neoplasia, Leukemia, Lymphoma",163.,09,2
+"Neoplasia, Leukemia, Lymphoma",164.,09,2
+"Neoplasia, Leukemia, Lymphoma",165.,09,2
+"Neoplasia, Leukemia, Lymphoma",166.,09,2
+"Neoplasia, Leukemia, Lymphoma",167.,09,2
+"Neoplasia, Leukemia, Lymphoma",168.,09,2
+"Neoplasia, Leukemia, Lymphoma",169.,09,2
+"Neoplasia, Leukemia, Lymphoma",170.,09,2
+"Neoplasia, Leukemia, Lymphoma",171.,09,2
+"Neoplasia, Leukemia, Lymphoma",172.,09,2
+"Neoplasia, Leukemia, Lymphoma",174.,09,2
+"Neoplasia, Leukemia, Lymphoma",175.,09,2
+"Neoplasia, Leukemia, Lymphoma",176.,09,2
+"Neoplasia, Leukemia, Lymphoma",177.,09,2
+"Neoplasia, Leukemia, Lymphoma",178.,09,2
+"Neoplasia, Leukemia, Lymphoma",179.,09,2
+"Neoplasia, Leukemia, Lymphoma",180.,09,2
+"Neoplasia, Leukemia, Lymphoma",181.,09,2
+"Neoplasia, Leukemia, Lymphoma",182.,09,2
+"Neoplasia, Leukemia, Lymphoma",183.,09,2
+"Neoplasia, Leukemia, Lymphoma",184.,09,2
+"Neoplasia, Leukemia, Lymphoma",185.,09,2
+"Neoplasia, Leukemia, Lymphoma",186.,09,2
+"Neoplasia, Leukemia, Lymphoma",187.,09,2
+"Neoplasia, Leukemia, Lymphoma",188.,09,2
+"Neoplasia, Leukemia, Lymphoma",189.,09,2
+"Neoplasia, Leukemia, Lymphoma",190.,09,2
+"Neoplasia, Leukemia, Lymphoma",191.,09,2
+"Neoplasia, Leukemia, Lymphoma",192.,09,2
+"Neoplasia, Leukemia, Lymphoma",193.,09,2
+"Neoplasia, Leukemia, Lymphoma",194.,09,2
+"Neoplasia, Leukemia, Lymphoma",195.,09,2
+"Neoplasia, Leukemia, Lymphoma",195.1,09,2
+"Neoplasia, Leukemia, Lymphoma",195.2,09,2
+"Neoplasia, Leukemia, Lymphoma",195.3,09,2
+"Neoplasia, Leukemia, Lymphoma",195.4,09,2
+"Neoplasia, Leukemia, Lymphoma",195.5,09,2
+"Neoplasia, Leukemia, Lymphoma",195.6,09,2
+"Neoplasia, Leukemia, Lymphoma",195.7,09,2
+"Neoplasia, Leukemia, Lymphoma",195.8,09,2
+"Neoplasia, Leukemia, Lymphoma",200.,09,2
+"Neoplasia, Leukemia, Lymphoma",201.,09,2
+"Neoplasia, Leukemia, Lymphoma",202.,09,2
+"Neoplasia, Leukemia, Lymphoma",203.,09,2
+"Neoplasia, Leukemia, Lymphoma",204.,09,2
+"Neoplasia, Leukemia, Lymphoma",205.,09,2
+"Neoplasia, Leukemia, Lymphoma",206.,09,2
+"Neoplasia, Leukemia, Lymphoma",207.,09,2
+"Neoplasia, Leukemia, Lymphoma",208.,09,2
+"Neoplasia, Leukemia, Lymphoma",238.6,09,2
+"Neoplasia, Leukemia, Lymphoma",C00.,10,2
+"Neoplasia, Leukemia, Lymphoma",C01.,10,2
+"Neoplasia, Leukemia, Lymphoma",C02.,10,2
+"Neoplasia, Leukemia, Lymphoma",C03.,10,2
+"Neoplasia, Leukemia, Lymphoma",C04.,10,2
+"Neoplasia, Leukemia, Lymphoma",C05.,10,2
+"Neoplasia, Leukemia, Lymphoma",C06.,10,2
+"Neoplasia, Leukemia, Lymphoma",C07.,10,2
+"Neoplasia, Leukemia, Lymphoma",C08.,10,2
+"Neoplasia, Leukemia, Lymphoma",C09.,10,2
+"Neoplasia, Leukemia, Lymphoma",C10.,10,2
+"Neoplasia, Leukemia, Lymphoma",C11.,10,2
+"Neoplasia, Leukemia, Lymphoma",C12.,10,2
+"Neoplasia, Leukemia, Lymphoma",C13.,10,2
+"Neoplasia, Leukemia, Lymphoma",C14.,10,2
+"Neoplasia, Leukemia, Lymphoma",C15.,10,2
+"Neoplasia, Leukemia, Lymphoma",C16.,10,2
+"Neoplasia, Leukemia, Lymphoma",C17.,10,2
+"Neoplasia, Leukemia, Lymphoma",C18.,10,2
+"Neoplasia, Leukemia, Lymphoma",C19.,10,2
+"Neoplasia, Leukemia, Lymphoma",C20.,10,2
+"Neoplasia, Leukemia, Lymphoma",C21.,10,2
+"Neoplasia, Leukemia, Lymphoma",C22.,10,2
+"Neoplasia, Leukemia, Lymphoma",C23.,10,2
+"Neoplasia, Leukemia, Lymphoma",C24.,10,2
+"Neoplasia, Leukemia, Lymphoma",C25.,10,2
+"Neoplasia, Leukemia, Lymphoma",C26.,10,2
+"Neoplasia, Leukemia, Lymphoma",C30.,10,2
+"Neoplasia, Leukemia, Lymphoma",C31.,10,2
+"Neoplasia, Leukemia, Lymphoma",C32.,10,2
+"Neoplasia, Leukemia, Lymphoma",C33.,10,2
+"Neoplasia, Leukemia, Lymphoma",C34.,10,2
+"Neoplasia, Leukemia, Lymphoma",C37.,10,2
+"Neoplasia, Leukemia, Lymphoma",C38.,10,2
+"Neoplasia, Leukemia, Lymphoma",C39.,10,2
+"Neoplasia, Leukemia, Lymphoma",C40.,10,2
+"Neoplasia, Leukemia, Lymphoma",C41.,10,2
+"Neoplasia, Leukemia, Lymphoma",C43.,10,2
+"Neoplasia, Leukemia, Lymphoma",C45.,10,2
+"Neoplasia, Leukemia, Lymphoma",C46.,10,2
+"Neoplasia, Leukemia, Lymphoma",C47.,10,2
+"Neoplasia, Leukemia, Lymphoma",C48.,10,2
+"Neoplasia, Leukemia, Lymphoma",C49.,10,2
+"Neoplasia, Leukemia, Lymphoma",C50.,10,2
+"Neoplasia, Leukemia, Lymphoma",C51.,10,2
+"Neoplasia, Leukemia, Lymphoma",C52.,10,2
+"Neoplasia, Leukemia, Lymphoma",C53.,10,2
+"Neoplasia, Leukemia, Lymphoma",C54.,10,2
+"Neoplasia, Leukemia, Lymphoma",C55.,10,2
+"Neoplasia, Leukemia, Lymphoma",C56.,10,2
+"Neoplasia, Leukemia, Lymphoma",C57.,10,2
+"Neoplasia, Leukemia, Lymphoma",C58.,10,2
+"Neoplasia, Leukemia, Lymphoma",C60.,10,2
+"Neoplasia, Leukemia, Lymphoma",C61.,10,2
+"Neoplasia, Leukemia, Lymphoma",C62.,10,2
+"Neoplasia, Leukemia, Lymphoma",C63.,10,2
+"Neoplasia, Leukemia, Lymphoma",C64.,10,2
+"Neoplasia, Leukemia, Lymphoma",C65.,10,2
+"Neoplasia, Leukemia, Lymphoma",C66.,10,2
+"Neoplasia, Leukemia, Lymphoma",C67.,10,2
+"Neoplasia, Leukemia, Lymphoma",C68.,10,2
+"Neoplasia, Leukemia, Lymphoma",C69.,10,2
+"Neoplasia, Leukemia, Lymphoma",C70.,10,2
+"Neoplasia, Leukemia, Lymphoma",C71.,10,2
+"Neoplasia, Leukemia, Lymphoma",C72.,10,2
+"Neoplasia, Leukemia, Lymphoma",C73.,10,2
+"Neoplasia, Leukemia, Lymphoma",C74.,10,2
+"Neoplasia, Leukemia, Lymphoma",C75.,10,2
+"Neoplasia, Leukemia, Lymphoma",C76.,10,2
+"Neoplasia, Leukemia, Lymphoma",C81.,10,2
+"Neoplasia, Leukemia, Lymphoma",C82.,10,2
+"Neoplasia, Leukemia, Lymphoma",C83.,10,2
+"Neoplasia, Leukemia, Lymphoma",C84.,10,2
+"Neoplasia, Leukemia, Lymphoma",C85.,10,2
+"Neoplasia, Leukemia, Lymphoma",C88.,10,2
+"Neoplasia, Leukemia, Lymphoma",C90.,10,2
+"Neoplasia, Leukemia, Lymphoma",C91.,10,2
+"Neoplasia, Leukemia, Lymphoma",C92.,10,2
+"Neoplasia, Leukemia, Lymphoma",C93.,10,2
+"Neoplasia, Leukemia, Lymphoma",C94.,10,2
+"Neoplasia, Leukemia, Lymphoma",C95.,10,2
+"Neoplasia, Leukemia, Lymphoma",C96.,10,2
+"Neoplasia, Leukemia, Lymphoma",C97.,10,2
+Moderate/severe liver disease,456.0,09,3
+Moderate/severe liver disease,456.1,09,3
+Moderate/severe liver disease,456.2,09,3
+Moderate/severe liver disease,572.2,09,3
+Moderate/severe liver disease,572.3,09,3
+Moderate/severe liver disease,572.4,09,3
+Moderate/severe liver disease,572.5,09,3
+Moderate/severe liver disease,572.6,09,3
+Moderate/severe liver disease,572.7,09,3
+Moderate/severe liver disease,572.8,09,3
+Moderate/severe liver disease,I85.0,10,3
+Moderate/severe liver disease,I85.9,10,3
+Moderate/severe liver disease,I86.4,10,3
+Moderate/severe liver disease,I98.2,10,3
+Moderate/severe liver disease,K70.4,10,3
+Moderate/severe liver disease,K71.1,10,3
+Moderate/severe liver disease,K72.1,10,3
+Moderate/severe liver disease,K72.9,10,3
+Moderate/severe liver disease,K76.5,10,3
+Moderate/severe liver disease,K76.6,10,3
+Moderate/severe liver disease,K76.7,10,3
+Metastatic disease,196.,09,6
+Metastatic disease,197.,09,6
+Metastatic disease,198.,09,6
+Metastatic disease,199.,09,6
+Metastatic disease,C77.,10,6
+Metastatic disease,C78.,10,6
+Metastatic disease,C79.,10,6
+Metastatic disease,C80.,10,6
+Human immunodeficiency virus,042.,09,6
+Human immunodeficiency virus,043.,09,6
+Human immunodeficiency virus,044.,09,6
+Human immunodeficiency virus,B20.,10,6
+Human immunodeficiency virus,B21.,10,6
+Human immunodeficiency virus,B22.,10,6
+Human immunodeficiency virus,B24.,10,6
