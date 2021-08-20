@@ -1,50 +1,26 @@
 /********************************************************************
-This table is to identify Major adverse cardiovascular events (MACE)
+This script is to identify Major adverse cardiovascular events (MACE)
 for the targeted cohort. MACE events are identified by ICD diagnosis
 codes and CPT procedure codes.
 
 For efficiency, it is recommended to perform computational 
 phenotyping on a smaller cut of CDM DIAGNOSIS and PROCEDURES 
-tables relevant to the eligible patient cohort
+tables relevant to the eligible patient cohort. The study-specific
+DIAGNOSIS and PROCEDURES tables are usually saved in a separate
+Study_Schema with CDM relational database structure preserved.
 ********************************************************************/
 
+/* setup environment*/
+use role "ANALYTICS";
+use warehouse ANALYTICS_WH;
+use database ANALYTICSDB;
+use schema VCCC_SCHEMA;
+
 /*Declarative Steps*/
-set cdm_db_schema = 'PCORNET_CDM.CDM_C010R021';
-set DIAGNOSIS = CONCAT($cdm_db_schema,'.DIAGNOSIS');
-set PROCEDURES = CONCAT($cdm_db_schema,'.PROCEDURES');
+set study_schema = 'VCCC_SCHEMA';
+set DIAGNOSIS = CONCAT($study_schema,'.DIAGNOSIS');
+set PROCEDURES = CONCAT($study_schema,'.PROCEDURES');
 show variables;
-
-/*Study-Specific CDM DIAGNOSIS table*/
-create or replace table CDM_DX_VCCC as
-select pat.PATID
-      ,dx.DX
-      ,dx.DX_TYPE
-      ,dx.DX_SOURCE
-      ,dx.DX_ORIGIN
-      ,dx.PDX
-      ,dx.DX_POA
-      ,dx.DX_DATE
-      ,DAY(dx.DX_DATE::date) - DAY(pat.ENROLL_START::date) DAYS_SINCE_ENROLL
-from pat_eligible pat
-join identifier($DIAGNOSIS) dx
-on pat.PATID = dx.PATID and
-   dx.DX_DATE >= pat.ENROLL_START
-; 
-
-/*Study-Specific CDM PROCEDURES table*/
-create or replace table CDM_PX_VCCC as
-select pat.PATID
-      ,px.PX
-      ,px.PX_TYPE
-      ,px.PX_SOURCE
-      ,px.PX_DATE
-      ,DAY(px.PX_DATE::date) - DAY(pat.ENROLL_START::date) DAYS_SINCE_ENROLL
-from pat_eligible pat
-join identifier($PROCEDURES) px
-on pat.PATID = px.PATID and
-   px.PX_DATE >= pat.ENROLL_START
-; 
-
 
 /*Identify MACE events:
 - MI:myocardial infarction
@@ -53,15 +29,16 @@ on pat.PATID = px.PATID and
 - CR:Coronary revascularization 
 - HF:Heart failure 
 */
+
 create or replace table MACE_event as
 select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,dx.DX as IDENTIFIER
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
-      ,'MI' SUB_EVENT
       ,'MI' ENDPOINT
-      ,DAYS_SINCE_ENROLL
-from CDM_DX_VCCC dx
+      ,dx.DX_DATE ENDPOINT_DATE
+      ,DAYS_SINCE_INDEX
+from identifier($DIAGNOSIS) dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I21'
                                   ,'I22'
@@ -71,10 +48,10 @@ select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,dx.DX as IDENTIFIER
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
-      ,'Ischemic' SUB_EVENT
-      ,'ST' ENDPOINT
-      ,DAYS_SINCE_ENROLL
-from CDM_DX_VCCC dx
+      ,'ST-Ischemic' ENDPOINT
+      ,dx.DX_DATE ENDPOINT_DATE
+      ,DAYS_SINCE_INDEX
+from identifier($DIAGNOSIS) dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I63')
 union
@@ -82,10 +59,10 @@ select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,dx.DX as IDENTIFIER
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
-      ,'Hemorrhagic' SUB_EVENT
-      ,'ST' ENDPOINT
-      ,DAYS_SINCE_ENROLL
-from CDM_DX_VCCC dx
+      ,'ST-Hemorrhagic' ENDPOINT
+      ,dx.DX_DATE ENDPOINT_DATE
+      ,DAYS_SINCE_INDEX
+from identifier($DIAGNOSIS) dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I61'
                                   ,'I62')
@@ -94,10 +71,10 @@ select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,dx.DX as IDENTIFIER
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
-      ,'HF' SUB_EVENT
       ,'HF' ENDPOINT
-      ,DAYS_SINCE_ENROLL
-from CDM_DX_VCCC dx
+      ,dx.DX_DATE ENDPOINT_DATE
+      ,DAYS_SINCE_INDEX
+from identifier($DIAGNOSIS) dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I50')
 union
@@ -105,10 +82,10 @@ select px.PATID
       ,'PX' as IDENTIFIER_TYPE
       ,px.PX as IDENTIFIER
       ,substr(px.PX,1,3) as IDENTIFIER_GRP
-      ,'CR' SUB_EVENT
       ,'CR' ENDPOINT
-      ,DAYS_SINCE_ENROLL
-from CDM_PX_VCCC px
+      ,dx.DX_DATE ENDPOINT_DATE
+      ,DAYS_SINCE_INDEX
+from identifier($DIAGNOSIS) px
 where px.PX_TYPE = '10' and
       substr(px.PX,1,3) in ( '021'
                             ,'027')
@@ -117,10 +94,10 @@ select px.PATID
       ,'PX' as IDENTIFIER_TYPE
       ,px.PX as IDENTIFIER
       ,substr(px.PX,1,3) as IDENTIFIER_GRP
-      ,'CR' SUB_EVENT
       ,'CR' ENDPOINT
-      ,DAYS_SINCE_ENROLL
-from CDM_PX_VCCC px
+      ,dx.DX_DATE ENDPOINT_DATE
+      ,DAYS_SINCE_INDEX
+from identifier($DIAGNOSIS) px
 where px.PX_TYPE = 'CH' and
       px.PX in ( '92920'
                 ,'92921'
