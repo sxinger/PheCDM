@@ -64,7 +64,8 @@ select dx.PATID
 from CDM_DX_VCCC dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I21'
-                                  ,'I22')
+                                  ,'I22'
+                                  ,'I23')
 union
 select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
@@ -134,5 +135,13 @@ where px.PX_TYPE = 'CH' and
                 ,'92941'
                 ,'92943'
                 ,'92944'
+                ,'92980'
+                ,'92981'
+                ,'92982'
+                ,'92984'
+                ,'92995'
+                ,'92996'
+                ,'92973'
+                ,'92974'
                )
 ;
