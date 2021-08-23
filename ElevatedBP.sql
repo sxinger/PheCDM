@@ -56,7 +56,6 @@ create or replace table BP_Event as
 select sbp1.PATID
       ,'SBP2' IDENTIFIER_TYPE
       ,DAY(sbp2.MEASURE_DATE::date)-DAY(sbp1.MEASURE_DATE::date) IDENTIFIER -- gap between two defining events
-      ,'HBP' as ENDPOINT
       ,sbp2.MEASURE_DATE as ENDPOINT_DATE
 from identifier($VITAL) sbp1
 join identifier($VITAL) sbp2
@@ -67,7 +66,6 @@ union
 select sbp.PATID
       ,'DX-SBP' as IDENTIFIER_TYPE
       ,DAY(sbp.MEASURE_DATE::date)-DAY(dx.DX_DATE::date) IDENTIFIER -- gap between two defining events
-      ,'HBP' as ENDPOINT
       ,sbp.MEASURE_DATE as ENDPOINT_DATE
 from BP_DX_Event dx
 join identifier($VITAL) sbp
@@ -78,7 +76,6 @@ union
 select PATID
       ,'SBP' as IDENTIFIER_TYPE
       ,0 as IDENTIFIER
-      ,'HBP' as ENDPOINT
       ,MEASURE_DATE as ENDPOINT_DATE
 from identifier($VITAL)
 where SYSTOLIC > 160
