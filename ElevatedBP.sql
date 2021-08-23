@@ -18,12 +18,6 @@ use warehouse ANALYTICS_WH;
 use database ANALYTICSDB;
 use schema VCCC_SCHEMA;
 
-/*Declarative Step*/
-set study_schema = 'VCCC_SCHEMA';
-set DIAGNOSIS = CONCAT($study_schema,'.DIAGNOSIS');
-set VITAL = CONCAT($study_schema,'.VITAL');
-show variables;
-
 /*Identify elevated blood pressure events
 a) SBP >140 at current visit AND documented history of hypertension; or
 b) SBP >140 at current visit and at another visit in last 18 months; or
@@ -35,7 +29,7 @@ select dx.PATID
       ,dx.DX as IDENTIFIER
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
       ,NVL(dx.DX_DATE::date,dx.ADMIT_DATE::date) as DX_DATE
-from identifier($DIAGNOSIS) dx
+from DIAGNOSIS dx
 where (dx.DX_TYPE = '10' and
        split_part(dx.DX,'.',1) in ( 'I10'
                                    ,'I11'
@@ -57,8 +51,8 @@ select sbp1.PATID
       ,'SBP2' IDENTIFIER_TYPE
       ,DAY(sbp2.MEASURE_DATE::date)-DAY(sbp1.MEASURE_DATE::date) IDENTIFIER -- gap between two defining events
       ,sbp2.MEASURE_DATE as ENDPOINT_DATE
-from identifier($VITAL) sbp1
-join identifier($VITAL) sbp2
+from VITAL sbp1
+join VITAL sbp2
 on sbp1.PATID = sbp2.PATID and
    sbp1.SYSTOLIC > 140 and sbp2.SYSTOLIC > 140 and
    DAY(sbp2.MEASURE_DATE::date)-DAY(sbp1.MEASURE_DATE::date) between 1 and 18*30 
@@ -68,7 +62,7 @@ select sbp.PATID
       ,DAY(sbp.MEASURE_DATE::date)-DAY(dx.DX_DATE::date) IDENTIFIER -- gap between two defining events
       ,sbp.MEASURE_DATE as ENDPOINT_DATE
 from BP_DX_Event dx
-join identifier($VITAL) sbp
+join VITAL sbp
 on dx.PATID = sbp.PATID and
    sbp.SYSTOLIC > 140 and
    sbp.MEASURE_DATE > dx.DX_DATE 
@@ -77,6 +71,6 @@ select PATID
       ,'SBP' as IDENTIFIER_TYPE
       ,0 as IDENTIFIER
       ,MEASURE_DATE as ENDPOINT_DATE
-from identifier($VITAL)
+from VITAL
 where SYSTOLIC > 160
 ;

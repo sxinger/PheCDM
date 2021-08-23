@@ -16,12 +16,6 @@ use warehouse ANALYTICS_WH;
 use database ANALYTICSDB;
 use schema VCCC_SCHEMA;
 
-/*Declarative Steps*/
-set study_schema = 'VCCC_SCHEMA';
-set DIAGNOSIS = CONCAT($study_schema,'.DIAGNOSIS');
-set PROCEDURES = CONCAT($study_schema,'.PROCEDURES');
-show variables;
-
 /*Identify MACE events:
 - MI:myocardial infarction
 - Ischemic,ST:nonfatal ischemic stroke 
@@ -37,7 +31,7 @@ select dx.PATID
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
       ,'MI' ENDPOINT
       ,dx.DX_DATE ENDPOINT_DATE
-from identifier($DIAGNOSIS) dx
+from DIAGNOSIS dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I21'
                                   ,'I22'
@@ -49,7 +43,7 @@ select dx.PATID
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
       ,'ST-Ischemic' ENDPOINT
       ,dx.DX_DATE ENDPOINT_DATE
-from identifier($DIAGNOSIS) dx
+from DIAGNOSIS dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I63')
 union
@@ -59,7 +53,7 @@ select dx.PATID
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
       ,'ST-Hemorrhagic' ENDPOINT
       ,dx.DX_DATE ENDPOINT_DATE
-from identifier($DIAGNOSIS) dx
+from DIAGNOSIS dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I61'
                                   ,'I62')
@@ -70,7 +64,7 @@ select dx.PATID
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
       ,'HF' ENDPOINT
       ,dx.DX_DATE ENDPOINT_DATE
-from identifier($DIAGNOSIS) dx
+from DIAGNOSIS dx
 where dx.DX_TYPE = '10' and
       split_part(dx.DX,'.',1) in ( 'I50')
 union
@@ -80,7 +74,7 @@ select px.PATID
       ,substr(px.PX,1,3) as IDENTIFIER_GRP
       ,'CR' ENDPOINT
       ,dx.DX_DATE ENDPOINT_DATE
-from identifier($DIAGNOSIS) px
+from DIAGNOSIS px
 where px.PX_TYPE = '10' and
       substr(px.PX,1,3) in ( '021'
                             ,'027')
@@ -91,7 +85,7 @@ select px.PATID
       ,substr(px.PX,1,3) as IDENTIFIER_GRP
       ,'CR' ENDPOINT
       ,dx.DX_DATE ENDPOINT_DATE
-from identifier($DIAGNOSIS) px
+from DIAGNOSIS px
 where px.PX_TYPE = 'CH' and
       px.PX in ( '92920'
                 ,'92921'
