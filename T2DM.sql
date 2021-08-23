@@ -951,56 +951,56 @@ create or replace table DM_event as
 with combine_dm_event as (
   select PATID
         ,'A1C' as IDENTIFIER_TYPE
-        ,LAB_DATE as ENDPOINT_DATE
+        ,LAB_DATE as DM_ONSET
   from A1C_ordered_pair
   where LAB_ORDER_WITHIN2YR = 1
   union
   select PATID
         ,'FG' as IDENTIFIER_TYPE
-        ,LAB_DATE as ENDPOINT_DATE
+        ,LAB_DATE as DM_ONSET
   from FG_ordered_pair
   where LAB_ORDER_WITHIN2YR = 1
   union
   select PATID
         ,'RG' as IDENTIFIER_TYPE
-        ,LAB_DATE as ENDPOINT_DATE
+        ,LAB_DATE as DM_ONSET
   from RG_ordered_pair
   where LAB_ORDER_WITHIN2YR = 1
   union
   select PATID
         ,IDENTIFIER_TYPE
-        ,LAB_DATE as ENDPOINT_DATE
+        ,LAB_DATE as DM_ONSET
   from A1C_FG_RG_ordered_pair
   where LAB_ORDER_WITHIN2YR = 1
   union
   select PATID
         ,IDENTIFIER_TYPE
-        ,LAB_DATE as ENDPOINT_DATE
+        ,LAB_DATE as DM_ONSET
   from A1C_FG_RG_ordered_pair
   where LAB_ORDER_WITHIN2YR = 1
   union
   select PATID
         ,'DX' as IDENTIFIER_TYPE
-        ,DX_DATE as ENDPOINT_DATE
+        ,DX_DATE as DM_ONSET
   from DX_ordered_pair
   where DX_ORDER_WITHIN2YR = 1
   union
   select PATID
         ,IDENTIFIER_TYPE
-        ,MED_DATE as ENDPOINT_DATE
+        ,MED_DATE as DM_ONSET
   from RX_incld_ordered
   where MED_ORDER_WITHIN2YR = 1
 ),
 combine_dm_event_ordered as (
   select PATID
         ,IDENTIFIER_TYPE
-        ,ENDPOINT_DATE
-        ,row_number() over (partition by PATID order by ENDPOINT_DATE) rn
+        ,DM_ONSET
+        ,row_number() over (partition by PATID order by DM_ONSET) rn
   from combine_dm_event
 )
 select PATID
       ,IDENTIFIER_TYPE
-      ,ENDPOINT_DATE
+      ,DM_ONSET
 from combine_dm_event_ordered
 where rn = 1
 ;
