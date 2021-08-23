@@ -19,7 +19,7 @@ use database ANALYTICSDB;
 use schema VCCC_SCHEMA;
 
 /*Declarative Step*/
-set study_schema = 'Study_Schema';
+set study_schema = 'VCCC_SCHEMA';
 set DIAGNOSIS = CONCAT($study_schema,'.DIAGNOSIS');
 set VITAL = CONCAT($study_schema,'.VITAL');
 show variables;
@@ -34,7 +34,7 @@ create or replace temporary table BP_DX_Event as
 select dx.PATID
       ,dx.DX as IDENTIFIER
       ,split_part(dx.DX,'.',1) as IDENTIFIER_GRP
-      ,DAYS_SINCE_INDEX
+      ,NVL(dx.DX_DATE::date,dx.ADMIT_DATE::date) as DX_DATE
 from identifier($DIAGNOSIS) dx
 where (dx.DX_TYPE = '10' and
        split_part(dx.DX,'.',1) in ( 'I10'
@@ -55,34 +55,31 @@ where (dx.DX_TYPE = '10' and
 create or replace table BP_Event as
 select sbp1.PATID
       ,'SBP2' IDENTIFIER_TYPE
-      ,(sbp2.DAYS_SINCE_INDEX-sbp1.DAYS_SINCE_INDEX) IDENTIFIER -- gap between two defining events
+      ,DAY(sbp2.MEASURE_DATE::date)-DAY(sbp1.MEASURE_DATE::date) IDENTIFIER -- gap between two defining events
       ,'HBP' as ENDPOINT
       ,sbp2.MEASURE_DATE as ENDPOINT_DATE
-      ,sbp2.DAYS_SINCE_INDEX
 from identifier($VITAL) sbp1
 join identifier($VITAL) sbp2
 on sbp1.PATID = sbp2.PATID and
    sbp1.SYSTOLIC > 140 and sbp2.SYSTOLIC > 140 and
-   sbp2.DAYS_SINCE_INDEX - sbp1.DAYS_SINCE_INDEX between 1 and 18*30 
+   DAY(sbp2.MEASURE_DATE::date)-DAY(sbp1.MEASURE_DATE::date) between 1 and 18*30 
 union
 select sbp.PATID
       ,'DX-SBP' as IDENTIFIER_TYPE
-      ,(sbp.DAYS_SINCE_INDEX-dx.DAYS_SINCE_INDEX) IDENTIFIER -- gap between two defining events
+      ,DAY(sbp.MEASURE_DATE::date)-DAY(dx.DX_DATE::date) IDENTIFIER -- gap between two defining events
       ,'HBP' as ENDPOINT
       ,sbp.MEASURE_DATE as ENDPOINT_DATE
-      ,sbp.DAYS_SINCE_INDEX
 from BP_DX_Event dx
 join identifier($VITAL) sbp
 on dx.PATID = sbp.PATID and
    sbp.SYSTOLIC > 140 and
-   sbp.DAYS_SINCE_INDEX > dx.DAYS_SINCE_INDEX 
+   sbp.MEASURE_DATE > dx.DX_DATE 
 union
 select PATID
       ,'SBP' as IDENTIFIER_TYPE
       ,0 as IDENTIFIER
       ,'HBP' as ENDPOINT
       ,MEASURE_DATE as ENDPOINT_DATE
-      ,DAYS_SINCE_INDEX
 from identifier($VITAL)
 where SYSTOLIC > 160
 ;
