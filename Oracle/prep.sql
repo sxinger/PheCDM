@@ -5,8 +5,9 @@
 /*eligible patients*/
 create table pat_incld as
 select distinct PATID
+      ,TRIAL_ENROLL_DATE as INDEX_DATE
 from &&PCORNET_CDM_SCHEMA.PCORNET_TRIAL
-where TRIALID = '&vCCC_TrialID'
+where TRIALID = '&vccc_trial_id'
 ;
 
 /*eligible encounter

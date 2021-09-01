@@ -14,27 +14,21 @@ eligible patient cohort. The study-specific CDM tables are usually
 saved in a separate Study Schema (e.g. VCCC_SCHEMA) preserving CDM relational database structure.
 *************************************************************************************************/
 
-/*setup environment*/
-use role "ANALYTICS";
-use warehouse ANALYTICS_WH;
-use database ANALYTICSDB;
-use schema VCCC_SCHEMA;
-
 /*Assumption: LAB_RESULT_CM under this specific study schema 
               should have been reduced to only eligible labs
               by matching with eligible patient or encounter
               list in the prep step
 */
-create or replace table A1C_ordered_pair as
+create table A1C_ordered_pair as
 with ALL_LABS as (
 select PATID
-      ,NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) as LAB_DATE 
+      ,NVL(SPECIMEN_DATE,LAB_ORDER_DATE) as LAB_DATE 
       ,LAB_LOINC
       ,RESULT_NUM
       ,RAW_LAB_NAME
       ,RAW_LAB_CODE
-      ,case when lead(NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date)) over (partition by PATID order by NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date)) - NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) between 1 and 365 * 2
-            then dense_rank() over (partition by PATID order by NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date))
+      ,case when lead(NVL(SPECIMEN_DATE,LAB_ORDER_DATE)) over (partition by PATID order by NVL(SPECIMEN_DATE,LAB_ORDER_DATE)) - NVL(SPECIMEN_DATE,LAB_ORDER_DATE) between 1 and 365 * 2
+            then dense_rank() over (partition by PATID order by NVL(SPECIMEN_DATE,LAB_ORDER_DATE))
        else NULL end as LAB_ORDER_WITHIN2YR
 from LAB_RESULT_CM
 where ( 
@@ -70,7 +64,7 @@ where (
 )
 select PATID
       ,LAB_DATE
-      ,lead(LAB_DATE::date) over (partition by PATID order by LAB_DATE::date) LAB_DATE_LEAD
+      ,lead(LAB_DATE) over (partition by PATID order by LAB_DATE) LAB_DATE_LEAD
       ,case when LAB_ORDER_WITHIN2YR is not null
             then dense_rank() over (partition by PATID, (LAB_ORDER_WITHIN2YR is not null) order by LAB_ORDER_WITHIN2YR)
             else NULL
@@ -87,13 +81,13 @@ from ALL_LABS
 create or replace table FG_ordered_pair as 
 with ALL_LABS as (
 select PATID
-      ,NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) as LAB_DATE 
+      ,NVL(SPECIMEN_DATE,LAB_ORDER_DATE) as LAB_DATE 
       ,LAB_LOINC
       ,RESULT_NUM
       ,RAW_LAB_NAME
       ,RAW_LAB_CODE
-      ,case when lead(NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date)) over (partition by PATID order by NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date)) - NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) between 1 and 365 * 2
-            then dense_rank() over (partition by PATID order by NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date))
+      ,case when lead(NVL(SPECIMEN_DATE,LAB_ORDER_DATE)) over (partition by PATID order by NVL(SPECIMEN_DATE,LAB_ORDER_DATE)) - NVL(SPECIMEN_DATE,LAB_ORDER_DATE) between 1 and 365 * 2
+            then dense_rank() over (partition by PATID order by NVL(SPECIMEN_DATE,LAB_ORDER_DATE))
        else NULL end as LAB_ORDER_WITHIN2YR
 from LAB_RESULT_CM
 where ( 
@@ -123,7 +117,7 @@ where (
 )
 select PATID
       ,LAB_DATE
-      ,lead(LAB_DATE::date) over (partition by PATID order by LAB_DATE::date) LAB_DATE_LEAD
+      ,lead(LAB_DATE) over (partition by PATID order by LAB_DATE) LAB_DATE_LEAD
       ,case when LAB_ORDER_WITHIN2YR is not null
             then dense_rank() over (partition by PATID, (LAB_ORDER_WITHIN2YR is not null) order by LAB_ORDER_WITHIN2YR)
             else NULL
@@ -139,13 +133,13 @@ from ALL_LABS
 create or replace table RG_ordered_pair as 
 with ALL_LABS as (
 select PATID
-      ,NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) as LAB_DATE 
+      ,NVL(SPECIMEN_DATE,LAB_ORDER_DATE) as LAB_DATE 
       ,LAB_LOINC
       ,RESULT_NUM
       ,RAW_LAB_NAME
       ,RAW_LAB_CODE
-      ,case when lead(NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date)) over (partition by PATID order by NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date)) - NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) between 1 and 365 * 2
-            then dense_rank() over (partition by PATID order by NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date))
+      ,case when lead(NVL(SPECIMEN_DATE,LAB_ORDER_DATE)) over (partition by PATID order by NVL(SPECIMEN_DATE,LAB_ORDER_DATE)) - NVL(SPECIMEN_DATE,LAB_ORDER_DATE) between 1 and 365 * 2
+            then dense_rank() over (partition by PATID order by NVL(SPECIMEN_DATE,LAB_ORDER_DATE))
        else NULL end as LAB_ORDER_WITHIN2YR
 from LAB_RESULT_CM
 where ( 
@@ -179,7 +173,7 @@ where (
 )
 select PATID
       ,LAB_DATE
-      ,lead(LAB_DATE::date) over (partition by PATID order by LAB_DATE::date) LAB_DATE_LEAD
+      ,lead(LAB_DATE) over (partition by PATID order by LAB_DATE) LAB_DATE_LEAD
       ,case when LAB_ORDER_WITHIN2YR is not null
             then dense_rank() over (partition by PATID, (LAB_ORDER_WITHIN2YR is not null) order by LAB_ORDER_WITHIN2YR)
             else NULL
@@ -209,7 +203,7 @@ select  ac.PATID
                                                           END) AS LAB_ORDER_WITHIN2YR
 from A1C_ordered_pair ac
 join FG_union_RG g on ac.PATID = g.PATID
-where abs(ac.LAB_DATE::date - g.LAB_DATE::date) between 1 and 365 * 2
+where abs(ac.LAB_DATE - g.LAB_DATE) between 1 and 365 * 2
 ;
 
 
@@ -221,11 +215,11 @@ where abs(ac.LAB_DATE::date - g.LAB_DATE::date) between 1 and 365 * 2
 create or replace table DX_ordered_pair as
 with ALL_DX as (
 select PATID
-      ,NVL(DX_DATE::date,ADMIT_DATE::date) as DX_DATE
+      ,NVL(DX_DATE,ADMIT_DATE) as DX_DATE
       ,DX
       ,DX_TYPE
-      ,case when lead(NVL(DX_DATE::date,ADMIT_DATE::date)) over (partition by PATID order by NVL(DX_DATE::date,ADMIT_DATE::date)) - NVL(DX_DATE::date,ADMIT_DATE::date) between 1 and 365 * 2
-            then dense_rank() over (partition by PATID order by NVL(DX_DATE::date,ADMIT_DATE::date))
+      ,case when lead(NVL(DX_DATE,ADMIT_DATE)) over (partition by PATID order by NVL(DX_DATE,ADMIT_DATE)) - NVL(DX_DATE,ADMIT_DATE) between 1 and 365 * 2
+            then dense_rank() over (partition by PATID order by NVL(DX_DATE,ADMIT_DATE))
        else NULL end as DX_ORDER_WITHIN2YR
 from DIAGNOSIS
 where (
@@ -250,7 +244,7 @@ where (
 )
 select PATID
       ,DX_DATE
-      ,lead(DX_DATE::date) over (partition by PATID order by DX_DATE::date) DX_DATE_LEAD
+      ,lead(DX_DATE) over (partition by PATID order by DX_DATE) DX_DATE_LEAD
       ,case when DX_ORDER_WITHIN2YR is not null
             then dense_rank() over (partition by PATID, (DX_ORDER_WITHIN2YR is not null) order by DX_ORDER_WITHIN2YR)
             else NULL
@@ -887,43 +881,43 @@ create or replace table RX_incld_ordered as
 with p1 as ( 
 -- Get set of patients having one med & one visit:
   select x.PATID
-        ,x.RX_ORDER_DATE::date as MED_DATE
+        ,x.RX_ORDER_DATE as MED_DATE
         ,'MED-DX' IDENTIFIER_TYPE
   from DM_non_spec_meds x
   join DX_ordered_pair y on x.PATID = y.PATID
-  where ABS(x.RX_ORDER_DATE::date - y.DX_DATE::date) > 1
+  where ABS(x.RX_ORDER_DATE - y.DX_DATE) > 1
 ),
 p2 as (   
 -- Get set of patients having one med & one HbA1c:
   select x.PATID
-        ,x.RX_ORDER_DATE::date as MED_DATE
+        ,x.RX_ORDER_DATE as MED_DATE
         ,'MED-A1C' IDENTIFIER_TYPE
   from DM_non_spec_meds x
   join A1C_ordered_pair y on x.PATID = y.PATID
-  where ABS(x.RX_ORDER_DATE::date - y.LAB_DATE::date) > 1
+  where ABS(x.RX_ORDER_DATE - y.LAB_DATE) > 1
 ), 
 p3 as (   
 -- Get set of patients having one med & fasting glucose measurement:
   select x.PATID
-        ,x.RX_ORDER_DATE::date as MED_DATE
+        ,x.RX_ORDER_DATE as MED_DATE
         ,'MED-FG' IDENTIFIER_TYPE
   from DM_non_spec_meds x
   join FG_ordered_pair y on x.PATID = y.PATID
-  where ABS(x.RX_ORDER_DATE::date - y.LAB_DATE::date) > 1
+  where ABS(x.RX_ORDER_DATE - y.LAB_DATE) > 1
 ), 
 p4 as (   
 -- Get set of patients having one med & random glucose measurement:
   select x.PATID
-        ,x.RX_ORDER_DATE::date as MED_DATE
+        ,x.RX_ORDER_DATE as MED_DATE
         ,'MED-RG' IDENTIFIER_TYPE
   from DM_non_spec_meds x
   join RG_ordered_pair y on x.PATID = y.PATID
-  where ABS(x.RX_ORDER_DATE::date - y.LAB_DATE::date) > 1
+  where ABS(x.RX_ORDER_DATE - y.LAB_DATE) > 1
 ), 
 p5 as (
 -- Get first date of any DM-specific medication
   select PATID
-      ,min(RX_ORDER_DATE::date) as MED_DATE
+      ,min(RX_ORDER_DATE) as MED_DATE
       ,'MED' as IDENTIFIER_TYPE
   from DM_spec_meds
   group by PATID

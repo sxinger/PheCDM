@@ -26,6 +26,7 @@ show variables;
 /*eligible patients*/
 create or replace table pat_incld as
 select distinct PATID
+      ,TRIAL_ENROLL_DATE as INDEX_DATE
 from identifier($PCORNET_TRIAL) 
 where TRIALID = identifier($trial_id)
 -- limit 200

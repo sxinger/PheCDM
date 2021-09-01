@@ -20,8 +20,9 @@ CDM relational database structure preserved.
 - HF:Heart failure 
 */
 
-/*Assume: current schema is different from &&PCORNET_CDM_SCHEMA, 
-          but where the prep.sql was run
+/*Assumption: current schema is different from &&PCORNET_CDM_SCHEMA, 
+              and it is where the prep.sql was run and all dependend
+              study-specific CDM tables were created
 */
 
 create table MACE_event as
@@ -33,9 +34,9 @@ select dx.PATID
       ,dx.DX_DATE ENDPOINT_DATE
 from DIAGNOSIS dx
 where dx.DX_TYPE = '10' and
-      split_part(dx.DX,'.',1) in ( 'I21'
-                                  ,'I22'
-                                  ,'I23')
+      (dx.DX like 'I21%' or
+       dx.DX like 'I22%' or
+       dx.DX like 'I23%')
 union
 select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
@@ -45,7 +46,7 @@ select dx.PATID
       ,dx.DX_DATE ENDPOINT_DATE
 from DIAGNOSIS dx
 where dx.DX_TYPE = '10' and
-      split_part(dx.DX,'.',1) in ( 'I63')
+      dx.DX like 'I63%'
 union
 select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
@@ -55,8 +56,8 @@ select dx.PATID
       ,dx.DX_DATE ENDPOINT_DATE
 from DIAGNOSIS dx
 where dx.DX_TYPE = '10' and
-      split_part(dx.DX,'.',1) in ( 'I61'
-                                  ,'I62')
+      (dx.DX like 'I61%' or
+       dx.DX like 'I62%')
 union
 select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
@@ -66,7 +67,7 @@ select dx.PATID
       ,dx.DX_DATE ENDPOINT_DATE
 from DIAGNOSIS dx
 where dx.DX_TYPE = '10' and
-      split_part(dx.DX,'.',1) in ( 'I50')
+      dx.DX like 'I50%'
 union
 select px.PATID
       ,'PX' as IDENTIFIER_TYPE
@@ -76,8 +77,9 @@ select px.PATID
       ,dx.DX_DATE ENDPOINT_DATE
 from DIAGNOSIS px
 where px.PX_TYPE = '10' and
-      substr(px.PX,1,3) in ( '021'
-                            ,'027')
+      (px.PX like '021%' or
+       px.PX like '027%'
+      )
 union
 select px.PATID
       ,'PX' as IDENTIFIER_TYPE

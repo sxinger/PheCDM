@@ -20,19 +20,18 @@ eligible patient cohort. The study-specific CDM tables are usually
 saved in a separate Study Schema (e.g. VCCC_SCHEMA) preserving CDM relational database structure.
 *************************************************************************************************/
 
-/*setup environment*/
-use role "ANALYTICS";
-use warehouse ANALYTICS_WH;
-use database ANALYTICSDB;
-use schema VCCC_SCHEMA;
-
 /* LOINC code set reference for Total, LDL, HDL Cholestrol:
   -- https://phekb.org/sites/phenotype/files/FH_eAlgorithm_Pseudocode_FullText_2016_1_3.pdf
 */
-create or replace table ASCVD_Risk_Chole as
+
+/*Assumption: T2DM.sql has run and the resulting table DM_Event 
+              has been created under the same schema
+*/
+
+create table ASCVD_Risk_Chole as
 with All_Chole as (
 select PATID
-      ,NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) as LAB_DATE 
+      ,NVL(SPECIMEN_DATE,LAB_ORDER_DATE) as LAB_DATE 
       ,'TC' as LAB_NAME
       ,RESULT_NUM
 from LAB_RESULT_CM
@@ -48,7 +47,7 @@ where (
       ) 
 union all
 select PATID
-      ,NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) as LAB_DATE 
+      ,NVL(SPECIMEN_DATE,LAB_ORDER_DATE) as LAB_DATE 
       ,'LDL-C' as LAB_NAME
       ,RESULT_NUM
 from LAB_RESULT_CM
@@ -72,7 +71,7 @@ where (
       )
 union all
 select PATID
-      ,NVL(SPECIMEN_DATE::date,LAB_ORDER_DATE::date) as LAB_DATE 
+      ,NVL(SPECIMEN_DATE,LAB_ORDER_DATE) as LAB_DATE 
       ,'HDL-C' as LAB_NAME
       ,RESULT_NUM
 from LAB_RESULT_CM
@@ -105,13 +104,13 @@ order by PATID, LAB_DATE
 ;
 
 /*the most plausible BMI*/
-create or replace table ASCVD_Risk_BMI as
+create table ASCVD_Risk_BMI as
 with bmi_closest as (
   select c.PATID
         ,c.LAB_DATE
         ,NVL(least(v.ORIGINAL_BMI,150),least(round(v.WT/(v.HT*v.HT)*703),150)) as BMI
-        ,v.MEASURE_DATE::date as BMI_DATE
-        ,row_number() over (partition by c.PATID,c.LAB_DATE order by abs(c.LAB_DATE::date-v.MEASURE_DATE::date)) rn
+        ,v.MEASURE_DATE as BMI_DATE
+        ,row_number() over (partition by c.PATID,c.LAB_DATE order by abs(c.LAB_DATE-v.MEASURE_DATE)) rn
   from ASCVD_Risk_Chole c
   join VITAL v
   on c.PATID = v.PATID and 
@@ -127,15 +126,15 @@ where rn = 1
 ;
 
 /*the most plausible smoking status*/
-create or replace table ASCVD_Risk_Smoker as
+create table ASCVD_Risk_Smoker as
 with smoke_closest as (
   select c.PATID
         ,c.LAB_DATE
         ,case when v.SMOKING in ('01','02','03','05','07','08') or v.TOBACCO in ('01','03','04') then 1 
               else 0
          end as SMOKER
-        ,v.MEASURE_DATE::date as SMOKER_DATE
-        ,row_number() over (partition by c.PATID,c.LAB_DATE order by abs(c.LAB_DATE::date-v.MEASURE_DATE::date)) rn
+        ,v.MEASURE_DATE as SMOKER_DATE
+        ,row_number() over (partition by c.PATID,c.LAB_DATE order by abs(c.LAB_DATE-v.MEASURE_DATE)) rn
   from ASCVD_Risk_Chole c
   join VITAL v
   on c.PATID = v.PATID
@@ -148,15 +147,16 @@ from smoke_closest
 where rn = 1
 ;
 
-create or replace table ASCVD_Risk_TRT as
+/*statin treatment*/
+create table ASCVD_Risk_TRT as
 with SBP_Statin as (
   select p.PATID
         ,v.SYSTOLIC as SBP
         ,case when v.MEASURE_DATE<=p.RX_ORDER_DATE then 'Before'
               else 'After'
          end as SBP_Bef_Aft
-        ,p.RX_ORDER_DATE::date as RX_ORDER_DATE
-        ,row_number() over (partition by p.PATID, (case when v.MEASURE_DATE <= p.RX_ORDER_DATE then 'Before' else 'After' end) order by abs(p.RX_ORDER_DATE::date-v.MEASURE_DATE::date)) rn
+        ,p.RX_ORDER_DATE as RX_ORDER_DATE
+        ,row_number() over (partition by p.PATID, (case when v.MEASURE_DATE <= p.RX_ORDER_DATE then 'Before' else 'After' end) order by abs(p.RX_ORDER_DATE-v.MEASURE_DATE)) rn
   from PRESCRIBING p
   join VITAL v on p.PATID = v.PATID
   where UPPER(p.RAW_RX_MED_NAME) like UPPER('%Atorvastatin%') or
@@ -189,10 +189,10 @@ order by PATID, RX_ORDER_DATE
 ;
 
 /*Combine all clinical observations required by ASCVD risk calculator*/
-create or replace table ASCVD_Risk_Calc as
+create table ASCVD_Risk_Calc as
 select c.PATID
       ,d.SEX
-      ,Year(c.LAB_DATE::date)-Year(d.BIRTH_DATE::date) AGE
+      ,Year(c.LAB_DATE)-Year(d.BIRTH_DATE) AGE
       ,d.RACE
       ,c.TC
       ,c.LDL_C
