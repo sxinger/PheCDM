@@ -2,33 +2,11 @@
    CDM tables needed by other computational phenotyping scripts.
 */
 
-/* setup environment*/
-use role "ANALYTICS";
-use warehouse ANALYTICS_WH;
-use database ANALYTICSDB;
-use schema VCCC_SCHEMA;
-
-/*delcaration for external schema and table*/
-set cdm_db_schema = 'PCORNET_CDM.CDM_C010R021';
-set PCORNET_TRIAL = CONCAT($cdm_db_schema,'.PCORNET_TRIAL');
-set ENCOUNTER = CONCAT($cdm_db_schema,'.ENCOUNTER');
-set DEMOGRAPHIC = CONCAT($cdm_db_schema,'.DEMOGRAPHIC');
-set VITAL = CONCAT($cdm_db_schema,'.VITAL');
-set LAB_RESULT_CM = CONCAT($cdm_db_schema,'.LAB_RESULT_CM');
-set DIAGNOSIS = CONCAT($cdm_db_schema,'.DIAGNOSIS');
-set PRESCRIBING = CONCAT($cdm_db_schema,'.PRESCRIBING');
-set trial_id = 'VCCC';
-set start_date = '2020-08-01';
-set end_date = '2020-10-31';
-set age_lower = 18;
-show variables;
-
 /*eligible patients*/
-create or replace table pat_incld as
+create table pat_incld as
 select distinct PATID
-from identifier($PCORNET_TRIAL) 
-where TRIALID = identifier($trial_id)
--- limit 200
+from &&PCORNET_CDM_SCHEMA.PCORNET_TRIAL
+where TRIALID = '&vCCC_TrialID'
 ;
 
 /*eligible encounter
@@ -36,7 +14,7 @@ where TRIALID = identifier($trial_id)
  - age ate encounter >= 18
 */
 
-create or replace table enc_incld as
+create table enc_incld as
 with encs_with_age_at_visit as (
    select e.PATID
          ,e.ENCOUNTERID
@@ -45,8 +23,8 @@ with encs_with_age_at_visit as (
          ,e.DISCHARGE_DATE
          ,e.ENC_TYPE
          ,year(e.ADMIT_DATE::date) - year(d.BIRTH_DATE::date) as AGE_AT_VIS
-   from identifier($ENCOUNTER) e
-   join identifier($DEMOGRAPHIC) d 
+   from &&PCORNET_CDM_SCHEMA.ENCOUNTER e
+   join &&PCORNET_CDM_SCHEMA.DEMOGRAPHIC d 
    on e.PATID = d.PATID and
       exists (select 1 from pat_elig p where e.PATID = p.PATID)
 )
@@ -84,7 +62,7 @@ create or replace table pat_excld as
 ;
 */
 
-create or replace table pat_elig as
+create table pat_elig as
 select pat.PATID
       ,pat.INDEX_DATE
 from pat_incld pat
@@ -100,7 +78,7 @@ create or replace table enc_elig AS
 ;
 */
 
-create or replace table DEMOGRAPHIC as
+create table DEMOGRAPHIC as
 select pat.PATID
       ,d.BIRTH_DATE
       ,d.SEX
@@ -108,11 +86,11 @@ select pat.PATID
       ,d.HISPANIC
       ,d.PAT_PREF_LANGUAGE_SPOKEN 
 from pat_elig pat
-join identifier($DEMOGRAPHIC) d
+join &&PCORNET_CDM_SCHEMA.DEMOGRAPHIC d
 on pat.PATID = d.PATID
 ;
 
-create or replace table VITAL as
+create table VITAL as
 select pat.PATID
       ,v.ENCOUNTERID
       ,v.MEASURE_DATE
@@ -128,11 +106,11 @@ select pat.PATID
       ,v.TOBACCO
       ,v.TOBACCO_TYPE
 from pat_elig pat
-join identifier($VITAL) v
+join &&PCORNET_CDM_SCHEMA.VITAL v
 on pat.PATID = v.PATID 
 ;
 
-create or replace table LAB_RESULT_CM as
+create table LAB_RESULT_CM as
 select enc.PATID
       ,l.ENCOUNTERID
       ,l.LAB_LOINC
@@ -164,13 +142,13 @@ select enc.PATID
       ,l.RAW_ORDER_DEPT
       ,l.RAW_FACILITY_CODE 
 from enc_incld enc
-join identifier($LAB_RESULT_CM) l
+join &&PCORNET_CDM_SCHEMA.LAB_RESULT_CM l
 on enc.PATID = l.PATID and 
    enc.ENCOUNTERID = l.ENCOUNTERID
 ;
 
 
-create or replace table DIAGNOSIS as
+create table DIAGNOSIS as
 select enc.PATID
       ,d.ENCOUNTERID
       ,d.ENC_TYPE
@@ -183,13 +161,13 @@ select enc.PATID
       ,d.PDX
       ,d.DX_POA
 from enc_incld enc
-join identifier($DIAGNOSIS) d
+join &&PCORNET_CDM_SCHEMA.DIAGNOSIS d
 on enc.PATID = d.PATID and 
    enc.ENCOUNTERID = d.ENCOUNTERID
 ;
 
 
-create or replace table PRESCRIBING as
+create table PRESCRIBING as
 select enc.PATID
       ,p.ENCOUNTERID
       ,p.RX_ORDER_DATE
@@ -213,7 +191,7 @@ select enc.PATID
       ,p.RAW_RXNORM_CUI 
       ,p.RAW_RX_NDC
 from enc_incld enc
-join identifier($PRESCRIBING) p
+join &&PCORNET_CDM_SCHEMA.PRESCRIBING p
 on enc.PATID = p.PATID and 
    enc.ENCOUNTERID = p.ENCOUNTERID
 ;
