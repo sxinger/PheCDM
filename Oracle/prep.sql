@@ -4,7 +4,7 @@
 
 /*eligible patients*/
 create table pat_incld as
-select distinct PATID
+select PATID -- assume it is one patient per row
       ,TRIAL_ENROLL_DATE as INDEX_DATE
 from &&PCORNET_CDM_SCHEMA.PCORNET_TRIAL
 -- where TRIAL_ENROLL_DATE >= '&VCCC_Start_Date' -- we want the "Index_date" to be w.r.t. VCCC not other trials patient used to participate
@@ -40,28 +40,32 @@ select pat.PATID
       ,v.SMOKING
       ,v.TOBACCO
       ,v.TOBACCO_TYPE
+      ,v.MEASURE_DATE - pat.INDEX_DATE as DAY_SINCE_INDEX
 from pat_elig pat
 join &&PCORNET_CDM_SCHEMA.VITAL v
 on pat.PATID = v.PATID 
-union
+-- union all
 -- stack BP information from Qardio
-select q.PATID
-      ,q.MEASURE_DATE
-      ,q.MEASURE_TIME
-      ,'' as VITAL_SOURCE
-      ,NULL as HT
-      ,NULL as WT
-      ,q.SYS SYSTOLIC
-      ,q.DIA DIASTOLIC
-      ,NULL as ORIGINAL_BMI
-      ,NULL as BP_POSITION
-      ,NULL as SMOKING
-      ,NULL as TOBACCO
-      ,NULL as TOBACCO_TYPE
+-- select pm.PATID
+--       ,q.DATE as MEASURE_DATE
+--       ,q.TIME as MEASURE_TIME
+--       ,'PD' as VITAL_SOURCE --Patient device direct feed
+--       ,NULL as HT
+--       ,NULL as WT
+--       ,q.SYS SYSTOLIC
+--       ,q.DIA DIASTOLIC
+--       ,NULL as ORIGINAL_BMI
+--       ,NULL as BP_POSITION
+--       ,NULL as SMOKING
+--       ,NULL as TOBACCO
+--       ,NULL as TOBACCO_TYPE
+-- from VCCC_QARDIO_EXTERNAL q
+-- join &&patient_mapping pm
+-- on pm.MRN = q.PATIENT_IDENTIFIER
 ;
 
 create table LAB_RESULT_CM as
-select enc.PATID
+select pat.PATID
       ,l.ENCOUNTERID
       ,l.LAB_LOINC
       ,l.LAB_RESULT_SOURCE
@@ -91,15 +95,14 @@ select enc.PATID
       ,l.RAW_UNIT
       ,l.RAW_ORDER_DEPT
       ,l.RAW_FACILITY_CODE 
-from enc_incld enc
+from pat_incld pat
 join &&PCORNET_CDM_SCHEMA.LAB_RESULT_CM l
-on enc.PATID = l.PATID and 
-   enc.ENCOUNTERID = l.ENCOUNTERID
+on pat.PATID = l.PATID
 ;
 
 
 create table DIAGNOSIS as
-select enc.PATID
+select pat.PATID
       ,d.ENCOUNTERID
       ,d.ENC_TYPE
       ,d.ADMIT_DATE
@@ -110,15 +113,25 @@ select enc.PATID
       ,d.DX_ORIGIN
       ,d.PDX
       ,d.DX_POA
-from enc_incld enc
+from pat_incld pat
 join &&PCORNET_CDM_SCHEMA.DIAGNOSIS d
-on enc.PATID = d.PATID and 
-   enc.ENCOUNTERID = d.ENCOUNTERID
+on pat.PATID = d.PATID
 ;
 
+create table PROCEDURES as
+select pat.PATID
+      ,px.ENCOUNTERID
+      ,px.PX
+      ,px.PX_TYPE
+      ,px.PX_SOURCE
+      ,px.PX_DATE
+from pat_incld pat
+join &&PCORNET_CDM_SCHEMA.PROCEDURES px
+on pat.PATID = px.PATID
+;
 
 create table PRESCRIBING as
-select enc.PATID
+select pat.PATID
       ,p.ENCOUNTERID
       ,p.RX_ORDER_DATE
       ,p.RX_ORDER_TIME
@@ -140,8 +153,39 @@ select enc.PATID
       ,p.RAW_RX_MED_NAME
       ,p.RAW_RXNORM_CUI 
       ,p.RAW_RX_NDC
-from enc_incld enc
+from pat_incld pat
 join &&PCORNET_CDM_SCHEMA.PRESCRIBING p
-on enc.PATID = p.PATID and 
-   enc.ENCOUNTERID = p.ENCOUNTERID
+on pat.PATID = p.PATID
+;
+
+create table MED_ADMIN as
+select pat.PATID
+      ,m.ENCOUNTERID
+      ,m.MEDADMIN_TYPE
+      ,m.MEDADMIN_CODE
+      ,m.MEDADMIN_DOSE_ADMIN
+      ,m.MEDADMIN_ROUTE
+      ,m.MEDADMIN_SOURCE
+      ,m.MEDADMIN_START_DATE
+      ,m.MEDADMIN_START_TIME
+from pat_incld pat
+join &&PCORNET_CDM_SCHEMA.MED_ADMIN m
+on pat.PATID = m.PATID
+;
+
+create table DISPENSING as
+select pat.PATID
+      ,d.ENCOUNTERID
+      ,d.PRESCRIBINGID
+      ,d.DISPENSE_DATE
+      ,d.NDC
+      ,d.DISPENSE_SOURCE
+      ,d.DISPENSE_SUP
+      ,d.DISPENSE_AMT
+      ,d.DISPENSE_DOSE_DISP
+      ,d.DISPENSE_DOSE_DISP_UNIT
+      ,d.DISPENSE_ROUTE
+from pat_incld pat
+join &&PCORNET_CDM_SCHEMA.DISPENSING d
+on pat.PATID = d.PATID
 ;

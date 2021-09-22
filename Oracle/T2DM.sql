@@ -102,12 +102,12 @@ where (
          UPPER(RAW_LAB_NAME) like '%HA1C%' or 
          UPPER(RAW_LAB_NAME) like '%HBA1C%'
          )
-        /*or
-        /*--!!supplement with local code set (modify as needed)
+        or
+        --!!supplement with local code set (modify as needed)
          RAW_LAB_CODE in (
            'KUH|COMPONENT_ID:2034' --KUMC specific
           ,'232551','2138924925' --MU specific
-         )*/ 
+         )
       )
       and RESULT_NUM > 6.5
       and UPPER(RESULT_UNIT) in ('%','PERCENT')
