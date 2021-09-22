@@ -16,9 +16,59 @@ saved in a separate Study Schema (e.g. VCCC_SCHEMA) preserving CDM relational da
 
 /*Assumption: LAB_RESULT_CM under this specific study schema 
               should have been reduced to only eligible labs
-              by matching with eligible patient or encounter
-              list in the prep step
+              by matching with eligible encounter identified 
+              before (SUPREME-DM Next-D algorithm)
 */
+
+/*eligible encounters 
+ - reliable encounter type: AV, ED, EI, IP, OS, IS
+ - age ate encounter >= 18
+*/
+
+create table enc_incld as
+with encs_with_age_at_visit as (
+   select e.PATID
+         ,e.ENCOUNTERID
+         ,d.BIRTH_DATE
+         ,e.ADMIT_DATE
+         ,e.DISCHARGE_DATE
+         ,e.ENC_TYPE
+         ,floor(MONTHS_BETWEEN(e.ADMIT_DATE, d.BIRTH_DATE)/12) as AGE_AT_VIS as AGE_AT_VIS
+   from &&PCORNET_CDM_SCHEMA.ENCOUNTER e
+   join &&PCORNET_CDM_SCHEMA.DEMOGRAPHIC d 
+   on e.PATID = d.PATID and
+      exists (select 1 from pat_incld p where e.PATID = p.PATID)
+)
+   ,summarized_encounters AS (
+   SELECT PATID
+         ,ENCOUNTERID
+         ,BIRTH_DATE
+         ,ADMIT_DATE
+         ,DISCHARGE_DATE
+         ,ENC_TYPE
+         ,AGE_AT_VIS
+         ,count(DISTINCT ADMIT_DATE) OVER (PARTITION BY PATID) AS cnt_distinct_enc_days
+   FROM encs_with_age_at_visit
+   WHERE AGE_AT_VIS >= '&age_lower'
+   AND   ENC_TYPE in ( 'IP'
+                      ,'ED'
+                      ,'EI'
+                      ,'IS'
+                      ,'OS'
+                      ,'AV') 
+)
+SELECT PATID
+      ,ENCOUNTERID
+      ,BIRTH_DATE
+      ,ADMIT_DATE
+      ,DISCHARGE_DATE
+      ,ENC_TYPE
+      ,AGE_AT_VIS
+FROM summarized_encounters
+WHERE cnt_distinct_enc_days >= 2
+;
+
+
 create table A1C_ordered_pair as
 with ALL_LABS as (
 select PATID

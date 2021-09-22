@@ -49,7 +49,7 @@ with encs_with_age_at_visit as (
    from identifier($ENCOUNTER) e
    join identifier($DEMOGRAPHIC) d 
    on e.PATID = d.PATID and
-      exists (select 1 from pat_elig p where e.PATID = p.PATID)
+      exists (select 1 from pat_incld p where e.PATID = p.PATID)
 )
    ,summarized_encounters AS (
    SELECT PATID

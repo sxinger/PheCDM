@@ -8,9 +8,9 @@ factors:
 - BMI
 - SBP
 - Smoking Status
-- Total Cholesterol
-- LDL Cholesterol
-- HDL Cholesterol
+- Total Cholesterol (TC)
+- LDL Cholesterol (LDL)
+- HDL Cholesterol (HDL)
 - History of Diabetes --- T2DM.sql (DM_event)
 - Treatment With Statin
 

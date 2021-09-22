@@ -7,78 +7,11 @@ create table pat_incld as
 select distinct PATID
       ,TRIAL_ENROLL_DATE as INDEX_DATE
 from &&PCORNET_CDM_SCHEMA.PCORNET_TRIAL
-where TRIALID = '&vccc_trial_id'
+-- where TRIAL_ENROLL_DATE >= '&VCCC_Start_Date' -- we want the "Index_date" to be w.r.t. VCCC not other trials patient used to participate
+-- where TRIALID = '&vccc_trial_id' -- comment it out as VCCC trialID may not be assigned to all participants
 ;
 
-/*eligible encounter
- - reliable encounter type: AV, ED, EI, IP, OS, IS
- - age ate encounter >= 18
-*/
-
-create table enc_incld as
-with encs_with_age_at_visit as (
-   select e.PATID
-         ,e.ENCOUNTERID
-         ,d.BIRTH_DATE
-         ,e.ADMIT_DATE
-         ,e.DISCHARGE_DATE
-         ,e.ENC_TYPE
-         ,year(e.ADMIT_DATE::date) - year(d.BIRTH_DATE::date) as AGE_AT_VIS
-   from &&PCORNET_CDM_SCHEMA.ENCOUNTER e
-   join &&PCORNET_CDM_SCHEMA.DEMOGRAPHIC d 
-   on e.PATID = d.PATID and
-      exists (select 1 from pat_elig p where e.PATID = p.PATID)
-)
-   ,summarized_encounters AS (
-   SELECT PATID
-         ,ENCOUNTERID
-         ,BIRTH_DATE
-         ,ADMIT_DATE
-         ,DISCHARGE_DATE
-         ,ENC_TYPE
-         ,AGE_AT_VIS
-         ,count(DISTINCT ADMIT_DATE::date) OVER (PARTITION BY PATID) AS cnt_distinct_enc_days
-   FROM encs_with_age_at_visit
-   WHERE AGE_AT_VIS >= $age_lower
-   AND   ENC_TYPE in ( 'IP'
-                      ,'ED'
-                      ,'EI'
-                      ,'IS'
-                      ,'OS'
-                      ,'AV') 
-)
-SELECT PATID
-      ,ENCOUNTERID
-      ,BIRTH_DATE
-      ,ADMIT_DATE
-      ,DISCHARGE_DATE
-      ,ENC_TYPE
-      ,AGE_AT_VIS
-FROM summarized_encounters
-WHERE cnt_distinct_enc_days >= 2
-;
-
-/*
-create or replace table pat_excld as
-;
-*/
-
-create table pat_elig as
-select pat.PATID
-      ,pat.INDEX_DATE
-from pat_incld pat
-where exists (select 1 from enc_incld enc 
-              where pat.PATID = enc.PATID)
-;
-
-/*
-create or replace table enc_excld AS
-;
-
-create or replace table enc_elig AS
-;
-*/
-
+/*gather demographic information from CDM*/
 create table DEMOGRAPHIC as
 select pat.PATID
       ,d.BIRTH_DATE
@@ -91,6 +24,7 @@ join &&PCORNET_CDM_SCHEMA.DEMOGRAPHIC d
 on pat.PATID = d.PATID
 ;
 
+/*gather BP, HT, WT, BMI, and SMOKING information from CDM and Quardio*/
 create table VITAL as
 select pat.PATID
       ,v.ENCOUNTERID
@@ -109,6 +43,21 @@ select pat.PATID
 from pat_elig pat
 join &&PCORNET_CDM_SCHEMA.VITAL v
 on pat.PATID = v.PATID 
+union
+-- stack BP information from Qardio
+select q.PATID
+      ,q.MEASURE_DATE
+      ,q.MEASURE_TIME
+      ,'' as VITAL_SOURCE
+      ,NULL as HT
+      ,NULL as WT
+      ,q.SYS SYSTOLIC
+      ,q.DIA DIASTOLIC
+      ,NULL as ORIGINAL_BMI
+      ,NULL as BP_POSITION
+      ,NULL as SMOKING
+      ,NULL as TOBACCO
+      ,NULL as TOBACCO_TYPE
 ;
 
 create table LAB_RESULT_CM as
