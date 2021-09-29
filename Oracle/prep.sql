@@ -63,8 +63,20 @@ on pat.PATID = v.PATID
 create table OBS_CLIN as
 select pat.PATID
       ,o.ENCOUNTERID
-      ,o.
-      ,v.MEASURE_DATE - pat.INDEX_DATE as DAY_SINCE_INDEX
+      ,o.OBSCLIN_TYPE 
+      ,o.OBSCLIN_CODE
+      ,o.OBSCLIN_RESULT_QUAL
+      ,o.OBSCLIN_RESULT_TEXT 
+      ,o.OBSCLIN_RESULT_SNOMED
+      ,o.OBSCLIN_RESULT_NUM
+      ,o.OBSCLIN_RESULT_MODIFIER
+      ,o.OBSCLIN_RESULT_UNIT
+      ,o.OBSCLIN_SOURCE
+      ,o.OBSCLIN_ABN_IND   
+      ,o.RAW_OBSCLIN_CODE
+      ,o.RAW_OBSCLIN_NAME  
+      ,o.OBSCLIN_START_DATE
+      ,o.OBSCLIN_START_DATE - pat.INDEX_DATE as DAY_SINCE_INDEX
 from pat_incld pat
 join &&PCORNET_CDM_SCHEMA.OBS_CLIN o
 on pat.PATID = o.PATID 
