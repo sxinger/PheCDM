@@ -160,7 +160,7 @@ union all
 -- Urine Protein Creatinine ratio
 select p.PATID
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) as LAB_DATE 
-      ,'HDL-C' as LAB_NAME
+      ,'UProtCrRatio' as LAB_NAME
       ,l.RESULT_NUM
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as LAB_DAYS_SINCE_ENROLL
 from pat_incld p 
