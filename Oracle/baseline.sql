@@ -25,7 +25,8 @@ select p.PATID
       ,d.PAT_PREF_LANGUAGE_SPOKEN 
       ,a.ADDRESS_ZIP9
       ,e.RAW_PAYER_NAME_PRIMARY
-      ,dense_rank() over (partition by p.PATID order by case when p.INDEX_DATE between ds.MEM_EFF_FROM_DATE and coalesce(ds.MEM_EFF_TO_DATE, CURRENT_DATE) then 0 else 1 end) rn 
+      ,e.ADMIT_DATE
+      ,row_number() over (partition by p.PATID, e.RAW_PAYER_NAME_PRIMARY order by e.ADMIT_DATE desc) rn 
 from pat_incld p
 join DEMOGRPHIC d on p.PATID = d.PATID
 left join &&PCORNET_CDM_SCHEMA.PRIVATE_ADDRESS_HISTORY a on p.PATID = a.PATID
@@ -39,7 +40,8 @@ select PATID
       ,HISPANIC
       ,PAT_PREF_LANGUAGE_SPOKEN 
       ,ADDRESS_ZIP9
-      ,RAW_PAYOR_NAME
+      ,RAW_PAYER_NAME_PRIMARY
+      ,ADMIT_DATE as PAYER_LASTEST_ENCOUNTER
 from demo_payor_rank
 where rn = 1
 ;
