@@ -119,7 +119,6 @@ join &&PCORNET_CDM_SCHEMA.LAB_RESULT_CM l
 on pat.PATID = l.PATID
 ;
 
-
 create table DIAGNOSIS as
 select pat.PATID
       ,d.ENCOUNTERID

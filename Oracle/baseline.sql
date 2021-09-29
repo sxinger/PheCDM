@@ -301,9 +301,22 @@ where (dx.DX_TYPE = '10' and
        (dx.DX like '272.4%'))
 ;
 
+/*stage the supplement concept_set file ConceptSet_Med_AntiHTN.csv
+ source: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7068459/
+*/
+select * from CONCEPTSET_MED_ANTIHTN;
 
 create table BL_MED as
-
+select p.PATID
+      ,m.RX_ORDER_DATE
+      ,m.RX_START_DATE
+      ,m.RX_END_DATE
+      ,cs.DRUG_CLASS
+      ,(m.RX_START_DATE - p.INDEX_DATE) as START_DAYS_SINCE_ENROLL
+from pat_incld p
+join PRESCRIBING m on m.PATID = p.PATID
+join CONCEPTSET_MED_ANTIHTN cs on m.RXNORM_CUI = cs.RXCUI 
+where m.RX_ORDER_DATE <= p.INDEX_DATE
 ;
 
 
