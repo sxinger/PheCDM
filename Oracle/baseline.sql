@@ -179,7 +179,7 @@ where (
 /*baseline medical history/condition table: 1 patient-condition per row*/
 create table BL_COND as
 -- history of coronary artery disease
-select select dx.PATID
+select  dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'CAD' as CONDITION
       ,dx.DX_DATE as CONDITION_DATE

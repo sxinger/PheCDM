@@ -24,26 +24,18 @@ join &&PCORNET_CDM_SCHEMA.DEMOGRAPHIC d on pat.PATID = d.PATID
 ;
 
 /*gather patient-level insurance coverage information from Clarity table*/
-create table DEMOGRAPHIC_SUPP as
-select distinct
-       pat.PATID
-      ,mem.MEM_EFF_FROM_DATE
-      ,mem.MEM_EFF_TO_DATE
-      ,epm.PAYOR_NAME as RAW_PAYER_NAME
-      ,coalesce(fc.financial_class_name,zcfv.name) as RAW_PAYER_TYPE
-from pat_incld pat 
-join &&nightheron_schema.patient_mapping pm on pat.PATID = pm.PATIENT_NUM and pm.PATIENT_IDE_SOURCE like 'Epic@%' -- map CDM de-ID to EPIC PAT_ID
-join &&clarity_schema.coverage_mem_list mem on mem.pat_id=pm.patient_ide
-join &&clarity_schema.coverage cvg on cvg.coverage_id=mem.coverage_id -- 
-join &&clarity_schema.clarity_epm p on p.payor_id=cvg.payor_id
-left join &&clarity_schema.clarity_fc fc on p.FINANCIAL_CLASS =fc.FINANCIAL_CLASS
-left join &&clarity_schema.zc_financial_class zcfv on p.financial_class = zcfv.FINANCIAL_CLASS
-where coalesce(fc.financial_class_name,zcfv.name) is not null and 
-      and mem.MEM_EFF_FROM_DATE is not null /*null exists*/
-      and mem.MEM_COVERED_YN = 'Y' /*confirm converage*/
+create table ENCOUNTER AS
+select pat.PATID
+      ,e.ENCOUNTERID
+      ,e.ENC_TYPE
+      ,e.ADMIT_DATE
+      ,e.PROVIDERID
+      ,e.PAYER_TYPE_PRIMARY
+from pat_incld pat
+join &&PCORNET_CDM_SCHEMA.ENCOUNTER e on pat.PATID = e.PATID
 ;
 
-/*gather BP, HT, WT, BMI, and SMOKING information from CDM and Quardio*/
+/*gather BP, HT, WT, BMI, and SMOKING information from CDM VITAL table*/
 create table VITAL as
 select pat.PATID
       ,v.ENCOUNTERID
@@ -63,24 +55,17 @@ select pat.PATID
 from pat_incld pat
 join &&PCORNET_CDM_SCHEMA.VITAL v
 on pat.PATID = v.PATID 
--- union all
--- stack BP information from Qardio
--- select pm.PATID
---       ,q.DATE as MEASURE_DATE
---       ,q.TIME as MEASURE_TIME
---       ,'PD' as VITAL_SOURCE --Patient device direct feed
---       ,NULL as HT
---       ,NULL as WT
---       ,q.SYS SYSTOLIC
---       ,q.DIA DIASTOLIC
---       ,NULL as ORIGINAL_BMI
---       ,NULL as BP_POSITION
---       ,NULL as SMOKING
---       ,NULL as TOBACCO
---       ,NULL as TOBACCO_TYPE
--- from VCCC_QARDIO_EXTERNAL q
--- join &&patient_mapping pm
--- on pm.MRN = q.PATIENT_IDENTIFIER
+;
+
+/*gather BP and other Observables from CDM OBS_CLIN table*/
+create table OBS_CLIN as
+select pat.PATID
+      ,o.ENCOUNTERID
+      ,o.
+      ,v.MEASURE_DATE - pat.INDEX_DATE as DAY_SINCE_INDEX
+from pat_incld pat
+join &&PCORNET_CDM_SCHEMA.OBS_CLIN o
+on pat.PATID = o.PATID 
 ;
 
 create table LAB_RESULT_CM as
