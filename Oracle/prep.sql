@@ -31,6 +31,8 @@ select pat.PATID
       ,e.ADMIT_DATE
       ,e.PROVIDERID
       ,e.PAYER_TYPE_PRIMARY
+      ,e.RAW_PAYER_TYPE_PRIMARY
+      ,e.RAW_PAYER_NAME_PRIMARY
 from pat_incld pat
 join &&PCORNET_CDM_SCHEMA.ENCOUNTER e on pat.PATID = e.PATID
 ;
