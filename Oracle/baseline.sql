@@ -6,7 +6,6 @@
 /*Assumption: the prep.sql has been run with study-specific cut of the
               following CDM tables: 
   - DEMOGRAPHIC
-  - DEMOGRAPHIC_SUPP (supplemental insurance coverage table)
   - DIAGNOSIS
   - PROCEDURES
   - LAB_RESULT_CM
@@ -15,6 +14,7 @@
 */
 
 /*baseline demographic table: 1 patient-payer per row*/
+
 create table BL_DEMO as 
 with demo_payor_rank as (
 select p.PATID
@@ -24,13 +24,14 @@ select p.PATID
       ,d.RACE
       ,d.HISPANIC
       ,d.PAT_PREF_LANGUAGE_SPOKEN 
-      ,a.ADDRESS_ZIP9
+--      ,a.ADDRESS_ZIP9  -- not available
       ,e.RAW_PAYER_NAME_PRIMARY
+      ,round(e.ADMIT_DATE - d.INDEX_DATE) PAYER_DAYS_SINCE_ENROLL
       ,e.ADMIT_DATE
-      ,row_number() over (partition by p.PATID, e.RAW_PAYER_NAME_PRIMARY order by e.ADMIT_DATE desc) rn 
+      ,row_number() over (partition by p.PATID order by case when UPPER(e.RAW_PAYER_NAME_PRIMARY) like '%MEDICARE%' then 1 else 0 end, e.ADMIT_DATE desc) rn 
 from pat_incld p
 join DEMOGRPHIC d on p.PATID = d.PATID
-left join &&PCORNET_CDM_SCHEMA.PRIVATE_ADDRESS_HISTORY a on p.PATID = a.PATID
+-- left join &&PCORNET_CDM_SCHEMA.PRIVATE_ADDRESS_HISTORY a on p.PATID = a.PATID -- not available
 left join ENCOUNTER e on p.PATID = e.PATID 
 )
 select PATID
@@ -40,9 +41,10 @@ select PATID
       ,RACE
       ,HISPANIC
       ,PAT_PREF_LANGUAGE_SPOKEN 
-      ,ADDRESS_ZIP9
+--      ,ADDRESS_ZIP9
       ,RAW_PAYER_NAME_PRIMARY
-      ,ADMIT_DATE as PAYER_LASTEST_ENCOUNTER
+      ,ADMIT_DATE as PAYER_LATEST_ENCOUNTER
+      ,PAYER_DAYS_SINCE_ENROLL
 from demo_payor_rank
 where rn = 1
 ;
@@ -364,6 +366,7 @@ select * from CONCEPTSET_MED_ANTIHTN;
 
 /*baseline medication: 1 patient-drugclass-perscription per row*/
 create table BL_MED as
+-- from prescribing table
 select p.PATID
       ,m.RX_ORDER_DATE
       ,m.RX_START_DATE
@@ -374,6 +377,8 @@ from pat_incld p
 join PRESCRIBING m on m.PATID = p.PATID
 join CONCEPTSET_MED_ANTIHTN cs on m.RXNORM_CUI = cs.RXCUI 
 where m.RX_ORDER_DATE <= p.INDEX_DATE
+union all 
+-- from dispensing table
 ;
 
 

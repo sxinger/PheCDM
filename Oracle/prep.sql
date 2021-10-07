@@ -8,7 +8,7 @@ select PATID -- assume it is one patient per row
       ,TRIAL_ENROLL_DATE as INDEX_DATE
 from &&PCORNET_CDM_SCHEMA.PCORNET_TRIAL
 -- where TRIAL_ENROLL_DATE >= '&VCCC_Start_Date' -- we want the "Index_date" to be w.r.t. VCCC not other trials patient used to participate
--- where TRIALID = '&vccc_trial_id' -- comment it out as VCCC trialID may not be assigned to all participants
+where TRIALID = 'VCCC' -- identifier of VCCC trial
 ;
 
 /*gather demographic information from CDM*/
@@ -93,6 +93,7 @@ select pat.PATID
       ,l.LAB_PX
       ,l.LAB_PX_TYPE
       ,l.LAB_ORDER_DATE
+      ,l.SPECIMEN_SOURCE
       ,l.SPECIMEN_DATE
       ,l.SPECIMEN_TIME
       ,l.RESULT_DATE
@@ -175,22 +176,6 @@ join &&PCORNET_CDM_SCHEMA.PRESCRIBING p
 on pat.PATID = p.PATID
 ;
 
-
-create table MED_ADMIN as
-select pat.PATID
-      ,m.ENCOUNTERID
-      ,m.MEDADMIN_TYPE
-      ,m.MEDADMIN_CODE
-      ,m.MEDADMIN_DOSE_ADMIN
-      ,m.MEDADMIN_ROUTE
-      ,m.MEDADMIN_SOURCE
-      ,m.MEDADMIN_START_DATE
-      ,m.MEDADMIN_START_TIME
-from pat_incld pat
-join &&PCORNET_CDM_SCHEMA.MED_ADMIN m
-on pat.PATID = m.PATID
-;
-
 create table DISPENSING as
 select pat.PATID
       ,d.ENCOUNTERID
@@ -207,3 +192,20 @@ from pat_incld pat
 join &&PCORNET_CDM_SCHEMA.DISPENSING d
 on pat.PATID = d.PATID
 ;
+
+/*
+create table MED_ADMIN as
+select pat.PATID
+      ,m.ENCOUNTERID
+      ,m.MEDADMIN_TYPE
+      ,m.MEDADMIN_CODE
+      ,m.MEDADMIN_DOSE_ADMIN
+      ,m.MEDADMIN_ROUTE
+      ,m.MEDADMIN_SOURCE
+      ,m.MEDADMIN_START_DATE
+      ,m.MEDADMIN_START_TIME
+from pat_incld pat
+join &&PCORNET_CDM_SCHEMA.MED_ADMIN m
+on pat.PATID = m.PATID
+;
+*/
