@@ -1,5 +1,6 @@
 /* This script is to collect baseline clinical characteristics
-   from CDM tables needed for data analysis
+   from CDM tables needed for data analysis. 
+   See "Data to be collected through EPIC.docx" for more details
 */
 
 /*Assumption: the prep.sql has been run with study-specific cut of the
@@ -221,7 +222,7 @@ where (
 /*baseline medical history/condition table: 1 patient-condition per row*/
 create table BL_COND as
 with event_deck as (
--- history of coronary artery disease
+-- history of coronary artery disease: diagnosis
 select  dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'CAD' as CONDITION
@@ -243,7 +244,7 @@ where (dx.DX_TYPE = '10' and
         dx.DX like 'V45.81%' or 
         dx.DX like 'V45.82%'))
 union all
--- history of coronary artery disease: coronary revascularization
+-- history of coronary artery disease: past coronary revascularization procedures
 select px.PATID
       ,'PX' as IDENTIFIER_TYPE
       ,'CAD' as CONDITION

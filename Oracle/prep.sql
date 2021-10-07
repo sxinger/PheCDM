@@ -175,7 +175,7 @@ join &&PCORNET_CDM_SCHEMA.PRESCRIBING p
 on pat.PATID = p.PATID
 ;
 
-/*
+
 create table MED_ADMIN as
 select pat.PATID
       ,m.ENCOUNTERID
@@ -207,4 +207,3 @@ from pat_incld pat
 join &&PCORNET_CDM_SCHEMA.DISPENSING d
 on pat.PATID = d.PATID
 ;
-*/

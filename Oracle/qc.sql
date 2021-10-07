@@ -1,4 +1,7 @@
-create table DEMOGRAPHIC_SUPP as
+/* This script is to collect potential QC checks against known EPIC source tables
+*/
+
+create table PAT_INSURANCE as
 select distinct
        pat.PATID
       ,mem.MEM_EFF_FROM_DATE
