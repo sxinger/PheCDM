@@ -1,4 +1,5 @@
-/* This script is to collect potential QC checks against known EPIC source tables
+/* This script is to collect potential QC checks against known EPIC source tables. 
+   Not required to run
 */
 
 create table PAT_INSURANCE as

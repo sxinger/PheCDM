@@ -169,7 +169,7 @@ select distinct p.PATID
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) as LAB_DATE 
       ,'SCr' as LAB_NAME
       ,l.RESULT_NUM
-      ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as DAYS_SINCE_ENROLL
+      ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as LAB_DAYS_SINCE_ENROLL
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
@@ -362,6 +362,7 @@ from event_deck
 */
 select * from CONCEPTSET_MED_ANTIHTN;
 
+/*baseline medication: 1 patient-drugclass-perscription per row*/
 create table BL_MED as
 select p.PATID
       ,m.RX_ORDER_DATE
