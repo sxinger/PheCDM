@@ -60,7 +60,7 @@ select distinct p.PATID
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) as LAB_DATE 
       ,'TC' as LAB_NAME
       ,l.RESULT_NUM
-      ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as LAB_DAYS_SINCE_ENROLL
+      ,round(NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE) as LAB_DAYS_SINCE_ENROLL
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
@@ -93,7 +93,7 @@ select distinct p.PATID
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) as LAB_DATE 
       ,'LDL-C' as LAB_NAME
       ,l.RESULT_NUM
-      ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as LAB_DAYS_SINCE_ENROLL
+      ,round(NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE) as LAB_DAYS_SINCE_ENROLL
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
@@ -142,7 +142,7 @@ select distinct p.PATID
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) as LAB_DATE 
       ,'HDL-C' as LAB_NAME
       ,l.RESULT_NUM
-      ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as LAB_DAYS_SINCE_ENROLL
+      ,round(NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE) as LAB_DAYS_SINCE_ENROLL
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
@@ -183,7 +183,7 @@ select distinct p.PATID
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) as LAB_DATE 
       ,'TG' as LAB_NAME
       ,l.RESULT_NUM
-      ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as LAB_DAYS_SINCE_ENROLL
+      ,round(NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE) as LAB_DAYS_SINCE_ENROLL
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
@@ -214,7 +214,7 @@ select distinct p.PATID
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) as LAB_DATE 
       ,'SCr' as LAB_NAME
       ,l.RESULT_NUM
-      ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as LAB_DAYS_SINCE_ENROLL
+      ,round(NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE) as LAB_DAYS_SINCE_ENROLL
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
@@ -254,7 +254,7 @@ select distinct p.PATID
       ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) as LAB_DATE 
       ,'UProtCrRatio' as LAB_NAME
       ,l.RESULT_NUM
-      ,NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE as LAB_DAYS_SINCE_ENROLL
+      ,round(NVL(l.SPECIMEN_DATE,l.LAB_ORDER_DATE) - p.INDEX_DATE) as LAB_DAYS_SINCE_ENROLL
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
@@ -289,7 +289,7 @@ select  dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'CAD' as CONDITION
       ,dx.DX_DATE as CONDITION_DATE
-      ,(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
+      ,round(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
@@ -311,7 +311,7 @@ select px.PATID
       ,'PX' as IDENTIFIER_TYPE
       ,'CAD' as CONDITION
       ,px.PX_DATE as CONDITION_DATE
-      ,(px.PX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
+      ,round(px.PX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join PROCEDURES px on p.PATID = px.PATID
 where px.PX_TYPE = 'CH' and
@@ -343,7 +343,7 @@ select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'Stroke' as CONDITION
       ,dx.DX_DATE as CONDITION_DATE
-      ,(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
+      ,round(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
@@ -360,7 +360,7 @@ select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'CKD' as CONDITION
       ,dx.DX_DATE
-      ,(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
+      ,round(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
@@ -373,7 +373,7 @@ select dx.PATID
       ,'LAB' as IDENTIFIER_TYPE
       ,'CKD' as CONDITION
       ,NVL(lab.SPECIMEN_DATE,lab.LAB_ORDER_DATE) as CONDITION_DATE 
-      ,NVL(lab.SPECIMEN_DATE,lab.LAB_ORDER_DATE) - p.INDEX_DATE as COND_DAYS_SINCE_ENROLL
+      ,round(NVL(lab.SPECIMEN_DATE,lab.LAB_ORDER_DATE) - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join LAB_RESULT_CM lab on p.PATID = lab.PATID
 where ( 
@@ -416,7 +416,7 @@ select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'Dyslipidemia' as CONDITION
       ,dx.DX_DATE as CONDITION_DATE
-      ,(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
+      ,round(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
@@ -444,14 +444,13 @@ select p.PATID
       ,m.RX_START_DATE START_DATE
       ,m.RX_END_DATE END_DATE
       ,cs.DRUG_CLASS
-      ,(m.RX_START_DATE - p.INDEX_DATE) as START_DAYS_SINCE_ENROLL
+      ,round(m.RX_START_DATE - p.INDEX_DATE) as START_DAYS_SINCE_ENROLL
 from pat_incld p
 join PRESCRIBING m on m.PATID = p.PATID
 join CONCEPTSET_MED_ANTIHTN cs on m.RXNORM_CUI = cs.RXCUI 
 where m.RX_ORDER_DATE <= p.INDEX_DATE
-union all 
+-- union all 
 -- from dispensing table
-
 ;
 
 
