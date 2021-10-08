@@ -13,8 +13,7 @@
   - DISPENSING
 */
 
-/*baseline demographic table: 1 patient-payer per row*/
-
+/*baseline demographic table: 1 patient per row*/
 create table BL_DEMO as 
 with demo_payor_rank as (
 select p.PATID
@@ -25,14 +24,17 @@ select p.PATID
       ,d.HISPANIC
       ,d.PAT_PREF_LANGUAGE_SPOKEN 
 --      ,a.ADDRESS_ZIP9  -- not available
+      ,case when UPPER(e.RAW_PAYER_NAME_PRIMARY) like '%MEDICARE%' 
+            then 1 else 0 end as MEDICARE_IND
       ,e.RAW_PAYER_NAME_PRIMARY
-      ,round(e.ADMIT_DATE - d.INDEX_DATE) PAYER_DAYS_SINCE_ENROLL
+      ,round(e.ADMIT_DATE - p.INDEX_DATE) PAYER_DAYS_SINCE_ENROLL
       ,e.ADMIT_DATE
-      ,row_number() over (partition by p.PATID order by case when UPPER(e.RAW_PAYER_NAME_PRIMARY) like '%MEDICARE%' then 1 else 0 end, e.ADMIT_DATE desc) rn 
+      ,row_number() over (partition by p.PATID order by case when UPPER(e.RAW_PAYER_NAME_PRIMARY) like '%MEDICARE%' then 1 else 0 end desc, e.ADMIT_DATE desc) rn 
 from pat_incld p
-join DEMOGRPHIC d on p.PATID = d.PATID
+join DEMOGRAPHIC d on p.PATID = d.PATID
 -- left join &&PCORNET_CDM_SCHEMA.PRIVATE_ADDRESS_HISTORY a on p.PATID = a.PATID -- not available
 left join ENCOUNTER e on p.PATID = e.PATID 
+where e.ADMIT_DATE <= d.INDEX_DATE -- so that the payor 
 )
 select PATID
       ,BIRTH_DATE
@@ -43,17 +45,15 @@ select PATID
       ,PAT_PREF_LANGUAGE_SPOKEN 
 --      ,ADDRESS_ZIP9
       ,RAW_PAYER_NAME_PRIMARY
+      ,MEDICARE_IND
       ,ADMIT_DATE as PAYER_LATEST_ENCOUNTER
       ,PAYER_DAYS_SINCE_ENROLL
 from demo_payor_rank
 where rn = 1
 ;
 
---check for duplicates
 
-
-
-/*baseline lab table: 1 patient-lab-observation per row*/
+/*baseline lab table: 1 patient-lab-date per row*/
 create table BL_LAB as
 -- Total cholesterol 
 select distinct p.PATID
@@ -64,21 +64,29 @@ select distinct p.PATID
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
-       (/*--LOINC code set*/
+       /*--LOINC code set*/
         l.LAB_LOINC in ( 
            '2093-3'
           ,'48620-9'
           ,'35200-5'
           ,'14647-2'
           ) 
---       or
---        (/*--local code set*/
---         l.RAW_LAB_CODE in (
---           'KUH|COMPONENT_ID:'    
---         )
+       or
+      /*--local code set
+        -- using a local mapping table VCCC.LOINC_COMPONENT_MAP to obtain
+           local codes that may not completely mapped to LOINC ontology yet*/
+         l.RAW_FACILITY_CODE in (
+            select 'KUH|COMPONENT_ID:'||COMPONENT_ID as KUH_COMPONENT_ID from VCCC.LOINC_COMPONENT_MAP
+            where LOINC in (
+             '2093-3'
+            ,'48620-9'
+            ,'35200-5'
+            ,'14647-2'
+            )
+          )
         )
-       and UPPER(l.RESULT_UNIT) = 'MG/DL' -- may want to comment it out to avoid missing records if the measuring units hasn't been standardized
-      ) 
+       and 
+       UPPER(l.RESULT_UNIT) = 'MG/DL' -- may want to comment it out to avoid missing records if the measuring units hasn't been standardized 
 union all
 -- LDL
 select distinct p.PATID
@@ -89,7 +97,7 @@ select distinct p.PATID
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
-       (/*--LOINC code set*/
+       /*--LOINC code set*/
         l.LAB_LOINC in ( 
            '2089-1'
           ,'18262-6'
@@ -104,14 +112,30 @@ where (
           ,'2574-2'
           ,'14815-5'
           ) 
---          or
---        (/*--local code set*/
---         l.RAW_LAB_CODE in (
---           'KUH|COMPONENT_ID:'    
---         )
+          or
+        /*--local code set
+           -- using a local mapping table VCCC.LOINC_COMPONENT_MAP to obtain
+              local codes that may not completely mapped to LOINC ontology yet */
+         l.RAW_FACILITY_CODE in (
+            select 'KUH|COMPONENT_ID:'||COMPONENT_ID as KUH_COMPONENT_ID from VCCC.LOINC_COMPONENT_MAP
+            where LOINC in (
+           '2089-1'
+          ,'18262-6'
+          ,'49132-4'
+          ,'35198-1'
+          ,'39469-2'
+          ,'12773-8'
+          ,'18261-8'
+          ,'22748-8'
+          ,'13457-7'
+          ,'9346-8'
+          ,'2574-2'
+          ,'14815-5'
+            )
+          )
         )
-       and UPPER(l.RESULT_UNIT) = 'MG/DL' -- may want to comment it out to avoid missing records if the measuring units hasn't been standardized
-      )
+       and 
+       UPPER(l.RESULT_UNIT) = 'MG/DL' -- may want to comment it out to avoid missing records if the measuring units hasn't been standardized
 union all
 -- HDL
 select distinct p.PATID
@@ -122,7 +146,7 @@ select distinct p.PATID
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
-       (/*--LOINC code set*/
+       /*--LOINC code set*/
         l.LAB_LOINC in ( 
            '2085-9'
           ,'49130-8'
@@ -133,14 +157,26 @@ where (
           ,'27340-9'
           ,'14646-4'
           )
---       or
---        (/*--local code set*/
---         l.RAW_LAB_CODE in (
---           'KUH|COMPONENT_ID:'    
---         )
+       or
+       /*--local code set
+        -- using a local mapping table VCCC.LOINC_COMPONENT_MAP to obtain
+           local codes that may not completely mapped to LOINC ontology yet*/
+         l.RAW_FACILITY_CODE in (
+            select 'KUH|COMPONENT_ID:'||COMPONENT_ID as KUH_COMPONENT_ID from VCCC.LOINC_COMPONENT_MAP
+            where LOINC in (
+           '2085-9'
+          ,'49130-8'
+          ,'35197-3'
+          ,'12771-2'
+          ,'12772-0'
+          ,'18263-4'
+          ,'27340-9'
+          ,'14646-4'
+            )
+          )
         )
-       and UPPER(l.RESULT_UNIT) = 'MG/DL' -- may want to comment it out to avoid missing records if the measuring units hasn't been standardized
-      )
+       and 
+       UPPER(l.RESULT_UNIT) = 'MG/DL' -- may want to comment it out to avoid missing records if the measuring units hasn't been standardized
 union all
 -- Triglycerides
 select distinct p.PATID
@@ -151,20 +187,27 @@ select distinct p.PATID
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
-       (/*--LOINC code set*/
+       /*--LOINC code set*/
         l.LAB_LOINC in ( 
            '2571-8'
           ,'1644-4'
           ,'3043-7'
          )
---       or
---        (/*--local code set*/
---         l.RAW_LAB_CODE in (
---           'KUH|COMPONENT_ID:'    
---         ) 
+       or
+       /*--local code set
+        -- using a local mapping table VCCC.LOINC_COMPONENT_MAP to obtain
+           local codes that may not completely mapped to LOINC ontology yet*/
+         l.RAW_FACILITY_CODE in (
+            select 'KUH|COMPONENT_ID:'||COMPONENT_ID as KUH_COMPONENT_ID from VCCC.LOINC_COMPONENT_MAP
+            where LOINC in (
+            '2571-8'
+           ,'1644-4'
+           ,'3043-7'
+            )
+          )
        )        
-       and UPPER(l.RESULT_UNIT) = 'MG/DL' -- may want to comment it out to avoid missing records if the measuring units hasn't been standardized
-      )
+       and 
+       UPPER(l.RESULT_UNIT) = 'MG/DL' -- may want to comment it out to avoid missing records if the measuring units hasn't been standardized
 union all
 -- Serum Creatinine
 select distinct p.PATID
@@ -175,7 +218,7 @@ select distinct p.PATID
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
-       (/*--LOINC code set*/
+       /*--LOINC code set*/
         l.LAB_LOINC in ( 
             '2160-0'
            ,'38483-4'
@@ -185,16 +228,26 @@ where (
            ,'44784-7'
            ,'59826-8'
           )
---       or
---        (/*--local code set*/
---         l.RAW_LAB_CODE in (
---           'KUH|COMPONENT_ID:'    
---         )
+       or
+       /*--local code set
+        -- using a local mapping table VCCC.LOINC_COMPONENT_MAP to obtain
+           local codes that may not completely mapped to LOINC ontology yet*/
+         l.RAW_FACILITY_CODE in (
+            select 'KUH|COMPONENT_ID:'||COMPONENT_ID as KUH_COMPONENT_ID from VCCC.LOINC_COMPONENT_MAP
+            where LOINC in (
+            '2160-0'
+           ,'38483-4'
+           ,'14682-9'
+           ,'21232-4'
+           ,'35203-9'
+           ,'44784-7'
+           ,'59826-8'
+            )
+          )
        )
        and (UPPER(l.RESULT_UNIT) = 'MG/DL' or UPPER(l.RESULT_UNIT) = 'MG') /*there are variations of common units*/
        and l.SPECIMEN_SOURCE <> 'URINE' /*only serum creatinine*/
        and l.RESULT_NUM > 0 /*value 0 could exist*/
-      )
 union all
 -- Urine Protein Creatinine ratio
 select distinct p.PATID
@@ -205,23 +258,30 @@ select distinct p.PATID
 from pat_incld p 
 join LAB_RESULT_CM l on l.PATID = p.PATID
 where ( 
-       (/*--LOINC code set*/
+       /*--LOINC code set*/
         l.LAB_LOINC in ( 
            '34366-5'
           ,'40486-3'
           ,'14959-1'
           ,'2889-4'
          )
---       or
---        (/*--local code set*/
---         l.RAW_LAB_CODE in (
---           'KUH|COMPONENT_ID:'    
---         )
+       or
+       /*--local code set
+        -- using a local mapping table VCCC.LOINC_COMPONENT_MAP to obtain
+           local codes that may not completely mapped to LOINC ontology yet*/
+         l.RAW_FACILITY_CODE in (
+            select 'KUH|COMPONENT_ID:'||COMPONENT_ID as KUH_COMPONENT_ID from VCCC.LOINC_COMPONENT_MAP
+            where LOINC in (
+           '34366-5'
+          ,'40486-3'
+          ,'14959-1'
+          ,'2889-4'
+            )
+          )
       )
-   )
 ;
 
-/*baseline medical history/condition table: 1 patient-condition per row*/
+/*baseline medical history/condition table: 1 patient-condition-date per row*/
 create table BL_COND as
 with event_deck as (
 -- history of coronary artery disease: diagnosis
@@ -229,7 +289,7 @@ select  dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'CAD' as CONDITION
       ,dx.DX_DATE as CONDITION_DATE
-      ,(dx.DX_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
@@ -251,7 +311,7 @@ select px.PATID
       ,'PX' as IDENTIFIER_TYPE
       ,'CAD' as CONDITION
       ,px.PX_DATE as CONDITION_DATE
-      ,(px.PX_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,(px.PX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join PROCEDURES px on p.PATID = px.PATID
 where px.PX_TYPE = 'CH' and
@@ -283,7 +343,7 @@ select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'Stroke' as CONDITION
       ,dx.DX_DATE as CONDITION_DATE
-      ,(dx.DX_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
@@ -300,7 +360,7 @@ select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'CKD' as CONDITION
       ,dx.DX_DATE
-      ,(dx.DX_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
@@ -313,11 +373,11 @@ select dx.PATID
       ,'LAB' as IDENTIFIER_TYPE
       ,'CKD' as CONDITION
       ,NVL(lab.SPECIMEN_DATE,lab.LAB_ORDER_DATE) as CONDITION_DATE 
-      ,NVL(lab.SPECIMEN_DATE,lab.LAB_ORDER_DATE) - p.INDEX_DATE as DAYS_SINCE_ENROLL
+      ,NVL(lab.SPECIMEN_DATE,lab.LAB_ORDER_DATE) - p.INDEX_DATE as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join LAB_RESULT_CM lab on p.PATID = lab.PATID
 where ( 
-       (/*--LOINC code set for eGFR/GFR*/
+       /*--LOINC code set for eGFR/GFR*/
         l.LAB_LOINC in ( 
            '33914-3'
           ,'50044-7'
@@ -329,21 +389,34 @@ where (
           ,'69405-9'
           ,'94677-2'
          )
---       or
---        (/*--local code set*/
---         l.RAW_LAB_CODE in (
---           'KUH|COMPONENT_ID:'    
---         ) 
+       or
+       /*--local code set
+        -- using a local mapping table VCCC.LOINC_COMPONENT_MAP to obtain
+           local codes that may not completely mapped to LOINC ontology yet*/
+         lab.RAW_FACILITY_CODE in (
+            select 'KUH|COMPONENT_ID:'||COMPONENT_ID as KUH_COMPONENT_ID from VCCC.LOINC_COMPONENT_MAP
+            where LOINC in (
+           '33914-3'
+          ,'50044-7'
+          ,'48642-3'
+          ,'48643-1'
+          ,'62238-1'
+          ,'88293-6'
+          ,'88294-4'
+          ,'69405-9'
+          ,'94677-2'
+            )
+          )
        )
-      and lab.RESULT_NUM < 60
-      )
+      and 
+      lab.RESULT_NUM < 60
 union all
 -- history of dyslipidemia
 select dx.PATID
       ,'DX' as IDENTIFIER_TYPE
       ,'Dyslipidemia' as CONDITION
       ,dx.DX_DATE as CONDITION_DATE
-      ,(dx.DX_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,(dx.DX_DATE - p.INDEX_DATE) as COND_DAYS_SINCE_ENROLL
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
@@ -355,7 +428,7 @@ where (dx.DX_TYPE = '10' and
 select distinct PATID
       ,CONDITION
       ,CONDITIOn_DATE
-      ,DAYS_SINCE_ENROLL
+      ,COND_DAYS_SINCE_ENROLL
 from event_deck
 ;
 
@@ -364,13 +437,12 @@ from event_deck
 */
 select * from CONCEPTSET_MED_ANTIHTN;
 
-/*baseline medication: 1 patient-drugclass-perscription per row*/
+/*baseline medication: 1 patient-drugclass-perscription/dispense per row*/
 create table BL_MED as
 -- from prescribing table
 select p.PATID
-      ,m.RX_ORDER_DATE
-      ,m.RX_START_DATE
-      ,m.RX_END_DATE
+      ,m.RX_START_DATE START_DATE
+      ,m.RX_END_DATE END_DATE
       ,cs.DRUG_CLASS
       ,(m.RX_START_DATE - p.INDEX_DATE) as START_DAYS_SINCE_ENROLL
 from pat_incld p
@@ -379,6 +451,7 @@ join CONCEPTSET_MED_ANTIHTN cs on m.RXNORM_CUI = cs.RXCUI
 where m.RX_ORDER_DATE <= p.INDEX_DATE
 union all 
 -- from dispensing table
+
 ;
 
 
