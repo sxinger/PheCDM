@@ -454,7 +454,7 @@ select distinct
       ,m.RX_DOSE_ORDERED as DOSE
       ,m.RX_DOSE_ORDERED_UNIT as DOSE_UNIT
       ,m.RX_QUANTITY as QUANTITY_AMT
-      ,round(m.RX_START_DATE - p.INDEX_DATE) as START_DAYS_SINCE_ENROLL
+      ,round(m.RX_START_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
       ,'Prescribing' DRUG_SOURCE_TABLE
 from pat_incld p
 join PRESCRIBING m on m.PATID = p.PATID
@@ -471,7 +471,7 @@ select distinct
       ,d.DISPENSE_DOSE_DISP as DOSE
       ,d.DISPENSE_DOSE_DISP_UNIT as DOSE_UNIT
       ,d.DISPENSE_AMT as QUANTITY_AMT
-      ,round(d.DISPENSE_DATE - p.INDEX_DATE) as START_DAYS_SINCE_ENROLL
+      ,round(d.DISPENSE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
       ,'Dispensing' DRUG_SOURCE_TABLE
 from pat_incld p
 join DISPENSING d on d.PATID = p.PATID
