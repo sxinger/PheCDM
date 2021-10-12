@@ -432,25 +432,51 @@ select distinct PATID
 from event_deck
 ;
 
-/*stage the supplement concept_set file ConceptSet_Med_AntiHTN.csv
- source: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7068459/
+/*stage the supplement concept_set files: 
+1. ConceptSet_Med_AntiHTN.csv  --RXNORM codes of different AntiHTN drug classes
+source: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7068459/
+
+2. ConceptSet_Med_AntiHTN_NDC.csv  --NDC codes of different AntiHTN drug classes
+source: https://www.nlm.nih.gov/research/umls/rxnorm/docs/techdoc.htm 
 */
 select * from CONCEPTSET_MED_ANTIHTN;
+select * from CONCEPTSET_MED_ANTIHTN_NDC;
 
 /*baseline medication: 1 patient-drugclass-perscription/dispense per row*/
 create table BL_MED as
 -- from prescribing table
-select p.PATID
+select distinct
+       p.PATID
       ,m.RX_START_DATE START_DATE
-      ,m.RX_END_DATE END_DATE
+      ,m.RX_END_DATE END_DATE --can be empty
       ,cs.DRUG_CLASS
+      ,m.RX_DAYS_SUPPLY as DAYS_SUPPLY
+      ,m.RX_DOSE_ORDERED as DOSE
+      ,m.RX_DOSE_ORDERED_UNIT as DOSE_UNIT
+      ,m.RX_QUANTITY as QUANTITY_AMT
       ,round(m.RX_START_DATE - p.INDEX_DATE) as START_DAYS_SINCE_ENROLL
+      ,'Prescribing' DRUG_SOURCE_TABLE
 from pat_incld p
 join PRESCRIBING m on m.PATID = p.PATID
 join CONCEPTSET_MED_ANTIHTN cs on m.RXNORM_CUI = cs.RXCUI 
 where m.RX_ORDER_DATE <= p.INDEX_DATE
--- union all 
+union all 
 -- from dispensing table
+select distinct
+       p.PATID
+      ,d.DISPENSE_DATE START_DATE
+      ,NULL as END_DATE --no end_date for dispensing data
+      ,cs.DRUG_CLASS
+      ,d.DISPENSE_SUP as DAYS_SUPPLY
+      ,d.DISPENSE_DOSE_DISP as DOSE
+      ,d.DISPENSE_DOSE_DISP_UNIT as DOSE_UNIT
+      ,d.DISPENSE_AMT as QUANTITY_AMT
+      ,round(d.DISPENSE_DATE - p.INDEX_DATE) as START_DAYS_SINCE_ENROLL
+      ,'Dispensing' DRUG_SOURCE_TABLE
+from pat_incld p
+join DISPENSING d on d.PATID = p.PATID
+join CONCEPTSET_MED_ANTIHTN_NDC csn on d.NDC = csn.NDC 
+where d.DISPENSE_DATE <= p.INDEX_DATE
 ;
 
 
