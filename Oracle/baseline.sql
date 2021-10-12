@@ -447,8 +447,8 @@ create table BL_MED as
 -- from prescribing table
 select distinct
        p.PATID
-      ,m.RX_START_DATE START_DATE
-      ,m.RX_END_DATE END_DATE --can be empty
+      ,m.RX_START_DATE as START_DATE
+      ,m.RX_END_DATE as END_DATE --can be empty
       ,cs.DRUG_CLASS
       ,m.RX_DAYS_SUPPLY as DAYS_SUPPLY
       ,m.RX_DOSE_ORDERED as DOSE
