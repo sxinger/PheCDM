@@ -11,6 +11,7 @@
   - LAB_RESULT_CM
   - PRESCRIBING
   - DISPENSING
+  - VITAL
 */
 
 /*baseline demographic table: 1 patient per row*/
@@ -293,8 +294,7 @@ select  dx.PATID
 from pat_incld p
 join DIAGNOSIS dx on p.PATID = dx.PATID
 where (dx.DX_TYPE = '10' and
-       (dx.DX like 'I61%' or
-        dx.DX like 'I63%' )) 
+       (dx.DX like 'I25%')) 
       or 
       (dx.DX_TYPE = '09' and
        (dx.DX like '410%' or
@@ -393,7 +393,7 @@ where (
        /*--local code set
         -- using a local mapping table VCCC.LOINC_COMPONENT_MAP to obtain
            local codes that may not completely mapped to LOINC ontology yet*/
-         lab.RAW_FACILITY_CODE in (
+         l.RAW_FACILITY_CODE in (
             select 'KUH|COMPONENT_ID:'||COMPONENT_ID as KUH_COMPONENT_ID from VCCC.LOINC_COMPONENT_MAP
             where LOINC in (
            '33914-3'
@@ -479,5 +479,116 @@ join CONCEPTSET_MED_ANTIHTN_NDC csn on d.NDC = csn.NDC
 where d.DISPENSE_DATE <= p.INDEX_DATE
 ;
 
+/*baseline BMI: 1 patient-BMI record per row*/
+create table BL_BMI as
+select p.PATID
+      ,v.HT as HT
+      ,v.WT as WT
+      ,NVL(round(v.WT/(v.HT*v.HT)*703),v.ORIGINAL_BMI) as BMI -- BMI = (Weight in Pounds / (Height in inches) x (Height in inches)) x 703
+      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+from pat_incld p
+join VITAL v on v.PATID = p.PATID 
+where coalesce(v.HT,v.WT,v.ORIGINAL_BMI) is not null
+;
 
 
+/*baseline vital: 1 patient-vital-record per row
+  - height
+  - weiht
+  - BMI
+  - heart rate
+*/
+create table BL_VITAL as
+with vital_stack (
+---- HEIGHT ----
+-- from VITAL table
+select p.PATID
+      ,v.ENCOUNTERID
+      ,'HT' as VITAL_TYPE
+      ,v.HT as VITAL_VAL
+      ,'in' as VITAL_UNIT
+      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+from pat_incld p
+join VITAL v on v.PATID = p.PATID 
+where v.HT is not null
+union all
+-- from OBS_CLIN table
+select p.PATID
+      ,oc.ENCOUNTERID
+      ,'HT' as VITAL_TYPE
+      ,v.OBSCLIN_RESULT as VITAL_VAL
+      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT -- could be "cm" or "in"
+      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+from pat_incld p
+join VITAL v on v.PATID = p.PATID and
+     oc.OBSCLIN_TYPE = 'LC' and oc.OBSCLIN_CODE = '8302-2'
+union all
+---- WEIGHT ----
+-- from VITAL table
+select p.PATID
+      ,v.ENCOUNTERID
+      ,'WT' as VITAL_TYPE
+      ,v.WT as VITAL_VAL
+      ,'lb' as VITAL_UNIT
+      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+from pat_incld p
+join VITAL v on v.PATID = p.PATID 
+where v.WT is not null
+union all
+-- from OBS_CLIN table
+select p.PATID
+      ,oc.ENCOUNTERID
+      ,'WT' as VITAL_TYPE
+      ,v.OBSCLIN_RESULT as VITAL_VAL
+      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT -- could be "lb" or "kg"
+      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+from pat_incld p
+join VITAL v on v.PATID = p.PATID and
+     oc.OBSCLIN_TYPE = 'LC' and oc.OBSCLIN_CODE = '29463-7'
+union all
+---- BMI ----
+-- from VITAL table
+select p.PATID
+      ,v.ENCOUNTERID
+      ,'BMI' as VITAL_TYPE
+      ,NVL(round(v.WT/(v.HT*v.HT)*703),v.ORIGINAL_BMI) as VITAL_VAL -- BMI = (Weight in Pounds / (Height in inches) x (Height in inches)) x 703
+      ,'kg/m2'
+      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+from pat_incld p
+join VITAL v on v.PATID = p.PATID 
+where coalesce(v.HT,v.WT,v.ORIGINAL_BMI) is not null
+-- from OBS_CLIN table
+select p.PATID
+      ,oc.ENCOUNTERID
+      ,'BMI' as VITAL_TYPE
+      ,v.OBSCLIN_RESULT as VITAL_VAL
+      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT 
+      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+from pat_incld p
+join VITAL v on v.PATID = p.PATID and
+     oc.OBSCLIN_TYPE = 'LC' and oc.OBSCLIN_CODE = '39156-5'
+---- HEART RATE ----
+-- from OBS_CLIN table
+select p.PATID
+      ,oc.ENCOUNTERID
+      ,'HR' as VITAL_TYPE
+      ,v.OBSCLIN_RESULT as VITAL_VAL
+      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT 
+      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+from pat_incld p
+join VITAL v on v.PATID = p.PATID and
+     oc.OBSCLIN_TYPE = 'LC' and 
+     oc.OBSCLIN_CODE in ( '8889-8' -- general heart rate by Pulse oximetry
+                         ,'8867-4' -- general heart rate by Palpation
+                         ,'11328-2'-- heart rate at first encounter
+                        )
+)
+select distinct
+       PATID
+      ,ENCOUNTERID
+      ,VITAL_TYPE
+      ,VITAL_VAL
+      ,VITAL_UNIT
+      ,DAYS_SINCE_ENROLL
+from vital_stack
+;
