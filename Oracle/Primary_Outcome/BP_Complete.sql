@@ -23,7 +23,7 @@ union all
 -- SBP from OBS_CLIN table
 select p.PATID
       ,oc.ENCOUNTERID
-      ,'SBP' as VITAL_TYPE
+      ,'SYSTOLIC' as VITAL_TYPE
       ,v.OBSCLIN_RESULT as VITAL_VAL
       ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT
       ,v.MEASURE_DATE
@@ -42,7 +42,7 @@ union all
 -- SBP from OBS_CLIN table
 select p.PATID
       ,oc.ENCOUNTERID
-      ,'DBP' as VITAL_TYPE
+      ,'DIASTOLIC' as VITAL_TYPE
       ,v.OBSCLIN_RESULT as VITAL_VAL
       ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT
       ,v.MEASURE_DATE
