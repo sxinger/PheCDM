@@ -479,7 +479,7 @@ join CONCEPTSET_MED_ANTIHTN_NDC csn on d.NDC = csn.NDC
 where d.DISPENSE_DATE <= p.INDEX_DATE
 ;
 
-/*baseline BMI: 1 patient-BMI record per row*/
+/*baseline BMI: 1 patient-BMI record per row
 create table BL_BMI as
 select p.PATID
       ,v.HT as HT
@@ -490,6 +490,7 @@ from pat_incld p
 join VITAL v on v.PATID = p.PATID 
 where coalesce(v.HT,v.WT,v.ORIGINAL_BMI) is not null
 ;
+*/
 
 
 /*baseline vital: 1 patient-vital-record per row
@@ -516,9 +517,9 @@ union all
 select p.PATID
       ,oc.ENCOUNTERID
       ,'HT' as VITAL_TYPE
-      ,v.OBSCLIN_RESULT as VITAL_VAL
-      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT -- could be "cm" or "in"
-      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,oc.OBSCLIN_RESULT as VITAL_VAL
+      ,oc.OBSCLIN_RESULT_UNIT as VITAL_UNIT -- could be "cm" or "in"
+      ,round(oc.OBSCLIN_START_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
 from pat_incld p
 join OBS_CLIN oc on oc.PATID = p.PATID and
      oc.OBSCLIN_TYPE = 'LC' and oc.OBSCLIN_CODE = '8302-2'
@@ -539,9 +540,9 @@ union all
 select p.PATID
       ,oc.ENCOUNTERID
       ,'WT' as VITAL_TYPE
-      ,v.OBSCLIN_RESULT as VITAL_VAL
-      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT -- could be "lb" or "kg"
-      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,oc.OBSCLIN_RESULT as VITAL_VAL
+      ,oc.OBSCLIN_RESULT_UNIT as VITAL_UNIT -- could be "lb" or "kg"
+      ,round(oc.OBSCLIN_START_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
 from pat_incld p
 join OBS_CLIN oc on oc.PATID = p.PATID and
      oc.OBSCLIN_TYPE = 'LC' and oc.OBSCLIN_CODE = '29463-7'
@@ -561,9 +562,9 @@ where coalesce(v.HT,v.WT,v.ORIGINAL_BMI) is not null
 select p.PATID
       ,oc.ENCOUNTERID
       ,'BMI' as VITAL_TYPE
-      ,v.OBSCLIN_RESULT as VITAL_VAL
-      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT 
-      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,oc.OBSCLIN_RESULT as VITAL_VAL
+      ,oc.OBSCLIN_RESULT_UNIT as VITAL_UNIT 
+      ,round(oc.OBSCLIN_START_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
 from pat_incld p
 join OBS_CLIN oc on oc.PATID = p.PATID and
      oc.OBSCLIN_TYPE = 'LC' and oc.OBSCLIN_CODE = '39156-5'
@@ -572,9 +573,9 @@ join OBS_CLIN oc on oc.PATID = p.PATID and
 select p.PATID
       ,oc.ENCOUNTERID
       ,'HR' as VITAL_TYPE
-      ,v.OBSCLIN_RESULT as VITAL_VAL
-      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT 
-      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,oc.OBSCLIN_RESULT as VITAL_VAL
+      ,oc.OBSCLIN_RESULT_UNIT as VITAL_UNIT 
+      ,round(oc.OBSCLIN_START_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
 from pat_incld p
 join OBS_CLIN oc on oc.PATID = p.PATID and
      oc.OBSCLIN_TYPE = 'LC' and 

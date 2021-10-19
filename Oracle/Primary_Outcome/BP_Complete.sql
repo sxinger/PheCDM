@@ -24,11 +24,11 @@ union all
 select p.PATID
       ,oc.ENCOUNTERID
       ,'SYSTOLIC' as VITAL_TYPE
-      ,v.OBSCLIN_RESULT as VITAL_VAL
-      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT
-      ,v.MEASURE_DATE
-      ,v.MEASURE_TIME
-      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,oc.OBSCLIN_RESULT as VITAL_VAL
+      ,oc.OBSCLIN_RESULT_UNIT as VITAL_UNIT
+      ,oc.OBSCLIN_START_DATE 
+      ,oc.OBSCLIN_START_TIME
+      ,round(v.OBSCLIN_START_DATE  - p.INDEX_DATE) as DAYS_SINCE_ENROLL
 from pat_incld p
 join OBS_CLIN oc on oc.PATID = p.PATID and
      oc.OBSCLIN_TYPE = 'LC' and 
@@ -43,11 +43,11 @@ union all
 select p.PATID
       ,oc.ENCOUNTERID
       ,'DIASTOLIC' as VITAL_TYPE
-      ,v.OBSCLIN_RESULT as VITAL_VAL
-      ,v.OBSCLIN_RESULT_UNIT as VITAL_UNIT
-      ,v.MEASURE_DATE
-      ,v.MEASURE_TIME
-      ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
+      ,oc.OBSCLIN_RESULT as VITAL_VAL
+      ,oc.OBSCLIN_RESULT_UNIT as VITAL_UNIT
+      ,oc.OBSCLIN_START_DATE 
+      ,oc.OBSCLIN_START_TIME
+      ,round(oc.OBSCLIN_START_DATE  - p.INDEX_DATE) as DAYS_SINCE_ENROLL
 from pat_incld p
 join OBS_CLIN oc on oc.PATID = p.PATID and
      oc.OBSCLIN_TYPE = 'LC' and 
