@@ -30,7 +30,7 @@ select p.PATID
       ,v.MEASURE_TIME
       ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
 from pat_incld p
-join VITAL v on v.PATID = p.PATID and
+join OBS_CLIN oc on oc.PATID = p.PATID and
      oc.OBSCLIN_TYPE = 'LC' and 
      oc.OBSCLIN_CODE in ( '8460-8' --standing
                          ,'8459-0' --sitting
@@ -49,7 +49,7 @@ select p.PATID
       ,v.MEASURE_TIME
       ,round(v.MEASURE_DATE - p.INDEX_DATE) as DAYS_SINCE_ENROLL
 from pat_incld p
-join VITAL v on v.PATID = p.PATID and
+join OBS_CLIN oc on oc.PATID = p.PATID and
      oc.OBSCLIN_TYPE = 'LC' and 
      oc.OBSCLIN_CODE in ( '8454-1' --standing
                          ,'8453-3' --sitting
