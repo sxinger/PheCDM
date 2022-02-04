@@ -1,0 +1,6 @@
+###### Requirements without Version Specifiers ######
+numpy
+pandas
+openpyxl
+
+###### Requirements with Version Specifiers ######
