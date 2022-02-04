@@ -9,7 +9,7 @@ api_key=bps.get_access_info("./.config/config.json")['bioportal']['api_key']
 bps.batch_write_code_list(
      api_key
     ,'C:/repo/PheCDM/concept_set/autogen_set'
-    ,'ped-uc-var'
+    ,'ped-uc-var_intput'
     )
 
 """

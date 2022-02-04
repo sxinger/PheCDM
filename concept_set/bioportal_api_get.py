@@ -76,7 +76,7 @@ def batch_write_code_list(api_key,
     search_dict = {k: g.to_dict(orient='records') for k, g in search_key.groupby(level=0)}
 
     #initialize workbook
-    with pd.ExcelWriter(f'{path_to_search_catalog}/{search_catalog_name}_codeset.xlsx') as writer: 
+    with pd.ExcelWriter(f'{path_to_search_catalog}/{search_catalog_name}_output.xlsx') as writer: 
         search_key.to_excel(writer,sheet_name='search keys')
 
     #append worksheets
