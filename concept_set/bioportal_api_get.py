@@ -84,8 +84,8 @@ def batch_write_code_list(api_key,
         
         result = []
         for ont in search_dict[key]:
-            bps_inst = BioPortalSearch(api_key,key,ont['search_ont'])
-            result.append(bps_inst.get_code_list())
+            bps_inst = BioPortalSearch(api_key,key,ont['search_ont']).get_code_list()
+            result.append(pd.DataFrame(bps_inst))
         
         result_df = pd.concat(result,ignore_index=True)
         with pd.ExcelWriter(f'{path_to_search_catalog}/{search_catalog_name}_codeset.xlsx',mode='a') as writer: 
