@@ -1,7 +1,8 @@
 from json import load,loads 
 from dataclasses import dataclass
-from re import match
+from re import search
 import urllib.request, urllib.error, urllib.parse
+# import requests #better library for API call
 import time
 import pandas as pd
 
@@ -20,7 +21,7 @@ class BioPortalSearch:
 
     def __init__(self,api_key,sterm,sont):
         self.api_key = api_key
-        self.sterm = sterm.replace(' ','%20') 
+        self.sterm = sterm
         self.sont = sont
     
     def get_json(self,url):
@@ -40,14 +41,19 @@ class BioPortalSearch:
         page = 1
         next_page = page
         time.sleep(1)
-        result = self.get_json(f'{self.API_URL}/search?q={self.sterm}&ontologies={self.sont}')
+        sterm_mod = self.sterm.replace(' ','%20')
+        result = self.get_json(f'{self.API_URL}/search?q={sterm_mod}&ontologies={self.sont}')
         while next_page:
             '''loop over all items in the collection list'''
             for cls in result["collection"]:
-                labels.append(cls["prefLabel"])
-                tuis.append(' '.join(cls.get("semanticType","NA")))
-                cuis.append(' '.join(cls.get("cui","NA")))
-                ids.append(cls["@id"].rsplit('/', 1)[-1])
+                # additional filter
+                if search('^'+self.sterm.replace(' ','.*'),cls["prefLabel"].lower()):
+                    labels.append(cls["prefLabel"])
+                    tuis.append(' '.join(cls.get("semanticType","NA")))
+                    cuis.append(' '.join(cls.get("cui","NA")))
+                    ids.append(cls["@id"].rsplit('/', 1)[-1])
+                else: 
+                    continue
 
             '''go to next page'''
             next_page = result["nextPage"]
@@ -60,7 +66,7 @@ class BioPortalSearch:
 
         out = {"code_type":self.sont,
                "code":ids,
-               "label": labels,
+               "label":labels,
                "tui":tuis,
                "cui":cuis}
         return out
@@ -76,7 +82,7 @@ def batch_write_code_list(api_key,
     search_dict = {k: g.to_dict(orient='records') for k, g in search_key.groupby(level=0)}
 
     #initialize workbook
-    with pd.ExcelWriter(f'{path_to_search_catalog}/{search_catalog_name}_output.xlsx') as writer: 
+    with pd.ExcelWriter(f"{path_to_search_catalog}/{search_catalog_name.replace('input','output')}.xlsx") as writer: 
         search_key.to_excel(writer,sheet_name='search keys')
 
     #append worksheets
@@ -88,8 +94,8 @@ def batch_write_code_list(api_key,
             result.append(pd.DataFrame(bps_inst))
         
         result_df = pd.concat(result,ignore_index=True)
-        with pd.ExcelWriter(f'{path_to_search_catalog}/{search_catalog_name}_codeset.xlsx',mode='a') as writer: 
-            result_df.to_excel(writer,sheet_name=key)
+        with pd.ExcelWriter(f"{path_to_search_catalog}/{search_catalog_name.replace('input','output')}.xlsx",mode='a') as writer: 
+            result_df.to_excel(writer,sheet_name=key[:30],index=False)
 
         if verbose:
             print(f'finish search for term:{key}')             
