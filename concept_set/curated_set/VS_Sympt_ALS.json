@@ -1,0 +1,90 @@
+{
+    "speech":{
+        "disorder":{
+            "icd9": ["315.39"],
+            "icd10": ["F80.0","F80.89"]
+        },
+        "deficits":{
+            "icd9":["438.1","784.3","784.4","784.5"],
+            "icd10":[]
+        },
+        "dysphagia":{
+            "icd9":["787.2","438.82"],
+            "icd10":[]
+        }
+    },
+    "swallowing":{
+        "disturbance":{
+            "icd9": ["527.7"],
+            "icd10": []
+        },
+        "salivary-gland-disorder":{
+            "icd9": ["527.8"],
+            "icd10": []  
+        },
+        "pain-in-throat":{
+            "icd9": ["784.1"],
+            "icd10": []  
+        }
+    },
+    "muscle-strength":{
+        "atrophy-muscle-disuse":{
+            "icd9": ["728.2"],
+            "icd10": []
+        },
+        "muscle-weakness-generalized":{
+            "icd9": ["728.87"],
+            "icd10": []
+        }
+    },
+    "gait":{
+        "difficulty-walking":{
+            "icd9": ["719.7"],
+            "icd10": []
+        },
+        "gait-abnormality":{
+            "icd9": ["781.2"],
+            "icd10": []
+        },
+        "lack-of-coordination":{
+            "icd9": ["781.3"],
+            "icd10": []
+        }
+    },
+    "involuntary-muscle-movement":{
+        "cramping":{
+            "icd9": ["729.82"],
+            "icd10": []
+        },
+        "spasm":{
+            "icd9": ["728.85"],
+            "icd10": []
+        },
+        "twitching-fasciculation":{
+            "icd9": [781.0],
+            "icd10": []
+        }
+    },
+    "myopathy":{
+        "myopath-weakness":{
+            "icd9": ["359."],
+            "icd10": []
+        }
+    },
+    "pain":{
+        "pain-in-joint":{
+            "icd9": ["719.4"],
+            "icd10": ["M25.5","M79.643","M79.646"]
+        },
+        "pain-in-limb":{
+            "icd9": ["729.5"],
+            "icd10": []
+        }
+    },
+    "other":{
+        "disorder-muscle-ligament":{
+            "icd9":["728."],
+            "icd10":[]
+        }
+    }
+}

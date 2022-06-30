@@ -1,10 +1,10 @@
-from json import load,loads 
-from dataclasses import dataclass
+from json import load,loads,dump
 from re import search
 import urllib.request, urllib.error, urllib.parse
 # import requests #better library for API call
 import time
 import pandas as pd
+from regex import F
 
 ##search_str = '&'.join(['%s=%s' % (k,v) for k,v in self.api_params.iteritems()])
 
@@ -74,7 +74,7 @@ class BioPortalSearch:
 '''
 batch run bioportal search and write search results to excel sheets
 '''  
-def batch_write_code_list(api_key,
+def batch_write_vs_excel(api_key,
                           path_to_search_catalog, #absolute path
                           search_catalog_name,
                           verbose=True):
@@ -86,19 +86,39 @@ def batch_write_code_list(api_key,
         search_key.to_excel(writer,sheet_name='search keys')
 
     #append worksheets
-    for key in search_dict:
-        
+    for key in search_dict:   
         result = []
         for ont in search_dict[key]:
             bps_inst = BioPortalSearch(api_key,key,ont['search_ont']).get_code_list()
             result.append(pd.DataFrame(bps_inst))
-        
+        # list to pd dataframe
         result_df = pd.concat(result,ignore_index=True)
         with pd.ExcelWriter(f"{path_to_search_catalog}/{search_catalog_name.replace('input','output')}.xlsx",mode='a') as writer: 
             result_df.to_excel(writer,sheet_name=key[:30],index=False)
-
+        # report progress
         if verbose:
-            print(f'finish search for term:{key}')             
+            print(f'finish search for term:{key}')
+
+def batch_write_vs_json(api_key,
+                        path_to_search_catalog, #absolute path
+                        search_catalog_name,
+                        verbose=True):
+    search_key = pd.read_csv(f'{path_to_search_catalog}/{search_catalog_name}.txt',sep=',').set_index("search_term")
+    search_dict = {k: g.to_dict(orient='records') for k, g in search_key.groupby(level=0)}
+    # collect aggregated dict
+    dict_agg = {}
+    for key in search_dict:
+        result = [] 
+        for ont in search_dict[key]:
+            bps_inst = BioPortalSearch(api_key,key,ont['search_ont']).get_code_list()
+            result.append(bps_inst)
+        dict_agg[key] = result
+        # report progress
+        if verbose:
+            print(f'finish search for term:{key}')
+    # write single dictionary to json
+    with open(f"{path_to_search_catalog}/{search_catalog_name.replace('input','output')}.json","w",encoding='utf-8') as writer: 
+        dump(dict_agg, writer, ensure_ascii=False, indent=4)
 
 
 
