@@ -10,9 +10,10 @@ def get_access_info(path_to_key):
         key = json.load(config_file)
     return(key)
 
+which_cms_open_data = "provider_taxonomy"
+
 # make api request
-cms_open_data = "provider_taxonomy"
-url = get_access_info("./.config/config.json")['cmsdata_api'][cms_open_data]
+url = get_access_info("./.config/config.json")['cmsdata_api'][which_cms_open_data]
 response_api = requests.get(url)
 print(f'status_code:{response_api.status_code}')
 
@@ -22,18 +23,5 @@ df = pd.read_json(data)
 
 # write to csv file
 path_to_save = f'{os.path.dirname(os.path.dirname(__file__))}/valueset_autogen'
-df.to_csv(f'{path_to_save}/{cms_open_data}.csv', index = None)
-
-    
-
-    
-
-
-
-    
-
-
-
-
-
+df.to_csv(f'{path_to_save}/{which_cms_open_data}.csv', index = None)
 

@@ -119,19 +119,3 @@ def batch_write_vs_json(api_key,
     # write single dictionary to json
     with open(f"{path_to_search_catalog}/{search_catalog_name.replace('input','output')}.json","w",encoding='utf-8') as writer: 
         dump(dict_agg, writer, ensure_ascii=False, indent=4)
-
-
-
-    
-
-    
-
-
-
-    
-
-
-
-
-
-
