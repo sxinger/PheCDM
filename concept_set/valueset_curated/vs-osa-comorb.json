@@ -64,15 +64,13 @@
         }
     },
     "peripheral-procedures":{
-        "icd9-pcs":{
-            "lev0":[],
-            "lev1":[],
-            "lev2":[]
+        "icd9-cm":{
+            "range":[],
+            "list":[]
         },
         "icd10-pcs":{
-            "lev0":[],
-            "lev1":[],
-            "lev2":[]
+            "range":[],
+            "list":[]
         },
         "cpt":{
             "range":["37220-37235","37215-37218","37236-37249","37211-37214","37184-37188"],
@@ -189,60 +187,65 @@
     },
     "chronic-obstructive-pulmonary-disease":{
         "icd9":{
-            "lev0":[],
+            "lev0":["496"],
             "lev1":[],
             "lev2":[]
         },
         "icd10":{
-            "lev0":[],
+            "lev0":["J44"],
             "lev1":[],
             "lev2":[]
         }
     },
     "bariatric-surgery":{
-        "icd9":{
-            "lev0":[],
-            "lev1":[],
-            "lev2":[]
+        "icd9-cm":{
+            "range":[],
+            "list":[]
         },
-        "icd10":{
-            "lev0":[],
-            "lev1":[],
-            "lev2":[]
-        }
+        "icd10-pcs":{
+            "range":[],
+            "list":["0DB64Z3","0DV64CZ","0D16479","0D1647A","0D1647B","0D1647L","0D164J9","0D164JA","0D164JB","0D164JL",
+                    "0D164K9","0D164KA","0D164KB","0D164KL","0D164Z9","0D164ZA","0D164ZB","0D164ZL","0D16079","0D1607A",
+                    "0D1607B","0D1607L","0D160J9","0D160JA","0D160JB","0D160JL","0D160K9","0D160KA","0D160KB","0D160KL",
+                    "0D160Z9","0D160ZA","0D160ZB","0D160ZL","0D16879","0D1687A","0D1687B","0D1687L","0D168J9","0D168JA",
+                    "0D168JB","0D168JL","0D168K9","0D168KA","0D168KB","0D168KL","0D168Z9","0D168ZA","0D168ZB","0D168ZL"]
+        },
+        "cpt":{
+            "range":["43644-43645","43845-43847"],
+            "list":["43770","43775"]
     },
     "neurotic-disorders":{
         "icd9":{
-            "lev0":[],
+            "lev0":["300"],
             "lev1":[],
             "lev2":[]
         },
         "icd10":{
-            "lev0":[],
+            "lev0":["F40","F41","F42","F43","F44","F45","F46","F47","F48"],
             "lev1":[],
             "lev2":[]
         }
     },
-    "acute-kidney-injury":{
+    "renal-failure":{
         "icd9":{
-            "lev0":[],
+            "lev0":["584","586"],
             "lev1":[],
             "lev2":[]
         },
         "icd10":{
-            "lev0":[],
+            "lev0":["N17"],
             "lev1":[],
             "lev2":[]
         }
     },
     "chronic-kidney-disease":{
         "icd9":{
-            "lev0":[],
+            "lev0":["585"],
             "lev1":[],
             "lev2":[]
         },
         "icd10":{
-            "lev0":[],
+            "lev0":["N18"],
             "lev1":[],
             "lev2":[]
         }
@@ -250,11 +253,11 @@
     "end-stage-renal-disease":{
         "icd9":{
             "lev0":[],
-            "lev1":[],
+            "lev1":["585.6"],
             "lev2":[]
         },
         "icd10":{
-            "lev0":[],
+            "lev0":["N18"],
             "lev1":[],
             "lev2":[]
         }
