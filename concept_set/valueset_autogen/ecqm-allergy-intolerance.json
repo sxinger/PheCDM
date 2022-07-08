@@ -8,28 +8,12 @@
         "codelist": {
             "RXNORM": [
                 [
-                    301542,
-                    "rosuvastatin"
-                ],
-                [
-                    36567,
-                    "simvastatin"
+                    83367,
+                    "atorvastatin"
                 ],
                 [
                     41127,
                     "fluvastatin"
-                ],
-                [
-                    42463,
-                    "pravastatin"
-                ],
-                [
-                    6472,
-                    "lovastatin"
-                ],
-                [
-                    83367,
-                    "atorvastatin"
                 ],
                 [
                     861634,
@@ -40,14 +24,6 @@
                     "rosuvastatin"
                 ],
                 [
-                    36567,
-                    "simvastatin"
-                ],
-                [
-                    41127,
-                    "fluvastatin"
-                ],
-                [
                     42463,
                     "pravastatin"
                 ],
@@ -56,23 +32,11 @@
                     "lovastatin"
                 ],
                 [
-                    83367,
-                    "atorvastatin"
-                ],
-                [
-                    861634,
-                    "pitavastatin"
+                    36567,
+                    "simvastatin"
                 ]
             ],
             "SNOMEDCT": [
-                [
-                    372912004,
-                    "Substance with 3-hydroxy-3-methylglutaryl-coenzyme A reductase inhibitor mechanism of action (substance)"
-                ],
-                [
-                    96302009,
-                    "Product containing 3-hydroxy-3-methylglutaryl-coenzyme A reductase inhibitor (product)"
-                ],
                 [
                     372912004,
                     "Substance with 3-hydroxy-3-methylglutaryl-coenzyme A reductase inhibitor mechanism of action (substance)"
@@ -93,8 +57,8 @@
         "codelist": {
             "RXNORM": [
                 [
-                    1091643,
-                    "azilsartan"
+                    35208,
+                    "quinapril"
                 ],
                 [
                     1656328,
@@ -105,48 +69,8 @@
                     "benazepril"
                 ],
                 [
-                    1998,
-                    "captopril"
-                ],
-                [
-                    214354,
-                    "candesartan"
-                ],
-                [
-                    29046,
-                    "lisinopril"
-                ],
-                [
                     30131,
                     "moexipril"
-                ],
-                [
-                    321064,
-                    "olmesartan"
-                ],
-                [
-                    35208,
-                    "quinapril"
-                ],
-                [
-                    35296,
-                    "ramipril"
-                ],
-                [
-                    3827,
-                    "enalapril"
-                ],
-                [
-                    38454,
-                    "trandolapril"
-                ],
-                [
-                    50166,
-                    "fosinopril"
-                ],
-                [
-                    52175,
-                    "losartan"
                 ],
                 [
                     54552,
@@ -157,8 +81,8 @@
                     "valsartan"
                 ],
                 [
-                    73494,
-                    "telmisartan"
+                    321064,
+                    "olmesartan"
                 ],
                 [
                     83515,
@@ -167,6 +91,46 @@
                 [
                     83818,
                     "irbesartan"
+                ],
+                [
+                    1091643,
+                    "azilsartan"
+                ],
+                [
+                    3827,
+                    "enalapril"
+                ],
+                [
+                    52175,
+                    "losartan"
+                ],
+                [
+                    73494,
+                    "telmisartan"
+                ],
+                [
+                    50166,
+                    "fosinopril"
+                ],
+                [
+                    1998,
+                    "captopril"
+                ],
+                [
+                    35296,
+                    "ramipril"
+                ],
+                [
+                    214354,
+                    "candesartan"
+                ],
+                [
+                    38454,
+                    "trandolapril"
+                ],
+                [
+                    29046,
+                    "lisinopril"
                 ]
             ]
         }
@@ -180,48 +144,20 @@
         "codelist": {
             "RXNORM": [
                 [
-                    10600,
-                    "timolol"
-                ],
-                [
-                    1202,
-                    "atenolol"
-                ],
-                [
-                    149,
-                    "acebutolol"
-                ],
-                [
-                    1520,
-                    "betaxolol"
-                ],
-                [
-                    19484,
-                    "bisoprolol"
-                ],
-                [
-                    20352,
-                    "carvedilol"
-                ],
-                [
-                    2116,
-                    "carteolol"
-                ],
-                [
-                    31555,
-                    "nebivolol"
+                    9947,
+                    "sotalol"
                 ],
                 [
                     6185,
                     "labetalol"
                 ],
                 [
-                    6918,
-                    "metoprolol"
+                    31555,
+                    "nebivolol"
                 ],
                 [
-                    7226,
-                    "nadolol"
+                    2116,
+                    "carteolol"
                 ],
                 [
                     8332,
@@ -232,12 +168,16 @@
                     "propranolol"
                 ],
                 [
-                    9947,
-                    "sotalol"
+                    19484,
+                    "bisoprolol"
                 ],
                 [
-                    10600,
-                    "timolol"
+                    1520,
+                    "betaxolol"
+                ],
+                [
+                    7226,
+                    "nadolol"
                 ],
                 [
                     1202,
@@ -248,48 +188,16 @@
                     "acebutolol"
                 ],
                 [
-                    1520,
-                    "betaxolol"
-                ],
-                [
-                    19484,
-                    "bisoprolol"
-                ],
-                [
-                    20352,
-                    "carvedilol"
-                ],
-                [
-                    2116,
-                    "carteolol"
-                ],
-                [
-                    31555,
-                    "nebivolol"
-                ],
-                [
-                    6185,
-                    "labetalol"
+                    10600,
+                    "timolol"
                 ],
                 [
                     6918,
                     "metoprolol"
                 ],
                 [
-                    7226,
-                    "nadolol"
-                ],
-                [
-                    8332,
-                    "pindolol"
-                ],
-                [
-                    8787,
-                    "propranolol"
-                ],
-                [
-                    9947,
-                    "sotalol"
+                    20352,
+                    "carvedilol"
                 ]
             ]
         }
@@ -303,28 +211,28 @@
         "codelist": {
             "RXNORM": [
                 [
-                    10106,
-                    "streptokinase"
-                ],
-                [
-                    11055,
-                    "urokinase"
-                ],
-                [
-                    259280,
-                    "tenecteplase"
-                ],
-                [
-                    40028,
-                    "anistreplase"
+                    8410,
+                    "alteplase"
                 ],
                 [
                     76895,
                     "reteplase"
                 ],
                 [
-                    8410,
-                    "alteplase"
+                    259280,
+                    "tenecteplase"
+                ],
+                [
+                    11055,
+                    "urokinase"
+                ],
+                [
+                    40028,
+                    "anistreplase"
+                ],
+                [
+                    10106,
+                    "streptokinase"
                 ]
             ]
         }

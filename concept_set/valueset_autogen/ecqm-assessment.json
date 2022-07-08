@@ -8,20 +8,20 @@
         "codelist": {
             "LOINC": [
                 [
-                    "11884-4",
-                    "Gestational age Estimated"
-                ],
-                [
-                    "11885-1",
-                    "Gestational age Estimated from last menstrual period"
-                ],
-                [
                     "18185-9",
                     "Gestational age"
                 ],
                 [
                     "49051-6",
                     "Gestational age in weeks"
+                ],
+                [
+                    "11885-1",
+                    "Gestational age Estimated from last menstrual period"
+                ],
+                [
+                    "11884-4",
+                    "Gestational age Estimated"
                 ]
             ]
         }
@@ -35,36 +35,20 @@
         "codelist": {
             "LOINC": [
                 [
-                    "28568-4",
-                    "Physician Emergency department Note"
+                    "68552-9",
+                    "Emergency medicine Emergency department Admission evaluation note"
                 ],
                 [
                     "34111-5",
                     "Emergency department Note"
                 ],
                 [
+                    "28568-4",
+                    "Physician Emergency department Note"
+                ],
+                [
                     "34878-9",
                     "Emergency medicine Note"
-                ],
-                [
-                    "51846-4",
-                    "Emergency department Consult note"
-                ],
-                [
-                    "54094-8",
-                    "Emergency department Triage note"
-                ],
-                [
-                    "68552-9",
-                    "Emergency medicine Emergency department Admission evaluation note"
-                ],
-                [
-                    "74211-4",
-                    "Emergency department+Hospital Summary of episode note"
-                ],
-                [
-                    "78249-0",
-                    "Emergency department Admission history and physical note"
                 ],
                 [
                     "78307-6",
@@ -75,20 +59,36 @@
                     "Emergency department Initial evaluation note"
                 ],
                 [
-                    "78341-5",
-                    "Emergency department Transfer summary note"
+                    "54094-8",
+                    "Emergency department Triage note"
                 ],
                 [
-                    "80741-2",
-                    "Emergency medicine Emergency department Plan of care note"
+                    "78249-0",
+                    "Emergency department Admission history and physical note"
                 ],
                 [
                     "80746-1",
                     "Emergency department Plan of care note"
                 ],
                 [
+                    "80741-2",
+                    "Emergency medicine Emergency department Plan of care note"
+                ],
+                [
+                    "51846-4",
+                    "Emergency department Consult note"
+                ],
+                [
+                    "78341-5",
+                    "Emergency department Transfer summary note"
+                ],
+                [
                     "83818-5",
                     "Attending Emergency department Note"
+                ],
+                [
+                    "74211-4",
+                    "Emergency department+Hospital Summary of episode note"
                 ]
             ]
         }
@@ -110,12 +110,12 @@
                     "Have you used tobacco in the last 30 days [SAMHSA]"
                 ],
                 [
-                    "68536-2",
-                    "Have you used smokeless tobacco product in the last 30 days [SAMHSA]"
-                ],
-                [
                     "72166-2",
                     "Tobacco smoking status"
+                ],
+                [
+                    "68536-2",
+                    "Have you used smokeless tobacco product in the last 30 days [SAMHSA]"
                 ]
             ]
         }
@@ -129,20 +129,20 @@
         "codelist": {
             "LOINC": [
                 [
-                    "52552-7",
-                    "Falls in the past year"
-                ],
-                [
-                    "57254-5",
-                    "Standardized fall risk assessment was conducted [CMS Assessment]"
+                    "73830-2",
+                    "Fall risk assessment"
                 ],
                 [
                     "59454-9",
                     "History of falling; immediate or within 3 months [Morse Fall Scale]"
                 ],
                 [
-                    "73830-2",
-                    "Fall risk assessment"
+                    "52552-7",
+                    "Falls in the past year"
+                ],
+                [
+                    "57254-5",
+                    "Standardized fall risk assessment was conducted [CMS Assessment]"
                 ]
             ]
         }
@@ -160,32 +160,32 @@
                     "Prior assessment Brief Interview for Mental Status (BIMS) summary score [MDSv3]"
                 ],
                 [
-                    "71492-3",
-                    "Total score [SLUMS]"
+                    "72172-0",
+                    "Total score [MoCA]"
                 ],
                 [
-                    "71493-1",
-                    "Total score [IQCODE]"
+                    "72233-0",
+                    "Total score [Mini-Cog]"
                 ],
                 [
                     "71722-3",
                     "Total score [AD8]"
                 ],
                 [
-                    "72106-8",
-                    "Total score [MMSE]"
-                ],
-                [
-                    "72172-0",
-                    "Total score [MoCA]"
+                    "71493-1",
+                    "Total score [IQCODE]"
                 ],
                 [
                     "72173-8",
                     "Total score [BOMC]"
                 ],
                 [
-                    "72233-0",
-                    "Total score [Mini-Cog]"
+                    "72106-8",
+                    "Total score [MMSE]"
+                ],
+                [
+                    "71492-3",
+                    "Total score [SLUMS]"
                 ]
             ]
         }
@@ -199,24 +199,24 @@
         "codelist": {
             "LOINC": [
                 [
-                    "38208-5",
-                    "Pain severity - Reported"
-                ],
-                [
                     "38214-3",
                     "Pain severity [Score] Visual analog score"
                 ],
                 [
-                    "38221-8",
-                    "Pain severity Wong-Baker FACES pain rating scale"
+                    "77565-0",
+                    "Pain interference score [BPI Short Form]"
+                ],
+                [
+                    "38208-5",
+                    "Pain severity - Reported"
                 ],
                 [
                     "72514-3",
                     "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
                 ],
                 [
-                    "77565-0",
-                    "Pain interference score [BPI Short Form]"
+                    "38221-8",
+                    "Pain severity Wong-Baker FACES pain rating scale"
                 ]
             ]
         }
@@ -230,12 +230,12 @@
         "codelist": {
             "LOINC": [
                 [
-                    "44261-6",
-                    "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]"
-                ],
-                [
                     "89204-2",
                     "Patient Health Questionnaire-9: Modified for Teens total score [Reported.PHQ.Teen]"
+                ],
+                [
+                    "44261-6",
+                    "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]"
                 ]
             ]
         }
@@ -276,12 +276,12 @@
         "codelist": {
             "LOINC": [
                 [
-                    "75282-4",
-                    "Nutrition assessment panel"
-                ],
-                [
                     "75285-7",
                     "Comparative nutrition assessment standards panel"
+                ],
+                [
+                    "75282-4",
+                    "Nutrition assessment panel"
                 ],
                 [
                     "75303-8",
@@ -311,16 +311,16 @@
             ],
             "SNOMEDCT": [
                 [
-                    "171184005",
-                    "Malnutrition screening (procedure)"
-                ],
-                [
                     "414648004",
                     "Malnutrition universal screening tool (assessment scale)"
                 ],
                 [
                     "443216009",
                     "Assessment using malnutrition universal screening tool (procedure)"
+                ],
+                [
+                    "171184005",
+                    "Malnutrition screening (procedure)"
                 ]
             ]
         }
@@ -357,20 +357,20 @@
         "codelist": {
             "LOINC": [
                 [
-                    "56056-5",
-                    "Birth weight - Reported"
-                ],
-                [
-                    "56092-0",
-                    "Birth weight GNWCH"
+                    "8339-4",
+                    "Birth weight Measured"
                 ],
                 [
                     "56093-8",
                     "Birth weight NVSS"
                 ],
                 [
-                    "8339-4",
-                    "Birth weight Measured"
+                    "56092-0",
+                    "Birth weight GNWCH"
+                ],
+                [
+                    "56056-5",
+                    "Birth weight - Reported"
                 ]
             ]
         }

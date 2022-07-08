@@ -8,12 +8,16 @@
         "codelist": {
             "CVX": [
                 [
-                    106,
-                    "diphtheria, tetanus toxoids and acellular pertussis vaccine, 5 pertussis antigens"
+                    146,
+                    "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
                 ],
                 [
                     107,
                     "diphtheria, tetanus toxoids and acellular pertussis vaccine, unspecified formulation"
+                ],
+                [
+                    106,
+                    "diphtheria, tetanus toxoids and acellular pertussis vaccine, 5 pertussis antigens"
                 ],
                 [
                     110,
@@ -22,10 +26,6 @@
                 [
                     120,
                     "diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
-                ],
-                [
-                    146,
-                    "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
                 ],
                 [
                     20,
@@ -47,16 +47,16 @@
         "codelist": {
             "CVX": [
                 [
-                    31,
-                    "hepatitis A vaccine, pediatric dosage, unspecified formulation"
+                    85,
+                    "hepatitis A vaccine, unspecified formulation"
                 ],
                 [
                     83,
                     "hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule"
                 ],
                 [
-                    85,
-                    "hepatitis A vaccine, unspecified formulation"
+                    31,
+                    "hepatitis A vaccine, pediatric dosage, unspecified formulation"
                 ]
             ]
         }
@@ -70,28 +70,28 @@
         "codelist": {
             "CVX": [
                 [
-                    8,
-                    "hepatitis B vaccine, pediatric or pediatric/adolescent dosage"
-                ],
-                [
-                    110,
-                    "DTaP-hepatitis B and poliovirus vaccine"
-                ],
-                [
                     146,
                     "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
+                ],
+                [
+                    51,
+                    "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+                ],
+                [
+                    8,
+                    "hepatitis B vaccine, pediatric or pediatric/adolescent dosage"
                 ],
                 [
                     44,
                     "hepatitis B vaccine, dialysis patient dosage"
                 ],
                 [
-                    45,
-                    "hepatitis B vaccine, unspecified formulation"
+                    110,
+                    "DTaP-hepatitis B and poliovirus vaccine"
                 ],
                 [
-                    51,
-                    "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+                    45,
+                    "hepatitis B vaccine, unspecified formulation"
                 ]
             ]
         }
@@ -136,12 +136,12 @@
                     "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
                 ],
                 [
-                    148,
-                    "Meningococcal Groups C and Y and Haemophilus b Tetanus Toxoid Conjugate Vaccine"
-                ],
-                [
                     48,
                     "Haemophilus influenzae type b vaccine, PRP-T conjugate"
+                ],
+                [
+                    148,
+                    "Meningococcal Groups C and Y and Haemophilus b Tetanus Toxoid Conjugate Vaccine"
                 ]
             ]
         }
@@ -155,6 +155,14 @@
         "codelist": {
             "CVX": [
                 [
+                    146,
+                    "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
+                ],
+                [
+                    89,
+                    "poliovirus vaccine, unspecified formulation"
+                ],
+                [
                     10,
                     "poliovirus vaccine, inactivated"
                 ],
@@ -165,14 +173,6 @@
                 [
                     120,
                     "diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
-                ],
-                [
-                    146,
-                    "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
-                ],
-                [
-                    89,
-                    "poliovirus vaccine, unspecified formulation"
                 ]
             ]
         }
@@ -186,112 +186,76 @@
         "codelist": {
             "CVX": [
                 [
-                    140,
-                    "Influenza, seasonal, injectable, preservative free"
+                    185,
+                    "Seasonal, quadrivalent, recombinant, injectable influenza vaccine, preservative free"
                 ],
                 [
                     141,
                     "Influenza, seasonal, injectable"
-                ],
-                [
-                    150,
-                    "Influenza, injectable, quadrivalent, preservative free"
-                ],
-                [
-                    153,
-                    "Influenza, injectable, Madin Darby Canine Kidney, preservative free"
-                ],
-                [
-                    155,
-                    "Seasonal, trivalent, recombinant, injectable influenza vaccine, preservative free"
-                ],
-                [
-                    158,
-                    "influenza, injectable, quadrivalent, contains preservative"
-                ],
-                [
-                    161,
-                    "Influenza, injectable,quadrivalent, preservative free, pediatric"
-                ],
-                [
-                    171,
-                    "Influenza, injectable, Madin Darby Canine Kidney, preservative free, quadrivalent"
-                ],
-                [
-                    186,
-                    "Influenza, injectable, Madin Darby Canine Kidney,  quadrivalent with preservative"
-                ],
-                [
-                    88,
-                    "influenza virus vaccine, unspecified formulation"
-                ],
-                [
-                    135,
-                    "influenza, high dose seasonal, preservative-free"
-                ],
-                [
-                    140,
-                    "Influenza, seasonal, injectable, preservative free"
-                ],
-                [
-                    141,
-                    "Influenza, seasonal, injectable"
-                ],
-                [
-                    144,
-                    "seasonal influenza, intradermal, preservative free"
-                ],
-                [
-                    149,
-                    "influenza, live, intranasal, quadrivalent"
-                ],
-                [
-                    150,
-                    "Influenza, injectable, quadrivalent, preservative free"
-                ],
-                [
-                    155,
-                    "Seasonal, trivalent, recombinant, injectable influenza vaccine, preservative free"
-                ],
-                [
-                    158,
-                    "influenza, injectable, quadrivalent, contains preservative"
-                ],
-                [
-                    161,
-                    "Influenza, injectable,quadrivalent, preservative free, pediatric"
                 ],
                 [
                     166,
                     "influenza, intradermal, quadrivalent, preservative free, injectable"
                 ],
                 [
-                    168,
-                    "Seasonal trivalent influenza vaccine, adjuvanted, preservative free"
+                    135,
+                    "influenza, high dose seasonal, preservative-free"
                 ],
                 [
                     171,
                     "Influenza, injectable, Madin Darby Canine Kidney, preservative free, quadrivalent"
                 ],
                 [
-                    185,
-                    "Seasonal, quadrivalent, recombinant, injectable influenza vaccine, preservative free"
+                    161,
+                    "Influenza, injectable,quadrivalent, preservative free, pediatric"
                 ],
                 [
                     186,
                     "Influenza, injectable, Madin Darby Canine Kidney,  quadrivalent with preservative"
                 ],
                 [
+                    88,
+                    "influenza virus vaccine, unspecified formulation"
+                ],
+                [
+                    149,
+                    "influenza, live, intranasal, quadrivalent"
+                ],
+                [
+                    168,
+                    "Seasonal trivalent influenza vaccine, adjuvanted, preservative free"
+                ],
+                [
                     197,
                     "influenza, high-dose seasonal, quadrivalent, .7mL dose, preservative free"
+                ],
+                [
+                    155,
+                    "Seasonal, trivalent, recombinant, injectable influenza vaccine, preservative free"
+                ],
+                [
+                    153,
+                    "Influenza, injectable, Madin Darby Canine Kidney, preservative free"
+                ],
+                [
+                    150,
+                    "Influenza, injectable, quadrivalent, preservative free"
+                ],
+                [
+                    140,
+                    "Influenza, seasonal, injectable, preservative free"
                 ],
                 [
                     205,
                     "influenza, seasonal vaccine, quadrivalent, adjuvanted, .5mL dose, preservative free"
                 ],
                 [
-                    88,
-                    "influenza virus vaccine, unspecified formulation"
+                    144,
+                    "seasonal influenza, intradermal, preservative free"
+                ],
+                [
+                    158,
+                    "influenza, injectable, quadrivalent, contains preservative"
                 ]
             ]
         }
@@ -304,14 +268,6 @@
         "excld": "Includes concepts that represent a live attenuated influenza vaccine (quadrivalent and trivalent).",
         "codelist": {
             "CVX": [
-                [
-                    111,
-                    "influenza virus vaccine, live, attenuated, for intranasal use"
-                ],
-                [
-                    149,
-                    "influenza, live, intranasal, quadrivalent"
-                ],
                 [
                     111,
                     "influenza virus vaccine, live, attenuated, for intranasal use"
@@ -332,12 +288,12 @@
         "codelist": {
             "CVX": [
                 [
-                    3,
-                    "measles, mumps and rubella virus vaccine"
-                ],
-                [
                     94,
                     "measles, mumps, rubella, and varicella virus vaccine"
+                ],
+                [
+                    3,
+                    "measles, mumps and rubella virus vaccine"
                 ]
             ]
         }
@@ -412,6 +368,14 @@
         "codelist": {
             "CVX": [
                 [
+                    216,
+                    "Pneumococcal conjugate vaccine 20-valent (PCV20), polysaccharide CRM197 conjugate, adjuvant, preservative free"
+                ],
+                [
+                    33,
+                    "pneumococcal polysaccharide vaccine, 23 valent"
+                ],
+                [
                     109,
                     "pneumococcal vaccine, unspecified formulation"
                 ],
@@ -420,20 +384,12 @@
                     "pneumococcal conjugate vaccine, 13 valent"
                 ],
                 [
-                    152,
-                    "Pneumococcal Conjugate, unspecified formulation"
-                ],
-                [
                     215,
                     "Pneumococcal conjugate vaccine 15-valent (PCV15), polysaccharide CRM197 conjugate, adjuvant, preservative free"
                 ],
                 [
-                    216,
-                    "Pneumococcal conjugate vaccine 20-valent (PCV20), polysaccharide CRM197 conjugate, adjuvant, preservative free"
-                ],
-                [
-                    33,
-                    "pneumococcal polysaccharide vaccine, 23 valent"
+                    152,
+                    "Pneumococcal Conjugate, unspecified formulation"
                 ]
             ]
         }

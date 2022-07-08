@@ -8,16 +8,20 @@
         "codelist": {
             "RXNORM": [
                 [
-                    301542,
-                    "rosuvastatin"
-                ],
-                [
-                    36567,
-                    "simvastatin"
+                    83367,
+                    "atorvastatin"
                 ],
                 [
                     41127,
                     "fluvastatin"
+                ],
+                [
+                    861634,
+                    "pitavastatin"
+                ],
+                [
+                    301542,
+                    "rosuvastatin"
                 ],
                 [
                     42463,
@@ -28,12 +32,8 @@
                     "lovastatin"
                 ],
                 [
-                    83367,
-                    "atorvastatin"
-                ],
-                [
-                    861634,
-                    "pitavastatin"
+                    36567,
+                    "simvastatin"
                 ]
             ],
             "SNOMEDCT": [
@@ -57,28 +57,28 @@
         "codelist": {
             "RXNORM": [
                 [
-                    10106,
-                    "streptokinase"
-                ],
-                [
-                    11055,
-                    "urokinase"
-                ],
-                [
-                    259280,
-                    "tenecteplase"
-                ],
-                [
-                    40028,
-                    "anistreplase"
+                    8410,
+                    "alteplase"
                 ],
                 [
                     76895,
                     "reteplase"
                 ],
                 [
-                    8410,
-                    "alteplase"
+                    259280,
+                    "tenecteplase"
+                ],
+                [
+                    11055,
+                    "urokinase"
+                ],
+                [
+                    40028,
+                    "anistreplase"
+                ],
+                [
+                    10106,
+                    "streptokinase"
                 ]
             ]
         }
