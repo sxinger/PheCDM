@@ -1,0 +1,615 @@
+{
+    "Frailty Symptom": {
+        "vs-id": "Frailty Symptom",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.113.12.1075",
+        "data-element": "The purpose of this value set is to represent concepts for symptoms of frailty.",
+        "incld": "This value set may use a model element related to Symptom.",
+        "excld": "Includes concepts that represent a symptom of frailty.",
+        "codelist": {
+            "ICD10CM": [
+                [
+                    "R63.4",
+                    "Abnormal weight loss"
+                ],
+                [
+                    "R64",
+                    "Cachexia"
+                ],
+                [
+                    "R26.1",
+                    "Paralytic gait"
+                ],
+                [
+                    "R26.0",
+                    "Ataxic gait"
+                ],
+                [
+                    "R53.83",
+                    "Other fatigue"
+                ],
+                [
+                    "R26.89",
+                    "Other abnormalities of gait and mobility"
+                ],
+                [
+                    "R26.9",
+                    "Unspecified abnormalities of gait and mobility"
+                ],
+                [
+                    "R53.81",
+                    "Other malaise"
+                ],
+                [
+                    "R41.81",
+                    "Age-related cognitive decline"
+                ],
+                [
+                    "R62.7",
+                    "Adult failure to thrive"
+                ],
+                [
+                    "R63.6",
+                    "Underweight"
+                ],
+                [
+                    "R54",
+                    "Age-related physical debility"
+                ],
+                [
+                    "R53.1",
+                    "Weakness"
+                ],
+                [
+                    "R26.2",
+                    "Difficulty in walking, not elsewhere classified"
+                ]
+            ],
+            "SNOMEDCT": [
+                [
+                    "268964003",
+                    "On examination - festination-Parkinson gait (finding)"
+                ],
+                [
+                    "16018391000119104",
+                    "Paresis of left lower limb (finding)"
+                ],
+                [
+                    "250034009",
+                    "Middle level sensorimotor gait disorder (finding)"
+                ],
+                [
+                    "78691002",
+                    "Staggering gait (finding)"
+                ],
+                [
+                    "309257005",
+                    "Excessive weight loss (finding)"
+                ],
+                [
+                    "365884000",
+                    "Cerebellar ataxic gait (finding)"
+                ],
+                [
+                    "300948004",
+                    "Quadriceps weakness (finding)"
+                ],
+                [
+                    "22325002",
+                    "Abnormal gait (finding)"
+                ],
+                [
+                    "397776000",
+                    "Festinating gait (finding)"
+                ],
+                [
+                    "250033003",
+                    "Visual ataxic gait (finding)"
+                ],
+                [
+                    "15634971000119107",
+                    "Weakness of bilateral upper limbs (finding)"
+                ],
+                [
+                    "404904002",
+                    "Frail elderly (finding)"
+                ],
+                [
+                    "67141003",
+                    "Antalgic gait (finding)"
+                ],
+                [
+                    "444932008",
+                    "Dependence on ventilator (finding)"
+                ],
+                [
+                    "713655003",
+                    "Dependence on non-invasive ventilation (finding)"
+                ],
+                [
+                    "102492002",
+                    "Failure to maintain weight (finding)"
+                ],
+                [
+                    "249939004",
+                    "Proximal muscle weakness (finding)"
+                ],
+                [
+                    "8510008",
+                    "Reduced mobility (finding)"
+                ],
+                [
+                    "373931001",
+                    "Sensation of heaviness in limbs (finding)"
+                ],
+                [
+                    "426977000",
+                    "Recent weight loss (finding)"
+                ],
+                [
+                    "250044006",
+                    "Cautious gait (finding)"
+                ],
+                [
+                    "161874006",
+                    "Heavy feeling (finding)"
+                ],
+                [
+                    "102568007",
+                    "Paresis of lower extremity (finding)"
+                ],
+                [
+                    "367391008",
+                    "Malaise (finding)"
+                ],
+                [
+                    "26544005",
+                    "Muscle weakness (finding)"
+                ],
+                [
+                    "271875007",
+                    "Senile debility (finding)"
+                ],
+                [
+                    "428116008",
+                    "Multifactorial gait problem (finding)"
+                ],
+                [
+                    "713514005",
+                    "Muscle weakness of limb (finding)"
+                ],
+                [
+                    "931000119107",
+                    "Dependence on supplemental oxygen (finding)"
+                ],
+                [
+                    "272060000",
+                    "Fatigue - symptom (finding)"
+                ],
+                [
+                    "284529003",
+                    "Cardiac cachexia (finding)"
+                ],
+                [
+                    "135834002",
+                    "Pseudoparalysis (finding)"
+                ],
+                [
+                    "314109004",
+                    "Feeling tired (finding)"
+                ],
+                [
+                    "160685001",
+                    "Bed-ridden (finding)"
+                ],
+                [
+                    "13791008",
+                    "Asthenia (finding)"
+                ],
+                [
+                    "84229001",
+                    "Fatigue (finding)"
+                ],
+                [
+                    "432559006",
+                    "Abnormal gait due to muscle weakness (finding)"
+                ],
+                [
+                    "79031000119101",
+                    "Dependence on respirator (finding)"
+                ],
+                [
+                    "249941003",
+                    "Pelvic girdle weakness (finding)"
+                ],
+                [
+                    "429487005",
+                    "Dependence on continuous positive airway pressure ventilation (finding)"
+                ],
+                [
+                    "248278004",
+                    "Attacks of weakness (finding)"
+                ],
+                [
+                    "444042007",
+                    "Excessive postexertional fatigue (finding)"
+                ],
+                [
+                    "60631000119109",
+                    "Dependence on home ventilator (finding)"
+                ],
+                [
+                    "50314001",
+                    "Partial bilateral paresis (finding)"
+                ],
+                [
+                    "298283006",
+                    "Hand muscle weakness (finding)"
+                ],
+                [
+                    "69161000119103",
+                    "Functional gait abnormality (finding)"
+                ],
+                [
+                    "249940002",
+                    "Shoulder girdle weakness (finding)"
+                ],
+                [
+                    "250054005",
+                    "Frontal gait disorder (finding)"
+                ],
+                [
+                    "248269005",
+                    "Tired on least exertion (finding)"
+                ],
+                [
+                    "163695007",
+                    "On examination - muscle power reduced (finding)"
+                ],
+                [
+                    "224960004",
+                    "Tired (finding)"
+                ],
+                [
+                    "225612007",
+                    "Wheelchair bound (finding)"
+                ],
+                [
+                    "105504002",
+                    "Dependence on walking stick (finding)"
+                ],
+                [
+                    "163686004",
+                    "On examination - gait ataxic (finding)"
+                ],
+                [
+                    "784317004",
+                    "Fatigue due to chemotherapy (finding)"
+                ],
+                [
+                    "309249007",
+                    "Calf muscle weakness (finding)"
+                ],
+                [
+                    "248279007",
+                    "Frailty (finding)"
+                ],
+                [
+                    "60651000119103",
+                    "Dependence on continuous supplemental oxygen (finding)"
+                ],
+                [
+                    "448765001",
+                    "Unintentional weight loss (finding)"
+                ],
+                [
+                    "429091008",
+                    "Dependence on biphasic positive airway pressure ventilation (finding)"
+                ],
+                [
+                    "126013009",
+                    "Subjective muscle weakness (finding)"
+                ],
+                [
+                    "89201000119106",
+                    "Dependence on supplemental oxygen when ambulating (finding)"
+                ],
+                [
+                    "271795006",
+                    "Malaise and fatigue (finding)"
+                ],
+                [
+                    "165243005",
+                    "Independent in wheelchair (finding)"
+                ],
+                [
+                    "22631008",
+                    "Unsteady when walking (finding)"
+                ],
+                [
+                    "43005009",
+                    "Shuffling gait (finding)"
+                ],
+                [
+                    "79021000119104",
+                    "Dependence on aspirator (finding)"
+                ],
+                [
+                    "127378008",
+                    "Bilateral paresis (finding)"
+                ],
+                [
+                    "78119002",
+                    "Complete bilateral paresis (finding)"
+                ],
+                [
+                    "428264009",
+                    "Painful gait (finding)"
+                ],
+                [
+                    "165244004",
+                    "Minimal help in wheelchair (finding)"
+                ],
+                [
+                    "250052009",
+                    "Petren's gait (finding)"
+                ],
+                [
+                    "422868009",
+                    "Unexplained weight loss (finding)"
+                ],
+                [
+                    "784318009",
+                    "Fatigue due to radiation therapy (finding)"
+                ],
+                [
+                    "250048009",
+                    "Frontal ataxia (finding)"
+                ],
+                [
+                    "162236007",
+                    "Weakness present (finding)"
+                ],
+                [
+                    "249937002",
+                    "Truncal muscle weakness (finding)"
+                ],
+                [
+                    "418073009",
+                    "Pseudoparalysis due to generalized arthritis (finding)"
+                ],
+                [
+                    "250038007",
+                    "Retropulsion when walking (finding)"
+                ],
+                [
+                    "262285001",
+                    "Weight decreased (finding)"
+                ],
+                [
+                    "102891000",
+                    "Age-related cognitive decline (finding)"
+                ],
+                [
+                    "89362005",
+                    "Weight loss (finding)"
+                ],
+                [
+                    "431524008",
+                    "Abnormal gait due to impairment of balance (finding)"
+                ],
+                [
+                    "275313006",
+                    "Dragging leg (finding)"
+                ],
+                [
+                    "161873000",
+                    "Heavy legs (finding)"
+                ],
+                [
+                    "160684002",
+                    "Confined to chair (finding)"
+                ],
+                [
+                    "713568000",
+                    "Occasionally tired (finding)"
+                ],
+                [
+                    "4468000",
+                    "Oppenheim's gait (finding)"
+                ],
+                [
+                    "788900007",
+                    "Dependence on artificial heart (finding)"
+                ],
+                [
+                    "249942005",
+                    "Distal muscle weakness (finding)"
+                ],
+                [
+                    "161832001",
+                    "Weight decreasing (finding)"
+                ],
+                [
+                    "312444006",
+                    "Spastic paraparesis (finding)"
+                ],
+                [
+                    "267031002",
+                    "Tiredness symptom (finding)"
+                ],
+                [
+                    "442099003",
+                    "Psychogenic fatigue (finding)"
+                ],
+                [
+                    "249888000",
+                    "Weakness of sternomastoid (finding)"
+                ],
+                [
+                    "105503008",
+                    "Dependence on wheelchair (finding)"
+                ],
+                [
+                    "267024001",
+                    "Abnormal weight loss (finding)"
+                ],
+                [
+                    "16018431000119109",
+                    "Paresis of right lower limb (finding)"
+                ],
+                [
+                    "249943000",
+                    "Weakness of distal arms and legs (finding)"
+                ],
+                [
+                    "18726006",
+                    "Senile asthenia (finding)"
+                ],
+                [
+                    "413121008",
+                    "Dependent on helper pushing wheelchair (finding)"
+                ],
+                [
+                    "713512009",
+                    "Muscle weakness of upper limb (finding)"
+                ],
+                [
+                    "250002000",
+                    "Rapid fatigue of gait (finding)"
+                ],
+                [
+                    "160692006",
+                    "Mobility very poor (finding)"
+                ],
+                [
+                    "160681005",
+                    "Mobile outside with aid (finding)"
+                ],
+                [
+                    "160693001",
+                    "Mobility poor (finding)"
+                ],
+                [
+                    "160734000",
+                    "Lives in a nursing home (finding)"
+                ],
+                [
+                    "267032009",
+                    "Tired all the time (finding)"
+                ],
+                [
+                    "371028005",
+                    "Spastic paresis (finding)"
+                ],
+                [
+                    "85711000119103",
+                    "Stumbling due to lack of coordination (finding)"
+                ],
+                [
+                    "16419651000119103",
+                    "Dependence on biphasic positive airway pressure ventilation due to central sleep apnea syndrome (finding)"
+                ],
+                [
+                    "23042008",
+                    "Spinal paraparesis (finding)"
+                ],
+                [
+                    "250032008",
+                    "Vestibular ataxic gait (finding)"
+                ],
+                [
+                    "152921000119101",
+                    "Dependence on respiratory device (finding)"
+                ],
+                [
+                    "238108007",
+                    "Cachexia (finding)"
+                ],
+                [
+                    "41786007",
+                    "Neurological muscle weakness (finding)"
+                ],
+                [
+                    "160737007",
+                    "Lives in an old peoples home (finding)"
+                ],
+                [
+                    "249946008",
+                    "Pyramidal type muscle weakness (finding)"
+                ],
+                [
+                    "250043000",
+                    "High level sensorimotor gait disorder (finding)"
+                ],
+                [
+                    "25136009",
+                    "Ataxic gait (finding)"
+                ],
+                [
+                    "788876001",
+                    "Cachexia due to malignant neoplastic disease (finding)"
+                ],
+                [
+                    "394616008",
+                    "Unsteady gait (finding)"
+                ],
+                [
+                    "160683008",
+                    "Needs walking aid in home (finding)"
+                ],
+                [
+                    "250003005",
+                    "Low level sensorimotor gait disorder (finding)"
+                ],
+                [
+                    "250029005",
+                    "Sensory ataxic gait (finding)"
+                ],
+                [
+                    "22090007",
+                    "Scissoring gait (finding)"
+                ],
+                [
+                    "250015009",
+                    "Arthritic gait (finding)"
+                ],
+                [
+                    "163600007",
+                    "On examination - paresis (weakness) (finding)"
+                ],
+                [
+                    "250045007",
+                    "Tottering gait (finding)"
+                ],
+                [
+                    "20940004",
+                    "Spinal hemiparesis (finding)"
+                ],
+                [
+                    "250991000119100",
+                    "Stumbling gait (finding)"
+                ],
+                [
+                    "272036004",
+                    "Complaining of debility and malaise (finding)"
+                ],
+                [
+                    "272062008",
+                    "Complaining of \"tired all the time\" (finding)"
+                ],
+                [
+                    "162239000",
+                    "Abdominal weakness (finding)"
+                ],
+                [
+                    "249938007",
+                    "Weakness of back (finding)"
+                ],
+                [
+                    "105501005",
+                    "Dependence on enabling machine or device (finding)"
+                ]
+            ]
+        }
+    }
+}

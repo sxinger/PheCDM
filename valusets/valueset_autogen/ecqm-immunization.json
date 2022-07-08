@@ -1,0 +1,397 @@
+{
+    "DTaP Vaccine": {
+        "vs-id": "DTaP Vaccine",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.196.12.1214",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with diphtheria, tetanus, and pertussis (DTaP) vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a diphtheria, tetanus, and pertussis (DTaP) vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    146,
+                    "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
+                ],
+                [
+                    107,
+                    "diphtheria, tetanus toxoids and acellular pertussis vaccine, unspecified formulation"
+                ],
+                [
+                    106,
+                    "diphtheria, tetanus toxoids and acellular pertussis vaccine, 5 pertussis antigens"
+                ],
+                [
+                    110,
+                    "DTaP-hepatitis B and poliovirus vaccine"
+                ],
+                [
+                    120,
+                    "diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
+                ],
+                [
+                    20,
+                    "diphtheria, tetanus toxoids and acellular pertussis vaccine"
+                ],
+                [
+                    50,
+                    "DTaP-Haemophilus influenzae type b conjugate vaccine"
+                ]
+            ]
+        }
+    },
+    "Hepatitis A Vaccine": {
+        "vs-id": "Hepatitis A Vaccine",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.196.12.1215",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with Hepatitis A vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a Hepatitis A vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    85,
+                    "hepatitis A vaccine, unspecified formulation"
+                ],
+                [
+                    83,
+                    "hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule"
+                ],
+                [
+                    31,
+                    "hepatitis A vaccine, pediatric dosage, unspecified formulation"
+                ]
+            ]
+        }
+    },
+    "Hepatitis B Vaccine": {
+        "vs-id": "Hepatitis B Vaccine",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.196.12.1216",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with Hepatitis B vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a Hepatitis B vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    146,
+                    "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
+                ],
+                [
+                    51,
+                    "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+                ],
+                [
+                    8,
+                    "hepatitis B vaccine, pediatric or pediatric/adolescent dosage"
+                ],
+                [
+                    44,
+                    "hepatitis B vaccine, dialysis patient dosage"
+                ],
+                [
+                    110,
+                    "DTaP-hepatitis B and poliovirus vaccine"
+                ],
+                [
+                    45,
+                    "hepatitis B vaccine, unspecified formulation"
+                ]
+            ]
+        }
+    },
+    "Hib Vaccine (3 dose schedule)": {
+        "vs-id": "Hib Vaccine (3 dose schedule)",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.110.12.1083",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with 3-dose haemophilus influenzae type b (Hib) vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a 3-dose haemophilus influenzae type b (Hib) vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    17,
+                    "Haemophilus influenzae type b vaccine, conjugate unspecified formulation"
+                ],
+                [
+                    49,
+                    "Haemophilus influenzae type b vaccine, PRP-OMP conjugate"
+                ],
+                [
+                    51,
+                    "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+                ]
+            ]
+        }
+    },
+    "Hib Vaccine (4 dose schedule)": {
+        "vs-id": "Hib Vaccine (4 dose schedule)",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.110.12.1085",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with 4-dose haemophilus influenzae type b (Hib) vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a 4-dose haemophilus influenzae type b (Hib) vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    120,
+                    "diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
+                ],
+                [
+                    146,
+                    "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
+                ],
+                [
+                    48,
+                    "Haemophilus influenzae type b vaccine, PRP-T conjugate"
+                ],
+                [
+                    148,
+                    "Meningococcal Groups C and Y and Haemophilus b Tetanus Toxoid Conjugate Vaccine"
+                ]
+            ]
+        }
+    },
+    "Inactivated Polio Vaccine (IPV)": {
+        "vs-id": "Inactivated Polio Vaccine (IPV)",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.196.12.1219",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with inactivated polio vaccines (IPV).",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent an inactivated polio vaccine (IPV).",
+        "codelist": {
+            "CVX": [
+                [
+                    146,
+                    "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
+                ],
+                [
+                    89,
+                    "poliovirus vaccine, unspecified formulation"
+                ],
+                [
+                    10,
+                    "poliovirus vaccine, inactivated"
+                ],
+                [
+                    110,
+                    "DTaP-hepatitis B and poliovirus vaccine"
+                ],
+                [
+                    120,
+                    "diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
+                ]
+            ]
+        }
+    },
+    "Influenza Vaccine": {
+        "vs-id": "Influenza Vaccine",
+        "clinical-focus": "2.16.840.1.113883.3.526.3.1254",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with influenza vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent an influenza vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    185,
+                    "Seasonal, quadrivalent, recombinant, injectable influenza vaccine, preservative free"
+                ],
+                [
+                    141,
+                    "Influenza, seasonal, injectable"
+                ],
+                [
+                    166,
+                    "influenza, intradermal, quadrivalent, preservative free, injectable"
+                ],
+                [
+                    135,
+                    "influenza, high dose seasonal, preservative-free"
+                ],
+                [
+                    171,
+                    "Influenza, injectable, Madin Darby Canine Kidney, preservative free, quadrivalent"
+                ],
+                [
+                    161,
+                    "Influenza, injectable,quadrivalent, preservative free, pediatric"
+                ],
+                [
+                    186,
+                    "Influenza, injectable, Madin Darby Canine Kidney,  quadrivalent with preservative"
+                ],
+                [
+                    88,
+                    "influenza virus vaccine, unspecified formulation"
+                ],
+                [
+                    149,
+                    "influenza, live, intranasal, quadrivalent"
+                ],
+                [
+                    168,
+                    "Seasonal trivalent influenza vaccine, adjuvanted, preservative free"
+                ],
+                [
+                    197,
+                    "influenza, high-dose seasonal, quadrivalent, .7mL dose, preservative free"
+                ],
+                [
+                    155,
+                    "Seasonal, trivalent, recombinant, injectable influenza vaccine, preservative free"
+                ],
+                [
+                    153,
+                    "Influenza, injectable, Madin Darby Canine Kidney, preservative free"
+                ],
+                [
+                    150,
+                    "Influenza, injectable, quadrivalent, preservative free"
+                ],
+                [
+                    140,
+                    "Influenza, seasonal, injectable, preservative free"
+                ],
+                [
+                    205,
+                    "influenza, seasonal vaccine, quadrivalent, adjuvanted, .5mL dose, preservative free"
+                ],
+                [
+                    144,
+                    "seasonal influenza, intradermal, preservative free"
+                ],
+                [
+                    158,
+                    "influenza, injectable, quadrivalent, contains preservative"
+                ]
+            ]
+        }
+    },
+    "Influenza Virus LAIV Immunization": {
+        "vs-id": "Influenza Virus LAIV Immunization",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.110.12.1087",
+        "data-element": "The purpose of this value set is to represent live attenuated influenza vaccine.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a live attenuated influenza vaccine (quadrivalent and trivalent).",
+        "codelist": {
+            "CVX": [
+                [
+                    111,
+                    "influenza virus vaccine, live, attenuated, for intranasal use"
+                ],
+                [
+                    149,
+                    "influenza, live, intranasal, quadrivalent"
+                ]
+            ]
+        }
+    },
+    "Measles, Mumps and Rubella (MMR) Vaccine": {
+        "vs-id": "Measles, Mumps and Rubella (MMR) Vaccine",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.196.12.1224",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with measles, mumps and rubella (MMR) vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a measles, mumps and rubella (MMR) vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    94,
+                    "measles, mumps, rubella, and varicella virus vaccine"
+                ],
+                [
+                    3,
+                    "measles, mumps and rubella virus vaccine"
+                ]
+            ]
+        }
+    },
+    "Pneumococcal Conjugate Vaccine": {
+        "vs-id": "Pneumococcal Conjugate Vaccine",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.196.12.1221",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with pneumococcal conjugate vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a pneumococcal conjugate vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    109,
+                    "pneumococcal vaccine, unspecified formulation"
+                ],
+                [
+                    133,
+                    "pneumococcal conjugate vaccine, 13 valent"
+                ],
+                [
+                    152,
+                    "Pneumococcal Conjugate, unspecified formulation"
+                ]
+            ]
+        }
+    },
+    "Rotavirus Vaccine (3 dose schedule)": {
+        "vs-id": "Rotavirus Vaccine (3 dose schedule)",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.196.12.1223",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with 3-dose rotavirus vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a 3-dose rotavirus vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    116,
+                    "rotavirus, live, pentavalent vaccine"
+                ],
+                [
+                    122,
+                    "rotavirus vaccine, unspecified formulation"
+                ]
+            ]
+        }
+    },
+    "Varicella Zoster Vaccine (VZV)": {
+        "vs-id": "Varicella Zoster Vaccine (VZV)",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.196.12.1170",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with varicella zoster vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a varicella zoster vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    21,
+                    "varicella virus vaccine"
+                ],
+                [
+                    94,
+                    "measles, mumps, rubella, and varicella virus vaccine"
+                ]
+            ]
+        }
+    },
+    "Adult Pneumococcal Vaccine": {
+        "vs-id": "Adult Pneumococcal Vaccine",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.1161",
+        "data-element": "The purpose of this value set is to represent concepts for immunizations with adult pneumococcal vaccines.",
+        "incld": "This value set may use a model element related to Immunization.",
+        "excld": "Includes concepts that represent a 13-valent, 15-valent, 20-valent, 23-valent or unspecified formulation pneumococcal vaccine.",
+        "codelist": {
+            "CVX": [
+                [
+                    216,
+                    "Pneumococcal conjugate vaccine 20-valent (PCV20), polysaccharide CRM197 conjugate, adjuvant, preservative free"
+                ],
+                [
+                    33,
+                    "pneumococcal polysaccharide vaccine, 23 valent"
+                ],
+                [
+                    109,
+                    "pneumococcal vaccine, unspecified formulation"
+                ],
+                [
+                    133,
+                    "pneumococcal conjugate vaccine, 13 valent"
+                ],
+                [
+                    215,
+                    "Pneumococcal conjugate vaccine 15-valent (PCV15), polysaccharide CRM197 conjugate, adjuvant, preservative free"
+                ],
+                [
+                    152,
+                    "Pneumococcal Conjugate, unspecified formulation"
+                ]
+            ]
+        }
+    }
+}

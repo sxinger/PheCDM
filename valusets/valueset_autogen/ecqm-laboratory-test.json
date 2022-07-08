@@ -1,0 +1,3538 @@
+{
+    "Hematocrit lab test": {
+        "vs-id": "Hematocrit lab test",
+        "clinical-focus": "2.16.840.1.113762.1.4.1045.114",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring hematocrit.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring hematocrit in the specimen source of blood.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "41654-5",
+                    "Hematocrit [Volume Fraction] of Venous blood"
+                ],
+                [
+                    "41655-2",
+                    "Hematocrit [Volume Fraction] of Mixed venous blood"
+                ],
+                [
+                    "71830-4",
+                    "Hematocrit [Pure volume fraction] of Mixed venous blood"
+                ],
+                [
+                    "31100-1",
+                    "Hematocrit [Volume Fraction] of Blood by Impedance"
+                ],
+                [
+                    "71829-6",
+                    "Hematocrit [Pure volume fraction] of Venous blood"
+                ],
+                [
+                    "71832-0",
+                    "Hematocrit [Pure volume fraction] of Arterial blood"
+                ],
+                [
+                    "4544-3",
+                    "Hematocrit [Volume Fraction] of Blood by Automated count"
+                ],
+                [
+                    "20570-8",
+                    "Hematocrit [Volume Fraction] of Blood"
+                ],
+                [
+                    "71833-8",
+                    "Hematocrit [Pure volume fraction] of Blood by Automated count"
+                ],
+                [
+                    "32354-3",
+                    "Hematocrit [Volume Fraction] of Arterial blood"
+                ],
+                [
+                    "4545-0",
+                    "Hematocrit [Volume Fraction] of Blood by Centrifugation"
+                ]
+            ]
+        }
+    },
+    "White blood cells count lab test": {
+        "vs-id": "White blood cells count lab test",
+        "clinical-focus": "2.16.840.1.113762.1.4.1045.129",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring white blood cells.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring white blood cell count in the specimen source of blood.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "49498-9",
+                    "Leukocytes [#/volume] in Blood by Estimate"
+                ],
+                [
+                    "804-5",
+                    "Leukocytes [#/volume] in Blood by Manual count"
+                ],
+                [
+                    "6690-2",
+                    "Leukocytes [#/volume] in Blood by Automated count"
+                ],
+                [
+                    "26464-8",
+                    "Leukocytes [#/volume] in Blood"
+                ],
+                [
+                    "33256-9",
+                    "Leukocytes [#/volume] corrected for nucleated erythrocytes in Blood by Automated count"
+                ]
+            ]
+        }
+    },
+    "LDL-c": {
+        "vs-id": "LDL-c",
+        "clinical-focus": "2.16.840.1.113883.3.117.1.7.1.215",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests commonly used for low-density lipoproteins (LDL) cholesterol measurement.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring low-density lipoprotein  cholesterol (LDL-C) using the specimen type of serum or plasma based on a measurement scale of mass per volume.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "91105-7",
+                    "Cholesterol in LDL 1 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "43394-6",
+                    "Cholesterol in LDL acylated [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "96259-7",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Calculated by Martin-Hopkins"
+                ],
+                [
+                    "91108-1",
+                    "Cholesterol in LDL 4 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "13457-7",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation"
+                ],
+                [
+                    "2089-1",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "50193-2",
+                    "Cholesterol in LDL.narrow density [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "91111-5",
+                    "Cholesterol in LDL 7 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "91109-9",
+                    "Cholesterol in LDL 5 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "91110-7",
+                    "Cholesterol in LDL 6 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "91107-3",
+                    "Cholesterol in LDL 3 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "18261-8",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma ultracentrifugate"
+                ],
+                [
+                    "55440-2",
+                    "Cholesterol.in LDL (real) [Mass/volume] in Serum or Plasma by VAP"
+                ],
+                [
+                    "18262-6",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
+                ],
+                [
+                    "49132-4",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Electrophoresis"
+                ],
+                [
+                    "91106-5",
+                    "Cholesterol in LDL 2 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "90364-1",
+                    "Cholesterol.in LDL.small dense [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "96597-0",
+                    "Cholesterol in LDL [Mass/volume] in DBS by Direct assay"
+                ],
+                [
+                    "86911-5",
+                    "Cholesterol in LDL goal [Mass/volume] Serum or Plasma"
+                ]
+            ]
+        }
+    },
+    "INR": {
+        "vs-id": "INR",
+        "clinical-focus": "2.16.840.1.113883.3.117.1.7.1.213",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory test for international normalized ratio (INR).",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test of INR (International Normalized Ratio).",
+        "codelist": {
+            "LOINC": [
+                [
+                    "38875-1",
+                    "INR in Platelet poor plasma or blood by Coagulation assay"
+                ],
+                [
+                    "34714-6",
+                    "INR in Blood by Coagulation assay"
+                ],
+                [
+                    "52129-4",
+                    "INR in Platelet poor plasma by Coagulation assay --post heparin neutralization"
+                ],
+                [
+                    "6301-6",
+                    "INR in Platelet poor plasma by Coagulation assay"
+                ],
+                [
+                    "46418-0",
+                    "INR in Capillary blood by Coagulation assay"
+                ]
+            ]
+        }
+    },
+    "HbA1c Laboratory Test": {
+        "vs-id": "HbA1c Laboratory Test",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.198.12.1013",
+        "data-element": "The purpose of this value set is to represent concepts for hemoglobin A1c tests.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests for hemoglobin A1c.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "17856-6",
+                    "Hemoglobin A1c/Hemoglobin.total in Blood by HPLC"
+                ],
+                [
+                    "4548-4",
+                    "Hemoglobin A1c/Hemoglobin.total in Blood"
+                ],
+                [
+                    "4549-2",
+                    "Hemoglobin A1c/Hemoglobin.total in Blood by Electrophoresis"
+                ]
+            ]
+        }
+    },
+    "HPV Test": {
+        "vs-id": "HPV Test",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.110.12.1059",
+        "data-element": "The purpose of this value set is to represent concepts for human papilloma viruses (HPV).",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests for high-risk HPV in cervical samples.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "59263-4",
+                    "Human papilloma virus 16 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "59420-0",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "82354-2",
+                    "Human papilloma virus 16 and 18+45 E6+E7 mRNA [Identifier] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "95539-3",
+                    "Human papilloma virus 31 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "30167-1",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "82456-5",
+                    "Human papilloma virus 16 E6+E7 mRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "71431-1",
+                    "Human papilloma virus 31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "75694-0",
+                    "Human papilloma virus 18+45 E6+E7 mRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "77379-6",
+                    "Human papilloma virus 16 and 18 and 31+33+35+39+45+51+52+56+58+59+66+68 DNA [Interpretation] in Cervix"
+                ],
+                [
+                    "21440-3",
+                    "Human papilloma virus 16+18+31+33+35+45+51+52+56 DNA [Presence] in Cervix by Probe"
+                ],
+                [
+                    "38372-9",
+                    "Human papilloma virus 6+11+16+18+31+33+35+39+42+43+44+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "77399-4",
+                    "Human papilloma virus 16 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "59264-2",
+                    "Human papilloma virus 18 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "69002-4",
+                    "Human papilloma virus E6+E7 mRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "82675-0",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "77400-0",
+                    "Human papilloma virus 18 DNA [Presence] in Cervix by NAA with probe detection"
+                ]
+            ]
+        }
+    },
+    "Pap Test": {
+        "vs-id": "Pap Test",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.108.12.1017",
+        "data-element": "The purpose of this value set is to represent concepts for cervical cytology tests.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests for cervical cytology.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "10524-7",
+                    "Microscopic observation [Identifier] in Cervix by Cyto stain"
+                ],
+                [
+                    "19774-9",
+                    "Cytology study comment Cervical or vaginal smear or scraping Cyto stain"
+                ],
+                [
+                    "19764-0",
+                    "Statement of adequacy [Interpretation] of Cervical or vaginal smear or scraping by Cyto stain"
+                ],
+                [
+                    "47528-5",
+                    "Cytology report of Cervical or vaginal smear or scraping Cyto stain"
+                ],
+                [
+                    "19765-7",
+                    "Microscopic observation [Identifier] in Cervical or vaginal smear or scraping by Cyto stain"
+                ],
+                [
+                    "19766-5",
+                    "Microscopic observation [Identifier] in Cervical or vaginal smear or scraping by Cyto stain Narrative"
+                ],
+                [
+                    "33717-0",
+                    "Cytology Cervical or vaginal smear or scraping study"
+                ],
+                [
+                    "18500-9",
+                    "Microscopic observation [Identifier] in Cervix by Cyto stain.thin prep"
+                ],
+                [
+                    "47527-7",
+                    "Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep"
+                ],
+                [
+                    "19762-4",
+                    "General categories [Interpretation] of Cervical or vaginal smear or scraping by Cyto stain"
+                ]
+            ]
+        }
+    },
+    "Prostate Specific Antigen Test": {
+        "vs-id": "Prostate Specific Antigen Test",
+        "clinical-focus": "2.16.840.1.113883.3.526.3.401",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring the prostate specific antigen (PSA).",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test for a prostate specific antigen (PSA).",
+        "codelist": {
+            "LOINC": [
+                [
+                    "15324-7",
+                    "Prostate specific Ag/Prostate volume calculated from planimetry"
+                ],
+                [
+                    "2857-1",
+                    "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "33667-7",
+                    "Prostate specific Ag.protein bound [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "10508-0",
+                    "Prostate specific Ag [Presence] in Tissue by Immune stain"
+                ],
+                [
+                    "35741-8",
+                    "Prostate specific Ag [Mass/volume] in Serum or Plasma by Detection limit <= 0.01 ng/mL"
+                ],
+                [
+                    "10886-0",
+                    "Prostate Specific Ag Free [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "15325-4",
+                    "Prostate specific Ag/Prostate volume calculated"
+                ],
+                [
+                    "12841-3",
+                    "Prostate Specific Ag Free/Prostate specific Ag.total in Serum or Plasma"
+                ],
+                [
+                    "19201-3",
+                    "Prostate Specific Ag Free [Units/volume] in Serum or Plasma"
+                ],
+                [
+                    "19195-7",
+                    "Prostate specific Ag [Units/volume] in Serum or Plasma"
+                ],
+                [
+                    "34611-4",
+                    "Prostate specific Ag [Mass/volume] in Urine"
+                ],
+                [
+                    "15323-9",
+                    "Prostate specific Ag/Prostate volume calculated from height, width and length"
+                ]
+            ]
+        }
+    },
+    "FIT DNA": {
+        "vs-id": "FIT DNA",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.108.12.1039",
+        "data-element": "The purpose of this value set is to represent concepts for fecal immunochemical (FIT) DNA tests.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent fecal immunochemical (FIT) DNA tests.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "77353-1",
+                    "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative"
+                ],
+                [
+                    "77354-9",
+                    "Noninvasive colorectal cancer DNA and occult blood screening [Presence] in Stool"
+                ]
+            ]
+        }
+    },
+    "Fecal Occult Blood Test (FOBT)": {
+        "vs-id": "Fecal Occult Blood Test (FOBT)",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.198.12.1011",
+        "data-element": "The purpose of this value set is to represent concepts for fecal occult blood tests.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests for occult blood in stool.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "2335-8",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool"
+                ],
+                [
+                    "56491-4",
+                    "Hemoglobin.gastrointestinal.lower [Presence] in Stool by Immunoassay --3rd specimen"
+                ],
+                [
+                    "14565-6",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool --3rd specimen"
+                ],
+                [
+                    "27396-1",
+                    "Hemoglobin.gastrointestinal [Mass/mass] in Stool"
+                ],
+                [
+                    "27925-7",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool --7th specimen"
+                ],
+                [
+                    "56490-6",
+                    "Hemoglobin.gastrointestinal.lower [Presence] in Stool by Immunoassay --2nd specimen"
+                ],
+                [
+                    "14564-9",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool --2nd specimen"
+                ],
+                [
+                    "27926-5",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool --8th specimen"
+                ],
+                [
+                    "57905-2",
+                    "Hemoglobin.gastrointestinal.lower [Presence] in Stool by Immunoassay --1st specimen"
+                ],
+                [
+                    "80372-6",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
+                ],
+                [
+                    "58453-2",
+                    "Hemoglobin.gastrointestinal.lower [Mass/volume] in Stool by Immunoassay"
+                ],
+                [
+                    "27401-9",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool --6th specimen"
+                ],
+                [
+                    "12504-7",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool --5th specimen"
+                ],
+                [
+                    "29771-3",
+                    "Hemoglobin.gastrointestinal.lower [Presence] in Stool by Immunoassay"
+                ],
+                [
+                    "12503-9",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool --4th specimen"
+                ],
+                [
+                    "14563-1",
+                    "Hemoglobin.gastrointestinal [Presence] in Stool --1st specimen"
+                ]
+            ]
+        }
+    },
+    "Urine Protein Tests": {
+        "vs-id": "Urine Protein Tests",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.109.12.1024",
+        "data-element": "The purpose of this value set is to represent concepts for tests that measure urine protein.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests for protein in urine.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "35663-4",
+                    "Protein [Mass/volume] in Urine collected for unspecified duration"
+                ],
+                [
+                    "53531-0",
+                    "Microalbumin [Mass/volume] in Urine by Detection limit <= 1.0 mg/L"
+                ],
+                [
+                    "1755-8",
+                    "Albumin [Mass/time] in 24 hour Urine"
+                ],
+                [
+                    "30001-2",
+                    "Microalbumin/Creatinine [Ratio] in Urine by Test strip"
+                ],
+                [
+                    "58448-2",
+                    "Microalbumin ug/min [Mass/time] in 24 hour Urine"
+                ],
+                [
+                    "32551-4",
+                    "Protein [Mass] in Urine collected for unspecified duration"
+                ],
+                [
+                    "50949-7",
+                    "Albumin [Presence] in Urine by Test strip"
+                ],
+                [
+                    "58992-9",
+                    "Protein [Mass/time] in 18 hour Urine"
+                ],
+                [
+                    "77254-1",
+                    "Microalbumin/Creatinine [Ratio] in 24 hour Urine by Detection limit <= 1.0 mg/L"
+                ],
+                [
+                    "21482-5",
+                    "Protein [Mass/volume] in 24 hour Urine"
+                ],
+                [
+                    "26801-1",
+                    "Protein [Mass/time] in 12 hour Urine"
+                ],
+                [
+                    "40662-9",
+                    "Protein [Mass/time] in 12 hour Urine --resting"
+                ],
+                [
+                    "30003-8",
+                    "Microalbumin [Mass/volume] in 24 hour Urine"
+                ],
+                [
+                    "40663-7",
+                    "Protein [Mass/time] in 12 hour Urine --upright"
+                ],
+                [
+                    "20454-5",
+                    "Protein [Presence] in Urine by Test strip"
+                ],
+                [
+                    "34366-5",
+                    "Protein/Creatinine [Ratio] in Urine"
+                ],
+                [
+                    "53532-8",
+                    "Microalbumin [Mass/time] in 24 hour Urine by Detection limit <= 1.0 mg/L"
+                ],
+                [
+                    "29946-1",
+                    "Albumin [Presence] in 24 hour Urine by Electrophoresis"
+                ],
+                [
+                    "50209-6",
+                    "Albumin [Mass/time] in Urine collected for unspecified duration --supine"
+                ],
+                [
+                    "57735-3",
+                    "Protein [Presence] in Urine by Automated test strip"
+                ],
+                [
+                    "21059-1",
+                    "Albumin [Mass/volume] in 24 hour Urine"
+                ],
+                [
+                    "6942-7",
+                    "Albumin [Mass/volume] in Urine by Electrophoresis"
+                ],
+                [
+                    "95232-5",
+                    "Microalbumin [Presence] in Urine by Test strip"
+                ],
+                [
+                    "95233-3",
+                    "Microalbumin/Creatinine Qualitative in Urine by Test strip"
+                ],
+                [
+                    "6941-9",
+                    "Albumin [Mass/time] in 24 hour Urine by Electrophoresis"
+                ],
+                [
+                    "18373-1",
+                    "Protein [Mass/time] in 6 hour Urine"
+                ],
+                [
+                    "53525-2",
+                    "Protein [Presence] in Urine by SSA method"
+                ],
+                [
+                    "9318-7",
+                    "Albumin/Creatinine [Mass Ratio] in Urine"
+                ],
+                [
+                    "60678-0",
+                    "Protein/Creatinine [Mass Ratio] in 12 hour Urine"
+                ],
+                [
+                    "1757-4",
+                    "Albumin renal clearance in 24 hour Urine and Serum or Plasma"
+                ],
+                [
+                    "89998-9",
+                    "Albumin/Creatinine [Ratio] in Urine by Detection limit <= 3.0 mg/L"
+                ],
+                [
+                    "14956-7",
+                    "Microalbumin [Mass/time] in 24 hour Urine"
+                ],
+                [
+                    "13705-9",
+                    "Albumin/Creatinine [Mass Ratio] in 24 hour Urine"
+                ],
+                [
+                    "43605-5",
+                    "Microalbumin [Mass/volume] in 4 hour Urine"
+                ],
+                [
+                    "43606-3",
+                    "Microalbumin [Mass/time] in 4 hour Urine"
+                ],
+                [
+                    "17819-4",
+                    "Albumin/Protein.total by Electrophoresis in Urine collected for unspecified duration"
+                ],
+                [
+                    "43607-1",
+                    "Microalbumin [Mass/time] in 12 hour Urine"
+                ],
+                [
+                    "50561-0",
+                    "Protein [Mass/volume] in Urine by Automated test strip"
+                ],
+                [
+                    "53121-0",
+                    "Protein [Mass/time] in 1 hour Urine"
+                ],
+                [
+                    "2889-4",
+                    "Protein [Mass/time] in 24 hour Urine"
+                ],
+                [
+                    "1753-3",
+                    "Albumin [Presence] in Urine"
+                ],
+                [
+                    "53530-2",
+                    "Microalbumin [Mass/volume] in 24 hour Urine by Detection limit <= 1.0 mg/L"
+                ],
+                [
+                    "2888-6",
+                    "Protein [Mass/volume] in Urine"
+                ],
+                [
+                    "1754-1",
+                    "Albumin [Mass/volume] in Urine"
+                ],
+                [
+                    "44292-1",
+                    "Microalbumin/Creatinine [Mass Ratio] in 12 hour Urine"
+                ],
+                [
+                    "12842-1",
+                    "Protein [Mass/volume] in 12 hour Urine"
+                ],
+                [
+                    "14959-1",
+                    "Microalbumin/Creatinine [Mass Ratio] in Urine"
+                ],
+                [
+                    "2890-2",
+                    "Protein/Creatinine [Mass Ratio] in Urine"
+                ],
+                [
+                    "56553-1",
+                    "Microalbumin [Mass/time] in 8 hour Urine"
+                ],
+                [
+                    "76401-9",
+                    "Albumin/Creatinine [Ratio] in 24 hour Urine"
+                ],
+                [
+                    "77940-5",
+                    "Albumin [Mass/volume] by Electrophoresis in Urine collected for unspecified duration"
+                ],
+                [
+                    "51190-7",
+                    "Albumin [Mass/volume] in 24 hour Urine by Electrophoresis"
+                ],
+                [
+                    "2887-8",
+                    "Protein [Presence] in Urine"
+                ],
+                [
+                    "77253-3",
+                    "Microalbumin/Creatinine [Ratio] in Urine by Detection limit <= 1.0 mg/L"
+                ],
+                [
+                    "13801-6",
+                    "Protein/Creatinine [Mass Ratio] in 24 hour Urine"
+                ],
+                [
+                    "63474-1",
+                    "Microalbumin [Mass/time] in 18 hour Urine"
+                ],
+                [
+                    "27298-9",
+                    "Protein [Units/volume] in Urine"
+                ],
+                [
+                    "93746-6",
+                    "Protein catabolic rate based on 24 hour Urine [Calculated]"
+                ],
+                [
+                    "13992-3",
+                    "Albumin/Protein.total in Urine by Electrophoresis"
+                ],
+                [
+                    "5804-0",
+                    "Protein [Mass/volume] in Urine by Test strip"
+                ],
+                [
+                    "14958-3",
+                    "Microalbumin/Creatinine [Mass Ratio] in 24 hour Urine"
+                ],
+                [
+                    "49023-5",
+                    "Microalbumin [Mass/time] in Urine collected for unspecified duration"
+                ],
+                [
+                    "32209-9",
+                    "Protein [Presence] in 24 hour Urine by Test strip"
+                ],
+                [
+                    "40486-3",
+                    "Protein/Creatinine [Ratio] in 24 hour Urine"
+                ],
+                [
+                    "14957-5",
+                    "Microalbumin [Mass/volume] in Urine"
+                ],
+                [
+                    "13986-5",
+                    "Albumin/Protein.total in 24 hour Urine by Electrophoresis"
+                ],
+                [
+                    "90000-1",
+                    "Albumin [Mass/time] in 24 hour Urine by Detection limit <= 3.0 mg/L"
+                ],
+                [
+                    "47558-2",
+                    "Microalbumin/Protein.total in 24 hour Urine"
+                ],
+                [
+                    "11218-5",
+                    "Microalbumin [Mass/volume] in Urine by Test strip"
+                ],
+                [
+                    "30000-4",
+                    "Microalbumin/Creatinine [Ratio] in Urine"
+                ],
+                [
+                    "59159-4",
+                    "Microalbumin/Creatinine [Ratio] in 24 hour Urine"
+                ],
+                [
+                    "89999-7",
+                    "Albumin [Mass/volume] in Urine by Detection limit <= 3.0 mg/L"
+                ],
+                [
+                    "49002-9",
+                    "Albumin [Mass/time] in Urine collected for unspecified duration"
+                ],
+                [
+                    "20621-9",
+                    "Albumin/Creatinine [Presence] in Urine by Test strip"
+                ],
+                [
+                    "32294-1",
+                    "Albumin/Creatinine [Ratio] in Urine"
+                ],
+                [
+                    "57369-1",
+                    "Microalbumin [Mass/volume] in 12 hour Urine"
+                ]
+            ]
+        }
+    },
+    "Group A Streptococcus Test": {
+        "vs-id": "Group A Streptococcus Test",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.198.12.1012",
+        "data-element": "The purpose of this value set is to represent concepts for group A streptococcus tests.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests to identify the presence of group A streptococcus.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "6557-3",
+                    "Streptococcus pyogenes Ag [Presence] in Throat by Immunofluorescence"
+                ],
+                [
+                    "49610-9",
+                    "Streptococcus pyogenes DNA [Identifier] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "31971-5",
+                    "Streptococcus pyogenes Ag [Presence] in Specimen"
+                ],
+                [
+                    "626-2",
+                    "Bacteria identified in Throat by Culture"
+                ],
+                [
+                    "6558-1",
+                    "Streptococcus pyogenes Ag [Presence] in Specimen by Immunoassay"
+                ],
+                [
+                    "6559-9",
+                    "Streptococcus pyogenes Ag [Presence] in Specimen by Immunofluorescence"
+                ],
+                [
+                    "68954-7",
+                    "Streptococcus pyogenes rRNA [Presence] in Throat by Probe"
+                ],
+                [
+                    "60489-2",
+                    "Streptococcus pyogenes DNA [Presence] in Throat by NAA with probe detection"
+                ],
+                [
+                    "18481-2",
+                    "Streptococcus pyogenes Ag [Presence] in Throat"
+                ],
+                [
+                    "5036-9",
+                    "Streptococcus pyogenes rRNA [Presence] in Specimen by Probe"
+                ],
+                [
+                    "78012-2",
+                    "Streptococcus pyogenes Ag [Presence] in Throat by Rapid immunoassay"
+                ],
+                [
+                    "96331-4",
+                    "Streptococcus pyogenes DNA [NCncRange] in Lower respiratory specimen Qualitative by NAA with non-probe detection"
+                ],
+                [
+                    "17898-8",
+                    "Bacteria identified in Throat by Aerobe culture"
+                ],
+                [
+                    "17656-0",
+                    "Streptococcus pyogenes [Presence] in Specimen by Organism specific culture"
+                ],
+                [
+                    "11268-0",
+                    "Streptococcus pyogenes [Presence] in Throat by Organism specific culture"
+                ]
+            ]
+        }
+    },
+    "Chlamydia Screening": {
+        "vs-id": "Chlamydia Screening",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.110.12.1052",
+        "data-element": "The purpose of this value set is to represent concepts for chlamydia tests.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent screening for chlamydia infections.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "45075-9",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae rRNA [Presence] in Urethra by Probe"
+                ],
+                [
+                    "16600-9",
+                    "Chlamydia trachomatis rRNA [Presence] in Genital specimen by Probe"
+                ],
+                [
+                    "45100-5",
+                    "Chlamydia sp identified in Vaginal fluid by Organism specific culture"
+                ],
+                [
+                    "43304-5",
+                    "Chlamydia trachomatis rRNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "31775-0",
+                    "Chlamydia trachomatis Ag [Presence] in Urine sediment"
+                ],
+                [
+                    "80361-9",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae rRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "42931-6",
+                    "Chlamydia trachomatis rRNA [Presence] in Urine by NAA with probe detection"
+                ],
+                [
+                    "36902-5",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "43406-8",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae DNA [Presence] in Specimen by Probe with signal amplification"
+                ],
+                [
+                    "557-9",
+                    "Chlamydia sp identified in Genital specimen by Organism specific culture"
+                ],
+                [
+                    "53925-4",
+                    "Chlamydia trachomatis rRNA [Presence] in Urethra by NAA with probe detection"
+                ],
+                [
+                    "14463-4",
+                    "Chlamydia trachomatis [Presence] in Cervix by Organism specific culture"
+                ],
+                [
+                    "6355-2",
+                    "Chlamydia trachomatis Ag [Presence] in Specimen by Immunofluorescence"
+                ],
+                [
+                    "47212-6",
+                    "Chlamydia trachomatis DNA [Identifier] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "21613-5",
+                    "Chlamydia trachomatis DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "80362-7",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae rRNA [Presence] in Vaginal fluid by NAA with probe detection"
+                ],
+                [
+                    "45091-6",
+                    "Chlamydia trachomatis Ag [Presence] in Genital specimen"
+                ],
+                [
+                    "44807-6",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae DNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "6349-5",
+                    "Chlamydia trachomatis [Presence] in Specimen by Organism specific culture"
+                ],
+                [
+                    "45098-1",
+                    "Chlamydia sp identified in Cervix by Organism specific culture"
+                ],
+                [
+                    "14513-6",
+                    "Chlamydia trachomatis Ag [Presence] in Urine sediment by Immunofluorescence"
+                ],
+                [
+                    "6357-8",
+                    "Chlamydia trachomatis DNA [Presence] in Urine by NAA with probe detection"
+                ],
+                [
+                    "44806-8",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae DNA [Presence] in Urine by NAA with probe detection"
+                ],
+                [
+                    "43405-0",
+                    "Chlamydia trachomatis and Neisseria gonorrhoeae DNA [Identifier] in Specimen by Probe with signal amplification"
+                ],
+                [
+                    "53926-2",
+                    "Chlamydia trachomatis rRNA [Presence] in Vaginal fluid by NAA with probe detection"
+                ],
+                [
+                    "43404-3",
+                    "Chlamydia trachomatis DNA [Presence] in Specimen by Probe with signal amplification"
+                ],
+                [
+                    "50387-0",
+                    "Chlamydia trachomatis rRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "560-3",
+                    "Chlamydia sp identified in Specimen by Organism specific culture"
+                ],
+                [
+                    "45084-1",
+                    "Chlamydia trachomatis DNA [Presence] in Vaginal fluid by NAA with probe detection"
+                ],
+                [
+                    "23838-6",
+                    "Chlamydia trachomatis rRNA [Presence] in Genital fluid by Probe"
+                ],
+                [
+                    "45069-2",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae rRNA [Presence] in Genital specimen by Probe"
+                ],
+                [
+                    "4993-2",
+                    "Chlamydia trachomatis rRNA [Presence] in Specimen by Probe"
+                ],
+                [
+                    "14467-5",
+                    "Chlamydia trachomatis [Presence] in Urine sediment by Organism specific culture"
+                ],
+                [
+                    "6356-0",
+                    "Chlamydia trachomatis DNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "45076-7",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae rRNA [Presence] in Specimen by Probe"
+                ],
+                [
+                    "80360-1",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae rRNA [Presence] in Urine by NAA with probe detection"
+                ],
+                [
+                    "91860-7",
+                    "Chlamydia trachomatis Ag [Presence] in Genital specimen by Immunofluorescence"
+                ],
+                [
+                    "21190-4",
+                    "Chlamydia trachomatis DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "31777-6",
+                    "Chlamydia trachomatis Ag [Presence] in Specimen"
+                ],
+                [
+                    "45068-4",
+                    "Chlamydia trachomatis+Neisseria gonorrhoeae DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "45095-7",
+                    "Chlamydia trachomatis [Presence] in Genital specimen by Organism specific culture"
+                ],
+                [
+                    "21191-2",
+                    "Chlamydia trachomatis DNA [Presence] in Urethra by NAA with probe detection"
+                ],
+                [
+                    "49096-1",
+                    "Chlamydia trachomatis DNA [Units/volume] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "14464-2",
+                    "Chlamydia trachomatis [Presence] in Vaginal fluid by Organism specific culture"
+                ],
+                [
+                    "36903-3",
+                    "Chlamydia trachomatis and Neisseria gonorrhoeae DNA [Identifier] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "47211-8",
+                    "Chlamydia trachomatis L2 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "6354-5",
+                    "Chlamydia trachomatis Ag [Presence] in Specimen by Immunoassay"
+                ],
+                [
+                    "14474-1",
+                    "Chlamydia trachomatis Ag [Presence] in Urine sediment by Immunoassay"
+                ]
+            ]
+        }
+    },
+    "Lab Tests During Pregnancy": {
+        "vs-id": "Lab Tests During Pregnancy",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.111.12.1007",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests conducted during pregnancy.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests conducted during pregnancy.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "83073-7",
+                    "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "48802-3",
+                    "Alpha-1-Fetoprotein panel - Serum or Plasma"
+                ],
+                [
+                    "19176-7",
+                    "Alpha-1-Fetoprotein [Units/volume] in Serum or Plasma"
+                ],
+                [
+                    "1834-1",
+                    "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "48781-9",
+                    "CYP21A2 gene mutations found [Identifier] in Amniotic fluid by Molecular genetics method Nominal"
+                ],
+                [
+                    "83075-2",
+                    "Alpha-1-Fetoprotein [Mass/volume] in Amniotic fluid by Immunoassay"
+                ],
+                [
+                    "19171-8",
+                    "Alpha-1-Fetoprotein [Units/volume] in Amniotic fluid"
+                ],
+                [
+                    "46989-0",
+                    "CFTR gene targeted mutation analysis in Amniotic fluid by Molecular genetics method"
+                ],
+                [
+                    "48039-2",
+                    "Fibronectin.fetal [Presence] in Specimen"
+                ],
+                [
+                    "34493-7",
+                    "PRF1 gene targeted mutation analysis in Amniotic fluid by Molecular genetics method"
+                ],
+                [
+                    "43798-8",
+                    "Alpha-1-Fetoprotein [Presence] in Amniotic fluid"
+                ],
+                [
+                    "15019-3",
+                    "Alpha-1-Fetoprotein [Moles/volume] in Amniotic fluid"
+                ],
+                [
+                    "83072-9",
+                    "Alpha-1-Fetoprotein [Units/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "49246-2",
+                    "Alpha-1-Fetoprotein interpretation in Serum or Plasma Narrative"
+                ],
+                [
+                    "41273-4",
+                    "Alpha-1-Fetoprotein interpretation in Amniotic fluid"
+                ],
+                [
+                    "35457-1",
+                    "Maternal cell contamination [Identifier] in Amniotic fluid Nominal"
+                ],
+                [
+                    "41274-2",
+                    "Alpha-1-Fetoprotein interpretation in Serum or Plasma"
+                ],
+                [
+                    "20403-2",
+                    "Fibronectin.fetal [Mass/volume] in Vaginal fluid"
+                ],
+                [
+                    "41096-9",
+                    "KEL gene allele [Genotype] in Amniotic fluid by Molecular genetics method Nominal"
+                ],
+                [
+                    "20404-0",
+                    "Fibronectin.fetal [Presence] in Vaginal fluid"
+                ],
+                [
+                    "1832-5",
+                    "Alpha-1-Fetoprotein [Mass/volume] in Amniotic fluid"
+                ],
+                [
+                    "19177-5",
+                    "Alpha-1-Fetoprotein [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "31993-9",
+                    "Alpha-1-Fetoprotein [Presence] in Serum or Plasma"
+                ],
+                [
+                    "49318-9",
+                    "Alpha-1-Fetoprotein interpretation in Amniotic fluid Narrative"
+                ],
+                [
+                    "41067-0",
+                    "PRF1 gene mutations found [Identifier] in Amniotic fluid by Molecular genetics method Nominal"
+                ]
+            ]
+        }
+    },
+    "Lab Tests for Sexually Transmitted Infections": {
+        "vs-id": "Lab Tests for Sexually Transmitted Infections",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.110.12.1051",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests for sexually transmitted infections.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests for sexually transmitted infections.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "12223-4",
+                    "Human papilloma virus 16+18 Ag [Presence] in Genital specimen"
+                ],
+                [
+                    "61385-1",
+                    "Human papilloma virus 59 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "48560-7",
+                    "Human papilloma virus genotype [Identifier] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "61376-0",
+                    "Human papilloma virus 33 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "32198-4",
+                    "Neisseria gonorrhoeae rRNA [Presence] in Cervix by Probe"
+                ],
+                [
+                    "17399-7",
+                    "Human papilloma virus 16 Ag [Presence] in Specimen"
+                ],
+                [
+                    "5392-6",
+                    "Treponema pallidum Ab [Units/volume] in Serum by Immobilization"
+                ],
+                [
+                    "21415-5",
+                    "Neisseria gonorrhoeae DNA [Presence] in Urethra by NAA with probe detection"
+                ],
+                [
+                    "44547-8",
+                    "Human papilloma virus DNA [Presence] in Specimen by Probe with signal amplification"
+                ],
+                [
+                    "61383-6",
+                    "Human papilloma virus 53 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "61384-4",
+                    "Human papilloma virus 58 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "91852-4",
+                    "Human papilloma virus DNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "49896-4",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "17400-3",
+                    "Human papilloma virus 16+18 Ag [Presence] in Specimen"
+                ],
+                [
+                    "21440-3",
+                    "Human papilloma virus 16+18+31+33+35+45+51+52+56 DNA [Presence] in Cervix by Probe"
+                ],
+                [
+                    "22585-4",
+                    "Treponema pallidum Ab [Units/volume] in Blood"
+                ],
+                [
+                    "17401-1",
+                    "Human papilloma virus 18 Ag [Presence] in Specimen"
+                ],
+                [
+                    "6488-1",
+                    "Neisseria gonorrhoeae Ag [Presence] in Genital specimen by Immunofluorescence"
+                ],
+                [
+                    "61381-0",
+                    "Human papilloma virus 51 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "61389-3",
+                    "Human papilloma virus 69 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "93778-9",
+                    "Human papilloma virus 6+11 E6+E7 mRNA [Presence] in Tissue by Probe"
+                ],
+                [
+                    "22590-4",
+                    "Treponema pallidum Ab [Titer] in Serum"
+                ],
+                [
+                    "86563-4",
+                    "Human papilloma virus 31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Tissue by NAA with probe detection"
+                ],
+                [
+                    "32199-2",
+                    "Neisseria gonorrhoeae rRNA [Presence] in Urethra by Probe"
+                ],
+                [
+                    "22594-6",
+                    "Treponema pallidum IgM Ab [Units/volume] in Serum"
+                ],
+                [
+                    "86564-2",
+                    "Human papilloma virus DNA [Presence] in Tissue by NAA with probe detection"
+                ],
+                [
+                    "43403-5",
+                    "Neisseria gonorrhoeae DNA [Presence] in Specimen by Probe with signal amplification"
+                ],
+                [
+                    "95938-7",
+                    "Fetal Cerebellum Diameter transverse percentile per estimated gestational age"
+                ],
+                [
+                    "24312-1",
+                    "Treponema pallidum Ab [Presence] in Serum by Agglutination"
+                ],
+                [
+                    "51839-9",
+                    "Treponema pallidum IgM Ab [Units/volume] in Serum by Immunoassay"
+                ],
+                [
+                    "47238-1",
+                    "Treponema pallidum IgG Ab [Presence] in Serum by Immunoassay"
+                ],
+                [
+                    "59420-0",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "692-4",
+                    "Neisseria gonorrhoeae [Presence] in Genital lochia by Organism specific culture"
+                ],
+                [
+                    "61379-4",
+                    "Human papilloma virus 44 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "14504-5",
+                    "Human papilloma virus 16+18 Ag [Presence] in Vaginal fluid"
+                ],
+                [
+                    "22462-6",
+                    "Reagin Ab [Units/volume] in Serum"
+                ],
+                [
+                    "57032-5",
+                    "Treponema pallidum Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "24111-7",
+                    "Neisseria gonorrhoeae DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "44544-5",
+                    "Human papilloma virus 35 Ag [Presence] in Specimen"
+                ],
+                [
+                    "44546-0",
+                    "Human papilloma virus DNA [Presence] in Vaginal fluid by Probe"
+                ],
+                [
+                    "95537-7",
+                    "Human papilloma virus 35+39+68 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "61377-8",
+                    "Human papilloma virus 35 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "86560-0",
+                    "Human papilloma virus 16 DNA [Presence] in Tissue by NAA with probe detection"
+                ],
+                [
+                    "43170-0",
+                    "Human papilloma virus 31+33 DNA [Presence] in Tissue by Probe with signal amplification"
+                ],
+                [
+                    "22430-3",
+                    "Neisseria gonorrhoeae Ab [Titer] in Serum"
+                ],
+                [
+                    "44543-7",
+                    "Human papilloma virus 31+33 Ag [Presence] in Specimen"
+                ],
+                [
+                    "40679-3",
+                    "Treponema pallidum IgG Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "5394-2",
+                    "Treponema pallidum Ab [Titer] in Serum by Latex agglutination"
+                ],
+                [
+                    "691-6",
+                    "Neisseria gonorrhoeae [Presence] in Genital specimen by Organism specific culture"
+                ],
+                [
+                    "16280-0",
+                    "Human papilloma virus DNA [Presence] in Specimen by Probe with amplification"
+                ],
+                [
+                    "6487-3",
+                    "Neisseria gonorrhoeae Ag [Presence] in Genital specimen by Immunoassay"
+                ],
+                [
+                    "6490-7",
+                    "Neisseria gonorrhoeae Ag [Presence] in Urethra"
+                ],
+                [
+                    "50326-8",
+                    "Neisseria gonorrhoeae DNA [Presence] in Specimen from Donor by NAA with probe detection"
+                ],
+                [
+                    "13322-3",
+                    "Human papilloma virus IgM Ab [Presence] in Serum"
+                ],
+                [
+                    "17405-2",
+                    "Human papilloma virus 42 Ag [Presence] in Specimen"
+                ],
+                [
+                    "22461-8",
+                    "Reagin Ab [Presence] in Serum"
+                ],
+                [
+                    "44551-0",
+                    "Human papilloma virus DNA [Presence] in Tissue by Probe"
+                ],
+                [
+                    "44548-6",
+                    "Human papilloma virus DNA [Presence] in Urethra by Probe with signal amplification"
+                ],
+                [
+                    "61378-6",
+                    "Human papilloma virus 39 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "690-8",
+                    "Neisseria gonorrhoeae [Presence] in Endometrium by Organism specific culture"
+                ],
+                [
+                    "94425-6",
+                    "Human papilloma virus E6+E7 mRNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "97156-4",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Genital specimen by Probe with signal amplification"
+                ],
+                [
+                    "59264-2",
+                    "Human papilloma virus 18 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "61386-9",
+                    "Human papilloma virus 66 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "91856-5",
+                    "Human papilloma virus 16 DNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "7975-6",
+                    "Human papilloma virus Ab [Presence] in Genital specimen"
+                ],
+                [
+                    "95539-3",
+                    "Human papilloma virus 31 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "82354-2",
+                    "Human papilloma virus 16 and 18+45 E6+E7 mRNA [Identifier] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "55298-4",
+                    "Human papilloma virus 6+11+42+43+44 DNA [Presence] in Urethra by Probe with signal amplification"
+                ],
+                [
+                    "91851-6",
+                    "Human papilloma virus genotype [Identifier] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "14502-9",
+                    "Human papilloma virus Ag [Presence] in Urethra"
+                ],
+                [
+                    "70061-7",
+                    "Human papilloma virus 16 and 18 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "698-1",
+                    "Neisseria gonorrhoeae [Presence] in Specimen by Organism specific culture"
+                ],
+                [
+                    "61393-5",
+                    "Human papilloma virus 6 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "55299-2",
+                    "Human papilloma virus 6+11+42+43+44 DNA [Presence] in Specimen by Probe with signal amplification"
+                ],
+                [
+                    "91854-0",
+                    "Human papilloma virus 18 DNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "32704-9",
+                    "Neisseria gonorrhoeae Ab [Presence] in Serum"
+                ],
+                [
+                    "5291-0",
+                    "Reagin Ab [Units/volume] in Serum by VDRL"
+                ],
+                [
+                    "20508-8",
+                    "Reagin Ab [Units/volume] in Serum or Plasma by RPR"
+                ],
+                [
+                    "95939-5",
+                    "Fetal Crown Rump length percentile per estimated gestational age"
+                ],
+                [
+                    "22434-5",
+                    "Human papilloma virus Ab [Presence] in Tissue"
+                ],
+                [
+                    "6514-4",
+                    "Human papilloma virus rRNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "96426-2",
+                    "Fetal Nasal bone"
+                ],
+                [
+                    "43305-2",
+                    "Neisseria gonorrhoeae rRNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "6515-1",
+                    "Human papilloma virus rRNA [Presence] in Tissue by NAA with probe detection"
+                ],
+                [
+                    "77400-0",
+                    "Human papilloma virus 18 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "17723-8",
+                    "Treponema pallidum Ab [Presence] in Serum by Immobilization"
+                ],
+                [
+                    "20507-0",
+                    "Reagin Ab [Presence] in Serum by RPR"
+                ],
+                [
+                    "17724-6",
+                    "Treponema pallidum Ab [Units/volume] in Serum by Immunofluorescence"
+                ],
+                [
+                    "42481-2",
+                    "Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "91073-7",
+                    "Human papilloma virus genotype [Identifier] in Tissue by NAA with probe detection"
+                ],
+                [
+                    "693-2",
+                    "Neisseria gonorrhoeae [Presence] in Vaginal fluid by Organism specific culture"
+                ],
+                [
+                    "8041-6",
+                    "Treponema pallidum Ab [Presence] in Serum by Hemagglutination"
+                ],
+                [
+                    "53927-0",
+                    "Neisseria gonorrhoeae rRNA [Presence] in Urethra by NAA with probe detection"
+                ],
+                [
+                    "98221-5",
+                    "Treponema pallidum IgG bands [Identifier] in Serum by Immunoblot"
+                ],
+                [
+                    "13288-6",
+                    "Treponema pallidum Ab [Units/volume] in Blood by Immunofluorescence"
+                ],
+                [
+                    "6562-3",
+                    "Treponema pallidum IgM Ab [Presence] in Serum"
+                ],
+                [
+                    "18480-4",
+                    "Human papilloma virus 6+11 DNA [Presence] in Tissue by Probe"
+                ],
+                [
+                    "47236-5",
+                    "Treponema pallidum IgG+IgM Ab [Presence] in Serum by Immunoassay"
+                ],
+                [
+                    "6561-5",
+                    "Treponema pallidum IgG Ab [Presence] in Serum"
+                ],
+                [
+                    "91855-7",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "95940-3",
+                    "Fetal Head Diameter.biparietal percentile per estimated gestational age"
+                ],
+                [
+                    "14500-3",
+                    "Human papilloma virus Ag [Presence] in Vaginal fluid"
+                ],
+                [
+                    "6512-8",
+                    "Human papilloma virus Ab [Presence] in Tissue by Immunoassay"
+                ],
+                [
+                    "96599-6",
+                    "Neisseria gonorrhoeae DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "59263-4",
+                    "Human papilloma virus 16 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "44550-2",
+                    "Human papilloma virus DNA [Presence] in Cervix by Probe"
+                ],
+                [
+                    "63464-2",
+                    "Treponema pallidum Ab [Units/volume] in Serum by Immunoassay"
+                ],
+                [
+                    "17410-2",
+                    "Human papilloma virus 51 Ag [Presence] in Specimen"
+                ],
+                [
+                    "61388-5",
+                    "Human papilloma virus 68 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "82456-5",
+                    "Human papilloma virus 16 E6+E7 mRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "31905-3",
+                    "Neisseria gonorrhoeae Ag [Presence] in Genital specimen"
+                ],
+                [
+                    "61380-2",
+                    "Human papilloma virus 45 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "50388-8",
+                    "Neisseria gonorrhoeae rRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "17412-8",
+                    "Human papilloma virus 6+11 Ag [Presence] in Specimen"
+                ],
+                [
+                    "6510-2",
+                    "Human papilloma virus Ab [Presence] in Genital specimen by Immunoassay"
+                ],
+                [
+                    "38372-9",
+                    "Human papilloma virus 6+11+16+18+31+33+35+39+42+43+44+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "61382-8",
+                    "Human papilloma virus 52 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "61394-3",
+                    "Human papilloma virus 11 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "61372-9",
+                    "Human papilloma virus 16 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "697-3",
+                    "Neisseria gonorrhoeae [Presence] in Urethra by Organism specific culture"
+                ],
+                [
+                    "17725-3",
+                    "Treponema pallidum Ab [Units/volume] in Serum by Latex agglutination"
+                ],
+                [
+                    "61375-2",
+                    "Human papilloma virus 31 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "61387-7",
+                    "Human papilloma virus 67 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "6516-9",
+                    "Human papilloma virus rRNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "17404-5",
+                    "Human papilloma virus 33 Ag [Presence] in Specimen"
+                ],
+                [
+                    "44545-2",
+                    "Human papilloma virus DNA [Presence] in Urethra by Probe"
+                ],
+                [
+                    "14506-0",
+                    "Human papilloma virus 16+18 Ag [Presence] in Urethra"
+                ],
+                [
+                    "9568-7",
+                    "Neisseria gonorrhoeae Ab [Titer] in Serum by Complement fixation"
+                ],
+                [
+                    "17398-9",
+                    "Human papilloma virus 11 Ag [Presence] in Specimen"
+                ],
+                [
+                    "5292-8",
+                    "Reagin Ab [Presence] in Serum by VDRL"
+                ],
+                [
+                    "14503-7",
+                    "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+                ],
+                [
+                    "6511-0",
+                    "Human papilloma virus Ab [Presence] in Genital specimen by Immunoblot"
+                ],
+                [
+                    "98223-1",
+                    "Treponema pallidum IgM bands [Identifier] in Serum by Immunoblot"
+                ],
+                [
+                    "17726-1",
+                    "Treponema pallidum IgG Ab [Presence] in Serum by Immunofluorescence"
+                ],
+                [
+                    "21414-8",
+                    "Neisseria gonorrhoeae DNA [Presence] in Cervical mucus by NAA with probe detection"
+                ],
+                [
+                    "32047-3",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+68+70 DNA [Presence] in Tissue by Probe"
+                ],
+                [
+                    "22592-0",
+                    "Treponema pallidum IgG Ab [Units/volume] in Serum"
+                ],
+                [
+                    "47237-3",
+                    "Treponema pallidum IgM Ab [Presence] in Serum by Immunoassay"
+                ],
+                [
+                    "82675-0",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "97157-2",
+                    "Human papilloma virus 6+11+42+43+44 DNA [Presence] in Genital specimen by Probe with signal amplification"
+                ],
+                [
+                    "6489-9",
+                    "Neisseria gonorrhoeae Ag [Presence] in Genital specimen by Latex agglutination"
+                ],
+                [
+                    "71793-4",
+                    "Treponema pallidum Ab [Titer] in Serum or Plasma by Agglutination"
+                ],
+                [
+                    "31906-1",
+                    "Neisseria gonorrhoeae Ag [Presence] in Specimen"
+                ],
+                [
+                    "61390-1",
+                    "Human papilloma virus 70 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "61373-7",
+                    "Human papilloma virus 18 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "61392-7",
+                    "Human papilloma virus 82 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "22587-0",
+                    "Treponema pallidum Ab [Presence] in Serum"
+                ],
+                [
+                    "96125-0",
+                    "Fetal Abdomen Circumference Per estimated gestational age"
+                ],
+                [
+                    "29311-8",
+                    "Neisseria gonorrhoeae Ag [Presence] in Specimen by Immunofluorescence"
+                ],
+                [
+                    "17729-5",
+                    "Treponema pallidum IgM Ab [Presence] in Serum by Immunofluorescence"
+                ],
+                [
+                    "44549-4",
+                    "Human papilloma virus DNA [Presence] in Vaginal fluid by Probe with signal amplification"
+                ],
+                [
+                    "50690-7",
+                    "Reagin Ab [Titer] in Serum by VDRL"
+                ],
+                [
+                    "6513-6",
+                    "Human papilloma virus Ab [Presence] in Tissue by Immunoblot"
+                ],
+                [
+                    "17727-9",
+                    "Treponema pallidum IgG Ab [Units/volume] in Serum by Immunofluorescence"
+                ],
+                [
+                    "30167-1",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe with signal amplification"
+                ],
+                [
+                    "34382-2",
+                    "Treponema pallidum Ab [Titer] in Serum by Immunofluorescence"
+                ],
+                [
+                    "11083-3",
+                    "Human papilloma virus identified in Cervix"
+                ],
+                [
+                    "5028-6",
+                    "Neisseria gonorrhoeae rRNA [Presence] in Specimen by Probe"
+                ],
+                [
+                    "61391-9",
+                    "Human papilloma virus 73 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "17403-7",
+                    "Human papilloma virus 31+33+35 Ag [Presence] in Specimen"
+                ],
+                [
+                    "17728-7",
+                    "Treponema pallidum IgM Ab [Units/volume] in Serum by Immunofluorescence"
+                ],
+                [
+                    "86562-6",
+                    "Human papilloma virus 18 DNA [Presence] in Tissue by NAA with probe detection"
+                ],
+                [
+                    "10705-2",
+                    "Human papilloma virus Ag [Presence] in Tissue by Immune stain"
+                ],
+                [
+                    "40680-1",
+                    "Treponema pallidum IgM Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "5393-4",
+                    "Treponema pallidum Ab [Presence] in Serum by Immunofluorescence"
+                ],
+                [
+                    "17409-4",
+                    "Human papilloma virus 5 Ag [Presence] in Specimen"
+                ],
+                [
+                    "11084-1",
+                    "Reagin Ab [Titer] in Serum"
+                ],
+                [
+                    "34147-9",
+                    "Treponema pallidum IgG+IgM Ab [Presence] in Serum"
+                ],
+                [
+                    "96124-3",
+                    "Fetal femur diaphysis length percentile per estimated gestational age"
+                ],
+                [
+                    "41122-3",
+                    "Treponema pallidum Ab [Units/volume] in Specimen"
+                ],
+                [
+                    "73959-9",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+66 DNA [Presence] in Tissue by Probe"
+                ],
+                [
+                    "51838-1",
+                    "Treponema pallidum IgG Ab [Units/volume] in Serum by Immunoassay"
+                ],
+                [
+                    "18478-8",
+                    "Human papilloma virus 16+18 DNA [Presence] in Tissue by Probe"
+                ],
+                [
+                    "53879-3",
+                    "Neisseria gonorrhoeae rRNA [Presence] in Vaginal fluid by NAA with probe detection"
+                ],
+                [
+                    "95534-4",
+                    "Human papilloma virus 52 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "61374-5",
+                    "Human papilloma virus 26 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "71431-1",
+                    "Human papilloma virus 31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "75694-0",
+                    "Human papilloma virus 18+45 E6+E7 mRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "18479-6",
+                    "Human papilloma virus 31+35+51 DNA [Presence] in Tissue by Probe"
+                ],
+                [
+                    "32705-6",
+                    "Neisseria gonorrhoeae DNA [Presence] in Vaginal fluid by NAA with probe detection"
+                ],
+                [
+                    "86561-8",
+                    "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Tissue by NAA with probe detection"
+                ],
+                [
+                    "61396-8",
+                    "Human papilloma virus 56 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "12222-6",
+                    "Human papilloma virus Ag [Presence] in Genital specimen"
+                ],
+                [
+                    "688-2",
+                    "Neisseria gonorrhoeae [Presence] in Cervix by Organism specific culture"
+                ],
+                [
+                    "17411-0",
+                    "Human papilloma virus 6 Ag [Presence] in Specimen"
+                ],
+                [
+                    "73732-0",
+                    "Human papilloma virus 26+31+33+35+39+45+51+52+53+56+58+59+66+68+73+82 DNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "17402-9",
+                    "Human papilloma virus 31 Ag [Presence] in Specimen"
+                ],
+                [
+                    "17406-0",
+                    "Human papilloma virus 43 Ag [Presence] in Specimen"
+                ],
+                [
+                    "11597-2",
+                    "Treponema pallidum Ab [Units/volume] in Serum"
+                ],
+                [
+                    "93777-1",
+                    "Human papilloma virus 16+18 E6+E7 mRNA [Presence] in Tissue by Probe"
+                ],
+                [
+                    "95533-6",
+                    "Human papilloma virus 56+59+66 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "95538-5",
+                    "Human papilloma virus 33+58 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "77399-4",
+                    "Human papilloma virus 16 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "69002-4",
+                    "Human papilloma virus E6+E7 mRNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "95535-1",
+                    "Human papilloma virus 51 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "47387-6",
+                    "Neisseria gonorrhoeae DNA [Presence] in Genital specimen by NAA with probe detection"
+                ],
+                [
+                    "61395-0",
+                    "Human papilloma virus 42 DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "14499-8",
+                    "Human papilloma virus Ag [Presence] in Cervix"
+                ],
+                [
+                    "95536-9",
+                    "Human papilloma virus 45 DNA [Presence] in Cervix by NAA with probe detection"
+                ],
+                [
+                    "24110-9",
+                    "Treponema pallidum Ab [Presence] in Serum by Immunoassay"
+                ],
+                [
+                    "49891-5",
+                    "Human papilloma virus DNA [Presence] in Specimen by NAA with probe detection"
+                ],
+                [
+                    "26009-1",
+                    "Treponema pallidum Ab [Titer] in Serum by Hemagglutination"
+                ],
+                [
+                    "13321-5",
+                    "Human papilloma virus IgG Ab [Presence] in Serum"
+                ],
+                [
+                    "11481-9",
+                    "Human papilloma virus identified in Specimen"
+                ],
+                [
+                    "17407-8",
+                    "Human papilloma virus 44 Ag [Presence] in Specimen"
+                ],
+                [
+                    "53762-1",
+                    "Neisseria gonorrhoeae IgG Ab [Titer] in Serum"
+                ],
+                [
+                    "21441-1",
+                    "Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe"
+                ],
+                [
+                    "50412-6",
+                    "Neisseria gonorrhoeae rRNA [Presence] in Specimen from Donor by NAA with probe detection"
+                ],
+                [
+                    "31147-2",
+                    "Reagin Ab [Titer] in Serum by RPR"
+                ],
+                [
+                    "17408-6",
+                    "Human papilloma virus 45 Ag [Presence] in Specimen"
+                ],
+                [
+                    "77375-4",
+                    "Human papilloma virus 31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Specimen by NAA with probe detection"
+                ]
+            ]
+        }
+    },
+    "Pregnancy Test": {
+        "vs-id": "Pregnancy Test",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.111.12.1011",
+        "data-element": "The purpose of this value set is to represent concepts for pregnancy tests.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent tests for pregnancy including in urine, serum or plasma.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "83086-9",
+                    "Choriogonadotropin [Units/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "2106-3",
+                    "Choriogonadotropin (pregnancy test) [Presence] in Urine"
+                ],
+                [
+                    "25372-4",
+                    "Choriogonadotropin [Units/volume] in Urine"
+                ],
+                [
+                    "2118-8",
+                    "Choriogonadotropin (pregnancy test) [Presence] in Serum or Plasma"
+                ],
+                [
+                    "21198-7",
+                    "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma"
+                ],
+                [
+                    "80385-8",
+                    "Choriogonadotropin (pregnancy test) [Presence] in Serum by Rapid immunoassay"
+                ],
+                [
+                    "80384-1",
+                    "Choriogonadotropin (pregnancy test) [Presence] in Urine by Rapid immunoassay"
+                ],
+                [
+                    "2114-7",
+                    "Choriogonadotropin.beta subunit [Moles/volume] in Urine"
+                ],
+                [
+                    "55870-0",
+                    "Choriogonadotropin [Units/volume] in Cord blood"
+                ],
+                [
+                    "2111-3",
+                    "Choriogonadotropin.beta subunit [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "45194-8",
+                    "Choriogonadotropin.intact+Beta subunit [Units/volume] in Serum or Plasma"
+                ],
+                [
+                    "19080-1",
+                    "Choriogonadotropin [Units/volume] in Serum or Plasma"
+                ],
+                [
+                    "20415-6",
+                    "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma by Immunoassay (EIA) 3rd IS"
+                ],
+                [
+                    "2110-5",
+                    "Choriogonadotropin.beta subunit (pregnancy test) [Presence] in Serum or Plasma"
+                ],
+                [
+                    "2113-9",
+                    "Choriogonadotropin.beta subunit [Mass/time] in 24 hour Urine"
+                ],
+                [
+                    "2119-6",
+                    "Choriogonadotropin [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "2115-4",
+                    "Choriogonadotropin.beta subunit free [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "19180-9",
+                    "Choriogonadotropin.beta subunit free [Units/volume] in Serum or Plasma"
+                ],
+                [
+                    "2112-1",
+                    "Choriogonadotropin.beta subunit (pregnancy test) [Presence] in Urine"
+                ],
+                [
+                    "93769-8",
+                    "Choriogonadotropin.intact+Beta subunit [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "2107-1",
+                    "Choriogonadotropin [Moles/volume] in Urine"
+                ],
+                [
+                    "25373-2",
+                    "Choriogonadotropin.beta subunit free [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "56497-1",
+                    "Choriogonadotropin.beta subunit [Units] in 24 hour Urine"
+                ],
+                [
+                    "55869-2",
+                    "Choriogonadotropin.beta subunit [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "20994-0",
+                    "Choriogonadotropin [Interpretation] in Serum or Plasma"
+                ],
+                [
+                    "34670-0",
+                    "Choriogonadotropin [Mass/volume] in Serum or Plasma"
+                ]
+            ]
+        }
+    },
+    "Laboratory Tests for Hypertension": {
+        "vs-id": "Laboratory Tests for Hypertension",
+        "clinical-focus": "2.16.840.1.113883.3.600.1482",
+        "data-element": "The purpose of this value set is to represent concepts for lab  tests that are commonly performed on patients with hypertension.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent concepts for lab tests that are commonly performed on patients with hypertension.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "24323-8",
+                    "Comprehensive metabolic 2000 panel - Serum or Plasma"
+                ],
+                [
+                    "24320-4",
+                    "Basic metabolic 1998 panel - Serum or Plasma"
+                ],
+                [
+                    "2888-6",
+                    "Protein [Mass/volume] in Urine"
+                ],
+                [
+                    "58410-2",
+                    "CBC panel - Blood by Automated count"
+                ],
+                [
+                    "24321-2",
+                    "Basic metabolic 2000 panel - Serum or Plasma"
+                ],
+                [
+                    "57021-8",
+                    "CBC W Auto Differential panel - Blood"
+                ],
+                [
+                    "57782-5",
+                    "CBC W Ordered Manual Differential panel - Blood"
+                ],
+                [
+                    "24357-6",
+                    "Urinalysis macro (dipstick) panel - Urine"
+                ],
+                [
+                    "24362-6",
+                    "Renal function 2000 panel - Serum or Plasma"
+                ],
+                [
+                    "24356-8",
+                    "Urinalysis complete panel - Urine"
+                ]
+            ]
+        }
+    },
+    "LDL Cholesterol": {
+        "vs-id": "LDL Cholesterol",
+        "clinical-focus": "2.16.840.1.113883.3.526.3.1573",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests commonly used for low-density lipoproteins (LDL) cholesterol measurement.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring low-density lipoprotein  cholesterol (LDL-C) using the specimen type of serum or plasma based on a measurement scale of mass per volume.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "91105-7",
+                    "Cholesterol in LDL 1 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "43394-6",
+                    "Cholesterol in LDL acylated [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "96259-7",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Calculated by Martin-Hopkins"
+                ],
+                [
+                    "91108-1",
+                    "Cholesterol in LDL 4 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "13457-7",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation"
+                ],
+                [
+                    "2089-1",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "50193-2",
+                    "Cholesterol in LDL.narrow density [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "91111-5",
+                    "Cholesterol in LDL 7 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "91109-9",
+                    "Cholesterol in LDL 5 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "91110-7",
+                    "Cholesterol in LDL 6 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "91107-3",
+                    "Cholesterol in LDL 3 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "18261-8",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma ultracentrifugate"
+                ],
+                [
+                    "55440-2",
+                    "Cholesterol.in LDL (real) [Mass/volume] in Serum or Plasma by VAP"
+                ],
+                [
+                    "18262-6",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
+                ],
+                [
+                    "49132-4",
+                    "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Electrophoresis"
+                ],
+                [
+                    "91106-5",
+                    "Cholesterol in LDL 2 [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "90364-1",
+                    "Cholesterol.in LDL.small dense [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "96597-0",
+                    "Cholesterol in LDL [Mass/volume] in DBS by Direct assay"
+                ],
+                [
+                    "86911-5",
+                    "Cholesterol in LDL goal [Mass/volume] Serum or Plasma"
+                ]
+            ]
+        }
+    },
+    "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)": {
+        "vs-id": "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)",
+        "clinical-focus": "2.16.840.1.113762.1.4.1056.50",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests used for Human Immunodeficiency Virus (HIV) screening.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test for HIV-1 and HIV-2 antibodies or antigens.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "33660-2",
+                    "HIV 1 p24 Ag [Presence] in Serum or Plasma by Neutralization test"
+                ],
+                [
+                    "45212-8",
+                    "HIV 2 p31+p34 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "11080-9",
+                    "HIV 2 p53 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "10901-7",
+                    "HIV 2 gp125 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "40437-6",
+                    "HIV 1 p24 Ab [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "13920-4",
+                    "HIV 2 p41 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "35442-3",
+                    "HIV 1 p66 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "32602-5",
+                    "HIV 1+2 Ab [Presence] in Cerebral spinal fluid"
+                ],
+                [
+                    "31201-7",
+                    "HIV 1+2 Ab [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "73906-0",
+                    "HIV 1+2 IgG Ab [Presence] in Blood by Rapid immunoassay"
+                ],
+                [
+                    "12858-7",
+                    "HIV 1 p32 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "32842-7",
+                    "HIV 1 p17+p18 Ab [Presence] in Serum"
+                ],
+                [
+                    "35450-6",
+                    "HIV 1 p18 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "9660-2",
+                    "HIV 1 gp160 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "9669-3",
+                    "HIV 1 p66 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "53601-1",
+                    "HIV 1 p24 Ag [Units/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "33866-5",
+                    "HIV 1 Ab [Presence] in Capillary blood by Immunoassay"
+                ],
+                [
+                    "21007-0",
+                    "HIV 1 Ab [Presence] in Serum from Donor"
+                ],
+                [
+                    "42339-2",
+                    "HIV 1 p24 Ag [Mass/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "31430-2",
+                    "HIV 1 IgG Ab [Presence] in Cerebral spinal fluid"
+                ],
+                [
+                    "57974-8",
+                    "HIV 1 Ab [Presence] in Cerebral spinal fluid by Immunoblot"
+                ],
+                [
+                    "62456-9",
+                    "HIV 2 p15 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "12876-9",
+                    "HIV 1 p53 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "21332-2",
+                    "HIV 1 p41 Ab [Titer] in Serum by Immunoblot"
+                ],
+                [
+                    "35564-4",
+                    "HIV 1 p31+p32 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "86233-4",
+                    "HIV 1 Ab [Presence] in Serum, Plasma or Blood by Immunoblot"
+                ],
+                [
+                    "9663-6",
+                    "HIV 1 p17 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "40733-8",
+                    "HIV 1+2 IgG Ab [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "41143-9",
+                    "HIV 1 Ab [Units/volume] in Saliva (oral fluid)"
+                ],
+                [
+                    "49905-3",
+                    "HIV 1 Ab [Presence] in Specimen by Rapid immunoassay"
+                ],
+                [
+                    "49965-7",
+                    "Deprecated HIV 1 Ab/HIV 2 Ab Ab [Ratio] in Serum by Immunoblot (IB)"
+                ],
+                [
+                    "89374-3",
+                    "HIV 1 Ab [Presence] in Specimen by Immunoassay"
+                ],
+                [
+                    "44872-0",
+                    "HIV 1 p24 Ag [Presence] in Serum or Plasma from Donor by Immunoassay"
+                ],
+                [
+                    "89365-1",
+                    "HIV 1 and 2 Ab panel - Serum, Plasma or Blood by Rapid immunoassay"
+                ],
+                [
+                    "35445-6",
+                    "HIV 1 p51 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "16977-1",
+                    "HIV 1 Ag [Presence] in Cerebral spinal fluid"
+                ],
+                [
+                    "35448-0",
+                    "HIV 1 p24 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "57975-5",
+                    "HIV 1+O+2 Ab [Presence] in Body fluid"
+                ],
+                [
+                    "31073-0",
+                    "HIV 2 Ab band pattern [Interpretation] in Serum by Immunoblot"
+                ],
+                [
+                    "43008-2",
+                    "HIV 1+2 IgM Ab [Units/volume] in Serum"
+                ],
+                [
+                    "5220-9",
+                    "HIV 1 Ab [Units/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "44533-8",
+                    "HIV 1+2 Ab [Presence] in Serum from Donor"
+                ],
+                [
+                    "42627-0",
+                    "HIV 1 Ab [Presence] in Cerebral spinal fluid by Immunofluorescence"
+                ],
+                [
+                    "57976-3",
+                    "HIV 2 gp140 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "68961-2",
+                    "HIV 1 Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay"
+                ],
+                [
+                    "43009-0",
+                    "HIV 1+2 IgG Ab [Presence] in Serum"
+                ],
+                [
+                    "12893-4",
+                    "HIV 1 gp105 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "42600-7",
+                    "HIV 1+2 Ab [Presence] in Specimen by Immunoassay"
+                ],
+                [
+                    "49718-0",
+                    "HIV 1 p24 Ag [Presence] in Cerebral spinal fluid"
+                ],
+                [
+                    "58900-2",
+                    "HIV 1+2 Ab+HIV1 p24 Ag [Units/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "14126-7",
+                    "HIV 1 gp120+gp160 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "5225-8",
+                    "HIV 2 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "21331-4",
+                    "HIV 1 p24 Ab [Titer] in Serum by Immunoblot"
+                ],
+                [
+                    "42768-2",
+                    "HIV 1 and 2 Ab [Interpretation] in Serum Narrative"
+                ],
+                [
+                    "11078-3",
+                    "HIV 2 gp80 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "49483-1",
+                    "HIV 1 [Interpretation] in Serum or Plasma by Immunoassay Narrative"
+                ],
+                [
+                    "35446-4",
+                    "HIV 1 gp41 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "5223-3",
+                    "HIV 1+2 Ab [Units/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "34591-8",
+                    "HIV 1 Ab [Presence] in Body fluid by Immunoassay"
+                ],
+                [
+                    "35443-1",
+                    "HIV 1 p65 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "86657-4",
+                    "HIV 1 and 2 tests - FPAR 2.0 set"
+                ],
+                [
+                    "9821-0",
+                    "HIV 1 p24 Ag [Presence] in Serum"
+                ],
+                [
+                    "77685-6",
+                    "HIV 1 and 2 IgG Ab [Identifier] in Serum or Plasma by Immunoblot"
+                ],
+                [
+                    "49580-4",
+                    "HIV 1+2 Ab [Presence] in Specimen by Rapid immunoassay"
+                ],
+                [
+                    "31072-2",
+                    "HIV 1 p41 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "44873-8",
+                    "HIV 1+2 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "11082-5",
+                    "HIV 2 p68 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "21337-1",
+                    "HIV 2 gp34 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "24012-7",
+                    "HIV 1 Ag [Presence] in Serum"
+                ],
+                [
+                    "44532-0",
+                    "HIV 1 gp120 Ab [Presence] in Serum"
+                ],
+                [
+                    "80387-4",
+                    "HIV 1+2 Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay"
+                ],
+                [
+                    "85686-4",
+                    "HIV 1 Ab [Presence] in Serum, Plasma or Blood by Immunofluorescence"
+                ],
+                [
+                    "22357-8",
+                    "HIV 1+2 Ab [Units/volume] in Serum"
+                ],
+                [
+                    "35444-9",
+                    "HIV 1 p55 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "32827-8",
+                    "HIV 1 p17+p18 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "35437-3",
+                    "HIV 1 Ab [Presence] in Saliva (oral fluid) by Immunoassay"
+                ],
+                [
+                    "80203-3",
+                    "HIV 1 and 2 Ab [Identifier] in Serum, Plasma or Blood by Rapid immunoassay"
+                ],
+                [
+                    "5224-1",
+                    "HIV 2 Ab [Units/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "16978-9",
+                    "HIV 1 p24 Ab [Units/volume] in Serum"
+                ],
+                [
+                    "41290-8",
+                    "HIV 1+2 IgM Ab [Units/volume] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "35452-2",
+                    "HIV 1 gp40 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "57977-1",
+                    "HIV 2 p16 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "51786-2",
+                    "HIV 2 Ab Signal/Cutoff in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "83101-6",
+                    "HIV 1+2 Ab and HIV1 p24 Ag panel - Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "9661-0",
+                    "HIV 1 gp120 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "7917-8",
+                    "HIV 1 Ab [Presence] in Serum"
+                ],
+                [
+                    "9666-9",
+                    "HIV 1 p31 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "12871-0",
+                    "HIV 1 p26 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "5222-5",
+                    "HIV 1 Ag [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "43185-8",
+                    "HIV 1 and 2 Ab band pattern [Interpretation] in Serum by Immunoblot"
+                ],
+                [
+                    "19110-6",
+                    "HIV 1 gp41+gp43 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "43599-0",
+                    "HIV 1 Ab [Units/volume] in Serum by Immunofluorescence"
+                ],
+                [
+                    "35441-5",
+                    "HIV 1 gp120 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "73905-2",
+                    "HIV 1+2 IgG Ab [Presence] in Serum or Plasma by Rapid immunoassay"
+                ],
+                [
+                    "81641-3",
+                    "HIV 2 Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay"
+                ],
+                [
+                    "22356-0",
+                    "HIV 1 Ab [Units/volume] in Serum"
+                ],
+                [
+                    "40439-2",
+                    "HIV 1 gp120+gp160 Ab [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "16975-5",
+                    "HIV 1 IgG Ab [Presence] in Serum"
+                ],
+                [
+                    "12857-9",
+                    "HIV 1 p28 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "44607-0",
+                    "HIV 1 [Interpretation] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "48345-3",
+                    "HIV 1+O+2 Ab [Presence] in Serum or Plasma"
+                ],
+                [
+                    "7918-6",
+                    "HIV 1+2 Ab [Presence] in Serum"
+                ],
+                [
+                    "5221-7",
+                    "HIV 1 Ab [Presence] in Serum or Plasma by Immunoblot"
+                ],
+                [
+                    "28004-0",
+                    "HIV 1 IgG Ab [Presence] in Cerebral spinal fluid by Immunoblot"
+                ],
+                [
+                    "21338-9",
+                    "HIV 2 p31 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "16132-3",
+                    "HIV 1 p15+p18 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "44531-2",
+                    "HIV 1 Ag [Presence] in Serum from Donor"
+                ],
+                [
+                    "53379-4",
+                    "HIV 1 Ab [Presence] in Specimen"
+                ],
+                [
+                    "75666-8",
+                    "HIV 1+2 Ab and HIV1 p24 Ag [Identifier] in Serum, Plasma or Blood by Rapid immunoassay"
+                ],
+                [
+                    "33807-9",
+                    "HIV 2 IgG Ab [Presence] in Serum"
+                ],
+                [
+                    "85037-0",
+                    "HIV 1 and 2 Ab and HIV 1 p24 Ag panel - Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "33806-1",
+                    "HIV 2 IgG Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "12875-1",
+                    "HIV 1 p64 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "75622-1",
+                    "HIV 1 and 2 tests - Meaningful Use set"
+                ],
+                [
+                    "51866-2",
+                    "Deprecated HIV 1 Ab+Ag [Presence] in Serum"
+                ],
+                [
+                    "29327-4",
+                    "HIV 1 Ab [Presence] in Body fluid"
+                ],
+                [
+                    "9665-1",
+                    "HIV 1 p24 Ag [Units/volume] in Serum"
+                ],
+                [
+                    "12856-1",
+                    "HIV 1 p65 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "48346-1",
+                    "HIV 1+O+2 Ab [Units/volume] in Serum or Plasma"
+                ],
+                [
+                    "40732-0",
+                    "HIV 1 IgG Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "9667-7",
+                    "HIV 1 p51 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "54086-4",
+                    "HIV 1+2 IgG Ab [Presence] in DBS"
+                ],
+                [
+                    "35440-7",
+                    "HIV 1 gp160 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "12894-2",
+                    "HIV 1 p68 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "35449-8",
+                    "HIV 1 p17 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "21339-7",
+                    "HIV 2 p55 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "33508-3",
+                    "HIV 1 p65+p66 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "30361-0",
+                    "HIV 2 Ab [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "35438-1",
+                    "HIV 1 Ab [Units/volume] in Saliva (oral fluid) by Immunoassay"
+                ],
+                [
+                    "41144-7",
+                    "HIV 1 Ab [Presence] in Saliva (oral fluid)"
+                ],
+                [
+                    "16976-3",
+                    "HIV 1 Ag [Units/volume] in Serum"
+                ],
+                [
+                    "10902-5",
+                    "HIV 2 gp36 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "16974-8",
+                    "HIV 1 Ab [Presence] in Cerebral spinal fluid"
+                ],
+                [
+                    "12870-2",
+                    "HIV 1 gp34 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "21335-5",
+                    "HIV 2 gp120 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "7919-4",
+                    "HIV 2 Ab [Presence] in Serum"
+                ],
+                [
+                    "21334-8",
+                    "HIV 2 gp105 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "43010-8",
+                    "HIV 1+2 Ab [Presence] in Specimen"
+                ],
+                [
+                    "9662-8",
+                    "HIV 1 gp41 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "14092-1",
+                    "HIV 1 Ab [Presence] in Serum by Immunofluorescence"
+                ],
+                [
+                    "18396-2",
+                    "HIV 1 p24 Ag [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "47029-4",
+                    "HIV 2 Ab [Presence] in Cerebral spinal fluid by Immunoblot"
+                ],
+                [
+                    "69668-2",
+                    "HIV 1 and 2 Ab [Identifier] in Serum or Plasma by Rapid immunoassay"
+                ],
+                [
+                    "12855-3",
+                    "HIV 1 p23 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "22358-6",
+                    "HIV 2 Ab [Units/volume] in Serum"
+                ],
+                [
+                    "16979-7",
+                    "HIV 1 p24 Ag [Units/volume] in Cerebral spinal fluid"
+                ],
+                [
+                    "40438-4",
+                    "HIV 1 gp41 Ab [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "21336-3",
+                    "HIV 2 gp15 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "12872-8",
+                    "HIV 1 p15 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "11079-1",
+                    "HIV 2 p26 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "29893-5",
+                    "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "57978-9",
+                    "HIV 2 p34 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "21340-5",
+                    "HIV 2 p58 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "34592-6",
+                    "HIV 1 Ab [Presence] in Body fluid by Immunoblot"
+                ],
+                [
+                    "9664-4",
+                    "HIV 1 p24 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "11081-7",
+                    "HIV 2 p56 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "43013-2",
+                    "HIV 1 gp120+gp160 Ab [Presence] in Serum"
+                ],
+                [
+                    "9668-5",
+                    "HIV 1 p55 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "13499-9",
+                    "HIV 1 Ab band pattern [Interpretation] in Serum by Immunoblot"
+                ],
+                [
+                    "28052-9",
+                    "HIV 1 IgG band pattern [Interpretation] in Cerebral spinal fluid by Immunoblot"
+                ],
+                [
+                    "41145-4",
+                    "HIV 1 Ab [Presence] in Capillary blood"
+                ],
+                [
+                    "43011-6",
+                    "HIV 1 p24 Ab [Presence] in Serum"
+                ],
+                [
+                    "35447-2",
+                    "HIV 1 p31 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "56888-1",
+                    "HIV 1+2 Ab+HIV1 p24 Ag [Presence] in Serum or Plasma by Immunoassay"
+                ],
+                [
+                    "43012-4",
+                    "HIV 1 gp41 Ab [Presence] in Serum"
+                ],
+                [
+                    "35439-9",
+                    "HIV 1 Ab [Presence] in Saliva (oral fluid) by Immunoblot"
+                ],
+                [
+                    "12895-9",
+                    "HIV 1 p58 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "12859-5",
+                    "HIV 1 p18 Ab [Presence] in Serum by Immunoblot"
+                ],
+                [
+                    "32571-2",
+                    "HIV 1 Ab [Presence] in Urine by Immunoblot"
+                ],
+                [
+                    "35565-1",
+                    "HIV 1 p40 Ab [Presence] in Serum by Immunoblot"
+                ]
+            ]
+        }
+    },
+    "Bicarbonate lab test": {
+        "vs-id": "Bicarbonate lab test",
+        "clinical-focus": "2.16.840.1.113762.1.4.1045.139",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring bicarbonate in blood, serum, or plasma.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring bicarbonate and carbon dioxide in the specimen source of blood, serum, or plasma.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "19223-7",
+                    "Carbon dioxide, total [Moles/volume] in Mixed venous blood"
+                ],
+                [
+                    "2026-3",
+                    "Carbon dioxide, total [Moles/volume] in Arterial blood"
+                ],
+                [
+                    "1963-8",
+                    "Bicarbonate [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "14627-4",
+                    "Bicarbonate [Moles/volume] in Venous blood"
+                ],
+                [
+                    "1960-4",
+                    "Bicarbonate [Moles/volume] in Arterial blood"
+                ],
+                [
+                    "69964-5",
+                    "Bicarbonate [Moles/volume] standard in Plasma"
+                ],
+                [
+                    "19230-2",
+                    "Bicarbonate [Moles/volume] standard in Arterial blood"
+                ],
+                [
+                    "2027-1",
+                    "Carbon dioxide, total [Moles/volume] in Venous blood"
+                ],
+                [
+                    "1959-6",
+                    "Bicarbonate [Moles/volume] in Blood"
+                ],
+                [
+                    "19229-4",
+                    "Bicarbonate [Moles/volume] in Mixed venous blood"
+                ],
+                [
+                    "2028-9",
+                    "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "19233-6",
+                    "Bicarbonate [Moles/volume] standard in Mixed venous blood"
+                ],
+                [
+                    "20565-8",
+                    "Carbon dioxide, total [Moles/volume] in Blood"
+                ],
+                [
+                    "77143-6",
+                    "Carbon dioxide, total [Moles/volume] in Serum, Plasma or Blood"
+                ],
+                [
+                    "19232-8",
+                    "Bicarbonate [Moles/volume] standard in Venous blood"
+                ],
+                [
+                    "97543-3",
+                    "Bicarbonate [Moles/volume] in Central venous blood"
+                ],
+                [
+                    "97544-1",
+                    "Bicarbonate [Moles/volume] standard in Central venous blood"
+                ]
+            ]
+        }
+    },
+    "Creatinine lab test": {
+        "vs-id": "Creatinine lab test",
+        "clinical-focus": "2.16.840.1.113883.3.666.5.2363",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring creatinine in blood, serum, or plasma.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring creatinine in the specimen source of blood, serum, or plasma.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "21232-4",
+                    "Creatinine [Mass/volume] in Arterial blood"
+                ],
+                [
+                    "35203-9",
+                    "Creatinine [Mass or Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "38483-4",
+                    "Creatinine [Mass/volume] in Blood"
+                ],
+                [
+                    "59826-8",
+                    "Creatinine [Moles/volume] in Blood"
+                ],
+                [
+                    "77140-2",
+                    "Creatinine [Moles/volume] in Serum, Plasma or Blood"
+                ],
+                [
+                    "14682-9",
+                    "Creatinine [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "2160-0",
+                    "Creatinine [Mass/volume] in Serum or Plasma"
+                ]
+            ]
+        }
+    },
+    "Glucose lab test": {
+        "vs-id": "Glucose lab test",
+        "clinical-focus": "2.16.840.1.113762.1.4.1045.134",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring glucose.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring glucose in the specimen source of blood, serum, or plasma, including Point of Care (POC) testing.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "1556-0",
+                    "Fasting glucose [Mass/volume] in Capillary blood"
+                ],
+                [
+                    "77135-2",
+                    "Glucose [Moles/volume] in Serum, Plasma or Blood"
+                ],
+                [
+                    "39480-9",
+                    "Glucose [Moles/volume] in Venous blood"
+                ],
+                [
+                    "15074-8",
+                    "Glucose [Moles/volume] in Blood"
+                ],
+                [
+                    "51596-5",
+                    "Glucose [Moles/volume] in Capillary blood"
+                ],
+                [
+                    "59813-6",
+                    "Glucose [Moles/volume] in Capillary blood by Glucometer --7 AM specimen"
+                ],
+                [
+                    "39481-7",
+                    "Glucose [Moles/volume] in Arterial blood"
+                ],
+                [
+                    "41651-1",
+                    "Glucose [Mass/volume] in Arterial blood"
+                ],
+                [
+                    "14743-9",
+                    "Glucose [Moles/volume] in Capillary blood by Glucometer"
+                ],
+                [
+                    "2341-6",
+                    "Glucose [Mass/volume] in Blood by Test strip manual"
+                ],
+                [
+                    "74774-1",
+                    "Glucose [Mass/volume] in Serum, Plasma or Blood"
+                ],
+                [
+                    "14749-6",
+                    "Glucose [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "41604-0",
+                    "Fasting glucose [Mass/volume] in Capillary blood by Glucometer"
+                ],
+                [
+                    "2339-0",
+                    "Glucose [Mass/volume] in Blood"
+                ],
+                [
+                    "72516-8",
+                    "Glucose [Moles/volume] in Blood by Automated test strip"
+                ],
+                [
+                    "1558-6",
+                    "Fasting glucose [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "41652-9",
+                    "Glucose [Mass/volume] in Venous blood"
+                ],
+                [
+                    "2345-7",
+                    "Glucose [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "32016-8",
+                    "Glucose [Mass/volume] in Capillary blood"
+                ],
+                [
+                    "40858-3",
+                    "Glucose [Mass/volume] in Capillary blood --baseline"
+                ],
+                [
+                    "41653-7",
+                    "Glucose [Mass/volume] in Capillary blood by Glucometer"
+                ],
+                [
+                    "1557-8",
+                    "Fasting glucose [Mass/volume] in Venous blood"
+                ],
+                [
+                    "14770-2",
+                    "Fasting glucose [Moles/volume] in Capillary blood by Glucometer"
+                ],
+                [
+                    "14760-3",
+                    "Glucose [Moles/volume] in Capillary blood --2 hours post meal"
+                ],
+                [
+                    "2340-8",
+                    "Glucose [Mass/volume] in Blood by Automated test strip"
+                ]
+            ]
+        }
+    },
+    "Potassium lab test": {
+        "vs-id": "Potassium lab test",
+        "clinical-focus": "2.16.840.1.113762.1.4.1045.117",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring potassium in blood, serum, or plasma.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring potassium in the specimen source of blood, serum, or plasma.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "39789-3",
+                    "Potassium [Moles/volume] in Venous blood"
+                ],
+                [
+                    "77142-8",
+                    "Potassium [Moles/volume] in Serum, Plasma or Blood"
+                ],
+                [
+                    "41656-0",
+                    "Potassium [Moles/volume] in Mixed venous blood"
+                ],
+                [
+                    "75940-7",
+                    "Potassium [Mass/volume] in Blood"
+                ],
+                [
+                    "6298-4",
+                    "Potassium [Moles/volume] in Blood"
+                ],
+                [
+                    "2823-3",
+                    "Potassium [Moles/volume] in Serum or Plasma"
+                ],
+                [
+                    "32713-0",
+                    "Potassium [Moles/volume] in Arterial blood"
+                ]
+            ]
+        }
+    },
+    "Sodium lab test": {
+        "vs-id": "Sodium lab test",
+        "clinical-focus": "2.16.840.1.113762.1.4.1045.119",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring sodium in blood, serum, or plasma.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring sodium in the specimen source of blood, serum, or plasma.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "2947-0",
+                    "Sodium [Moles/volume] in Blood"
+                ],
+                [
+                    "77139-4",
+                    "Sodium [Moles/volume] in Serum, Plasma or Blood"
+                ],
+                [
+                    "32717-1",
+                    "Sodium [Moles/volume] in Arterial blood"
+                ],
+                [
+                    "41657-8",
+                    "Sodium [Moles/volume] in Mixed venous blood"
+                ],
+                [
+                    "39791-9",
+                    "Sodium [Moles/volume] in Venous blood"
+                ],
+                [
+                    "2951-2",
+                    "Sodium [Moles/volume] in Serum or Plasma"
+                ]
+            ]
+        }
+    },
+    "Glucose Lab Test Mass Per Volume": {
+        "vs-id": "Glucose Lab Test Mass Per Volume",
+        "clinical-focus": "2.16.840.1.113762.1.4.1248.34",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring glucose and reported as Mass Per Volume (mg/dL).",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring glucose in the specimen source of blood, serum, or plasma, including Point of Care (POC) testing and reported as Mass Per Volume (mg/dL).",
+        "codelist": {
+            "LOINC": [
+                [
+                    "41604-0",
+                    "Fasting glucose [Mass/volume] in Capillary blood by Glucometer"
+                ],
+                [
+                    "1556-0",
+                    "Fasting glucose [Mass/volume] in Capillary blood"
+                ],
+                [
+                    "2339-0",
+                    "Glucose [Mass/volume] in Blood"
+                ],
+                [
+                    "41651-1",
+                    "Glucose [Mass/volume] in Arterial blood"
+                ],
+                [
+                    "41652-9",
+                    "Glucose [Mass/volume] in Venous blood"
+                ],
+                [
+                    "1558-6",
+                    "Fasting glucose [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "2345-7",
+                    "Glucose [Mass/volume] in Serum or Plasma"
+                ],
+                [
+                    "2341-6",
+                    "Glucose [Mass/volume] in Blood by Test strip manual"
+                ],
+                [
+                    "32016-8",
+                    "Glucose [Mass/volume] in Capillary blood"
+                ],
+                [
+                    "40858-3",
+                    "Glucose [Mass/volume] in Capillary blood --baseline"
+                ],
+                [
+                    "1557-8",
+                    "Fasting glucose [Mass/volume] in Venous blood"
+                ],
+                [
+                    "41653-7",
+                    "Glucose [Mass/volume] in Capillary blood by Glucometer"
+                ],
+                [
+                    "74774-1",
+                    "Glucose [Mass/volume] in Serum, Plasma or Blood"
+                ],
+                [
+                    "2340-8",
+                    "Glucose [Mass/volume] in Blood by Automated test strip"
+                ]
+            ]
+        }
+    },
+    "Platelet count lab test": {
+        "vs-id": "Platelet count lab test",
+        "clinical-focus": "2.16.840.1.113762.1.4.1045.127",
+        "data-element": "The purpose of this value set is to represent concepts for laboratory tests measuring platelet count in blood, serum, or plasma.",
+        "incld": "This value set may use a model element related to Laboratory Test.",
+        "excld": "Includes concepts that represent a laboratory test measuring platelet count in the specimen source of blood, serum, or plasma.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "777-3",
+                    "Platelets [#/volume] in Blood by Automated count"
+                ],
+                [
+                    "13056-7",
+                    "Platelets [#/volume] in Plasma by Automated count"
+                ],
+                [
+                    "26516-5",
+                    "Platelets [#/volume] in Plasma"
+                ],
+                [
+                    "26515-7",
+                    "Platelets [#/volume] in Blood"
+                ],
+                [
+                    "34167-7",
+                    "Platelets Large [Presence] in Blood by Automated count"
+                ],
+                [
+                    "48386-7",
+                    "Platelets Large/Platelets in Blood by Automated count"
+                ],
+                [
+                    "778-1",
+                    "Platelets [#/volume] in Blood by Manual count"
+                ],
+                [
+                    "96354-6",
+                    "Platelets Large [#/volume] in Blood by Automated count"
+                ],
+                [
+                    "32623-1",
+                    "Platelet mean volume [Entitic volume] in Blood by Automated count"
+                ],
+                [
+                    "53800-9",
+                    "Platelets panel - Blood by Automated count"
+                ]
+            ]
+        }
+    },
+    "Estimated Glomerular Filtration Rate": {
+        "vs-id": "Estimated Glomerular Filtration Rate",
+        "clinical-focus": "2.16.840.1.113883.3.6929.3.1000",
+        "data-element": "This value set contains concepts that represent estimated glomerular filtration rate (eGFR) tests.",
+        "incld": "This value set may use Quality Data Model (QDM) category related to Laboratory Test.",
+        "excld": "Includes only relevant concepts associated with estimated glomerular filtration rate (eGFR) tests.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "48643-1",
+                    "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+                ],
+                [
+                    "50044-7",
+                    "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+                ],
+                [
+                    "48642-3",
+                    "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+                ],
+                [
+                    "70969-1",
+                    "Glomerular filtration rate/1.73 sq M.predicted among males [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+                ],
+                [
+                    "50210-4",
+                    "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Cystatin-based formula"
+                ],
+                [
+                    "62238-1",
+                    "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
+                ],
+                [
+                    "69405-9",
+                    "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood"
+                ],
+                [
+                    "77147-7",
+                    "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+                ]
+            ]
+        }
+    },
+    "Urine Albumin Creatinine Ratio": {
+        "vs-id": "Urine Albumin Creatinine Ratio",
+        "clinical-focus": "2.16.840.1.113883.3.6929.3.1007",
+        "data-element": "This value set contains concepts that represent urine albumin creatinine ratio (uACR) tests.",
+        "incld": "This value set may use Quality Data Model (QDM) category related to Laboratory Test.",
+        "excld": "Includes only relevant concepts associated with urine albumin creatinine ratio (uACR) tests. Value set includes contents with mg/mol/creatinine unit of measurement and mg/g/creatinine unit of measurement.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "14585-4",
+                    "Albumin/Creatinine [Molar ratio] in Urine"
+                ],
+                [
+                    "14958-3",
+                    "Microalbumin/Creatinine [Mass Ratio] in 24 hour Urine"
+                ],
+                [
+                    "30001-2",
+                    "Microalbumin/Creatinine [Ratio] in Urine by Test strip"
+                ],
+                [
+                    "44292-1",
+                    "Microalbumin/Creatinine [Mass Ratio] in 12 hour Urine"
+                ],
+                [
+                    "77254-1",
+                    "Microalbumin/Creatinine [Ratio] in 24 hour Urine by Detection limit <= 1.0 mg/L"
+                ],
+                [
+                    "14959-1",
+                    "Microalbumin/Creatinine [Mass Ratio] in Urine"
+                ],
+                [
+                    "30000-4",
+                    "Microalbumin/Creatinine [Ratio] in Urine"
+                ],
+                [
+                    "9318-7",
+                    "Albumin/Creatinine [Mass Ratio] in Urine"
+                ],
+                [
+                    "59159-4",
+                    "Microalbumin/Creatinine [Ratio] in 24 hour Urine"
+                ],
+                [
+                    "76401-9",
+                    "Albumin/Creatinine [Ratio] in 24 hour Urine"
+                ],
+                [
+                    "13705-9",
+                    "Albumin/Creatinine [Mass Ratio] in 24 hour Urine"
+                ],
+                [
+                    "77253-3",
+                    "Microalbumin/Creatinine [Ratio] in Urine by Detection limit <= 1.0 mg/L"
+                ],
+                [
+                    "32294-1",
+                    "Albumin/Creatinine [Ratio] in Urine"
+                ]
+            ]
+        }
+    }
+}

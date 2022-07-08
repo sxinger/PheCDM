@@ -1,0 +1,188 @@
+{
+    "Breast Milk": {
+        "vs-id": "Breast Milk",
+        "clinical-focus": "2.16.840.1.113883.3.117.1.7.1.30",
+        "data-element": "The purpose of this value set is to represent concepts for the substance of breast milk.",
+        "incld": "This value set may use a model element related to Substance.",
+        "excld": "Includes concepts that identify a substance of breast milk.",
+        "codelist": {
+            "SNOMEDCT": [
+                [
+                    226789007,
+                    "Breast milk (substance)"
+                ],
+                [
+                    53875002,
+                    "Colostrum (substance)"
+                ],
+                [
+                    226790003,
+                    "Expressed breast milk (substance)"
+                ]
+            ]
+        }
+    },
+    "Dietary Intake Other than Breast Milk": {
+        "vs-id": "Dietary Intake Other than Breast Milk",
+        "clinical-focus": "2.16.840.1.113883.3.117.1.7.1.27",
+        "data-element": "The purpose of this value set is to represent concepts for a substance of dietary intake other than breast milk.",
+        "incld": "This value set may use a model element related to Substance.",
+        "excld": "Includes concepts that identify a substance of dietary intake other than breast milk.",
+        "codelist": {
+            "SNOMEDCT": [
+                [
+                    444281000124102,
+                    "Glucose water infant formula (product)"
+                ],
+                [
+                    443201000124109,
+                    "Standard infant organic formula (product)"
+                ],
+                [
+                    444311000124100,
+                    "Modular hydrolyzed protein infant formula component (product)"
+                ],
+                [
+                    443231000124101,
+                    "Premature infant formula (product)"
+                ],
+                [
+                    443161000124103,
+                    "Soy-based infant weaning formula (product)"
+                ],
+                [
+                    443511000124109,
+                    "Low calcium and vitamin D-free infant formula (product)"
+                ],
+                [
+                    11713004,
+                    "Water (substance)"
+                ],
+                [
+                    284458003,
+                    "Casein-based baby milk (substance)"
+                ],
+                [
+                    443341000124104,
+                    "Modular amino acid-free infant formula component (product)"
+                ],
+                [
+                    386127005,
+                    "Formula milk (substance)"
+                ],
+                [
+                    443331000124109,
+                    "Phenylalanine and tyrosine-free infant formula (product)"
+                ],
+                [
+                    443281000124100,
+                    "Leucine-free infant formula (product)"
+                ],
+                [
+                    443541000124108,
+                    "Renal infant formula (product)"
+                ],
+                [
+                    284459006,
+                    "Low birth weight baby milk (substance)"
+                ],
+                [
+                    444261000124107,
+                    "Isoleucine, leucine and valine-free infant formula (product)"
+                ],
+                [
+                    443171000124105,
+                    "Soy-based no added carbohydrate infant formula (product)"
+                ],
+                [
+                    443291000124102,
+                    "Methionine-free infant formula (product)"
+                ],
+                [
+                    443191000124106,
+                    "Soy-based standard infant formula (product)"
+                ],
+                [
+                    443321000124106,
+                    "Non-essential amino acid free infant formula (product)"
+                ],
+                [
+                    443271000124103,
+                    "Hydrolyzed protein infant formula (product)"
+                ],
+                [
+                    443301000124101,
+                    "Phenylalanine-free infant formula (product)"
+                ],
+                [
+                    443531000124103,
+                    "Methionine and valine-free and low in isoleucine and threonine infant formula (product)"
+                ],
+                [
+                    284461002,
+                    "Whey-based baby milk (substance)"
+                ],
+                [
+                    412414007,
+                    "Infant formula + iron (product)"
+                ],
+                [
+                    443261000124105,
+                    "Elemental infant formula (product)"
+                ],
+                [
+                    443241000124106,
+                    "Modified amino acid composition infant formula (product)"
+                ],
+                [
+                    443551000124105,
+                    "Modular infant formula component (product)"
+                ],
+                [
+                    443181000124108,
+                    "Standard infant formula (product)"
+                ],
+                [
+                    412413001,
+                    "Infant formula (product)"
+                ],
+                [
+                    443141000124102,
+                    "Soy-based infant formula (product)"
+                ],
+                [
+                    443251000124108,
+                    "Hypoallergenic infant formula (product)"
+                ],
+                [
+                    443221000124104,
+                    "Standard weaning infant formula (product)"
+                ],
+                [
+                    443211000124107,
+                    "Standard infant formula with fiber (product)"
+                ],
+                [
+                    67079006,
+                    "Glucose (substance)"
+                ],
+                [
+                    443311000124103,
+                    "Lysine and tryptophan-free infant formula (product)"
+                ],
+                [
+                    443521000124101,
+                    "Reduced lactose infant formula (product)"
+                ],
+                [
+                    346712003,
+                    "Product containing water (medicinal product)"
+                ],
+                [
+                    443151000124100,
+                    "Sterilized water infant formula (product)"
+                ]
+            ]
+        }
+    }
+}

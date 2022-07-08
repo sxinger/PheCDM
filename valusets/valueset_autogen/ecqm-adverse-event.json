@@ -1,0 +1,86 @@
+{
+    "Statin Allergen": {
+        "vs-id": "Statin Allergen",
+        "clinical-focus": "2.16.840.1.113762.1.4.1110.42",
+        "data-element": "The purpose of this value set is to represent concepts of an allergy to statin medications.",
+        "incld": "This value set may use a model element related to Allergy/Intolerance.",
+        "excld": "Includes concepts that define an allergy to statin medications.",
+        "codelist": {
+            "RXNORM": [
+                [
+                    83367,
+                    "atorvastatin"
+                ],
+                [
+                    41127,
+                    "fluvastatin"
+                ],
+                [
+                    861634,
+                    "pitavastatin"
+                ],
+                [
+                    301542,
+                    "rosuvastatin"
+                ],
+                [
+                    42463,
+                    "pravastatin"
+                ],
+                [
+                    6472,
+                    "lovastatin"
+                ],
+                [
+                    36567,
+                    "simvastatin"
+                ]
+            ],
+            "SNOMEDCT": [
+                [
+                    372912004,
+                    "Substance with 3-hydroxy-3-methylglutaryl-coenzyme A reductase inhibitor mechanism of action (substance)"
+                ],
+                [
+                    96302009,
+                    "Product containing 3-hydroxy-3-methylglutaryl-coenzyme A reductase inhibitor (product)"
+                ]
+            ]
+        }
+    },
+    "Thrombolytic medications": {
+        "vs-id": "Thrombolytic medications",
+        "clinical-focus": "2.16.840.1.113762.1.4.1170.4",
+        "data-element": "The purpose of this value set is to represent concepts for thrombolytic medications used for treatment of ST-segment elevation myocardial infaction (STEMI).",
+        "incld": "This value set may use a model element related to Medication.",
+        "excld": "Includes RXNORM codes that represent ingredients in thrombolytic medications for STEMI treatment.",
+        "codelist": {
+            "RXNORM": [
+                [
+                    8410,
+                    "alteplase"
+                ],
+                [
+                    76895,
+                    "reteplase"
+                ],
+                [
+                    259280,
+                    "tenecteplase"
+                ],
+                [
+                    11055,
+                    "urokinase"
+                ],
+                [
+                    40028,
+                    "anistreplase"
+                ],
+                [
+                    10106,
+                    "streptokinase"
+                ]
+            ]
+        }
+    }
+}

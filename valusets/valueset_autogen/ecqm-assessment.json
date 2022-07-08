@@ -1,0 +1,378 @@
+{
+    "Estimated Gestational Age at Delivery": {
+        "vs-id": "Estimated Gestational Age at Delivery",
+        "clinical-focus": "2.16.840.1.113762.1.4.1045.26",
+        "data-element": "The purpose of this value set is to describe concepts of assessment for estimated gestational age at delivery.",
+        "incld": "This value set may use a model element related to assessment.",
+        "excld": "Includes concepts that define an assessment of the estimated gestational age at delivery.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "18185-9",
+                    "Gestational age"
+                ],
+                [
+                    "49051-6",
+                    "Gestational age in weeks"
+                ],
+                [
+                    "11885-1",
+                    "Gestational age Estimated from last menstrual period"
+                ],
+                [
+                    "11884-4",
+                    "Gestational age Estimated"
+                ]
+            ]
+        }
+    },
+    "Emergency Department Evaluation": {
+        "vs-id": "Emergency Department Evaluation",
+        "clinical-focus": "2.16.840.1.113762.1.4.1111.163",
+        "data-element": "The purpose of this value set is to represent concepts of an assessment performed in the emergency department.",
+        "incld": "This value set may use a model element related to Assessment.",
+        "excld": "Includes concepts that represent an assessment that was performed in the emergency department.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "68552-9",
+                    "Emergency medicine Emergency department Admission evaluation note"
+                ],
+                [
+                    "34111-5",
+                    "Emergency department Note"
+                ],
+                [
+                    "28568-4",
+                    "Physician Emergency department Note"
+                ],
+                [
+                    "34878-9",
+                    "Emergency medicine Note"
+                ],
+                [
+                    "78307-6",
+                    "Emergency department History and physical note"
+                ],
+                [
+                    "78337-3",
+                    "Emergency department Initial evaluation note"
+                ],
+                [
+                    "54094-8",
+                    "Emergency department Triage note"
+                ],
+                [
+                    "78249-0",
+                    "Emergency department Admission history and physical note"
+                ],
+                [
+                    "80746-1",
+                    "Emergency department Plan of care note"
+                ],
+                [
+                    "80741-2",
+                    "Emergency medicine Emergency department Plan of care note"
+                ],
+                [
+                    "51846-4",
+                    "Emergency department Consult note"
+                ],
+                [
+                    "78341-5",
+                    "Emergency department Transfer summary note"
+                ],
+                [
+                    "83818-5",
+                    "Attending Emergency department Note"
+                ],
+                [
+                    "74211-4",
+                    "Emergency department+Hospital Summary of episode note"
+                ]
+            ]
+        }
+    },
+    "Tobacco Use Screening": {
+        "vs-id": "Tobacco Use Screening",
+        "clinical-focus": "2.16.840.1.113883.3.526.3.1278",
+        "data-element": "The purpose of this value set is to represent concepts for assessments to screen for tobacco use.",
+        "incld": "This value set may use a model element related to Assessment.",
+        "excld": "Includes concepts that represent an assessment for tobacco use, including smoking and smoke-less tobacco products.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "39240-7",
+                    "Tobacco use status CPHS"
+                ],
+                [
+                    "68535-4",
+                    "Have you used tobacco in the last 30 days [SAMHSA]"
+                ],
+                [
+                    "72166-2",
+                    "Tobacco smoking status"
+                ],
+                [
+                    "68536-2",
+                    "Have you used smokeless tobacco product in the last 30 days [SAMHSA]"
+                ]
+            ]
+        }
+    },
+    "Falls Screening": {
+        "vs-id": "Falls Screening",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.118.12.1028",
+        "data-element": "The purpose of this value set is to represent concepts for assessments using a falls screening tool.",
+        "incld": "This value set may use a model element related to Assessment.",
+        "excld": "Includes concepts that represent an assessment for fall risk.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "73830-2",
+                    "Fall risk assessment"
+                ],
+                [
+                    "59454-9",
+                    "History of falling; immediate or within 3 months [Morse Fall Scale]"
+                ],
+                [
+                    "52552-7",
+                    "Falls in the past year"
+                ],
+                [
+                    "57254-5",
+                    "Standardized fall risk assessment was conducted [CMS Assessment]"
+                ]
+            ]
+        }
+    },
+    "Standardized Tools for Assessment of Cognition": {
+        "vs-id": "Standardized Tools for Assessment of Cognition",
+        "clinical-focus": "2.16.840.1.113883.3.526.3.1006",
+        "data-element": "The purpose of this value set is to define concepts for assessments representing total score results for standardized tools used for the evaluation of cognition.",
+        "incld": "This value set may use a model element related to Assessment.",
+        "excld": "Includes concepts that describe assessments with total score results for the following standardized tools:\n-Blessed Orientation-Memory-Concentration Test (BOMC)\n-Montreal Cognitive Assessment (MoCA)\n-St. Louis University Mental Status Examination (SLUMS)\n-Mini-Mental State Examination (MMSE) [Note: The MMSE has not been well validated for non-Alzheimer's dementias]\n-Short Informant Questionnaire on Cognitive Decline in the Elderly (IQCODE)\n-Ascertain Dementia 8 (AD8) Questionnaire\n-Minimum Data Set (MDS) Brief Interview of Mental Status (BIMS) [Note: Validated for use with nursing home patients only]\n-Formal neuropsychological evaluation\n-Mini-Cog.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "58151-2",
+                    "Prior assessment Brief Interview for Mental Status (BIMS) summary score [MDSv3]"
+                ],
+                [
+                    "72172-0",
+                    "Total score [MoCA]"
+                ],
+                [
+                    "72233-0",
+                    "Total score [Mini-Cog]"
+                ],
+                [
+                    "71722-3",
+                    "Total score [AD8]"
+                ],
+                [
+                    "71493-1",
+                    "Total score [IQCODE]"
+                ],
+                [
+                    "72173-8",
+                    "Total score [BOMC]"
+                ],
+                [
+                    "72106-8",
+                    "Total score [MMSE]"
+                ],
+                [
+                    "71492-3",
+                    "Total score [SLUMS]"
+                ]
+            ]
+        }
+    },
+    "Standardized Pain Assessment Tool": {
+        "vs-id": "Standardized Pain Assessment Tool",
+        "clinical-focus": "2.16.840.1.113883.3.526.3.1028",
+        "data-element": "The purpose of this value set is to represent concepts for assessments using pain-focused tools or instruments to quantify pain intensity.",
+        "incld": "This value set may use a model element related to Assessment.",
+        "excld": "Includes concepts that represent an assessment of pain intensity.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "38214-3",
+                    "Pain severity [Score] Visual analog score"
+                ],
+                [
+                    "77565-0",
+                    "Pain interference score [BPI Short Form]"
+                ],
+                [
+                    "38208-5",
+                    "Pain severity - Reported"
+                ],
+                [
+                    "72514-3",
+                    "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+                ],
+                [
+                    "38221-8",
+                    "Pain severity Wong-Baker FACES pain rating scale"
+                ]
+            ]
+        }
+    },
+    "PHQ 9 and PHQ 9M Tools": {
+        "vs-id": "PHQ 9 and PHQ 9M Tools",
+        "clinical-focus": "2.16.840.1.113883.3.67.1.101.1.263",
+        "data-element": "The purpose of this value set is to represent concepts for the assessments of PHQ 9 and PHQ 9M resulting in a completed depression assessment scores for adults and adolescents.",
+        "incld": "This value set may use a model element related to Assessment.",
+        "excld": "Includes concepts that represent a completed assessment using PHQ 9 and PHQ 9M depression assessment tools for adults and adolescents with a summary score.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "89204-2",
+                    "Patient Health Questionnaire-9: Modified for Teens total score [Reported.PHQ.Teen]"
+                ],
+                [
+                    "44261-6",
+                    "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]"
+                ]
+            ]
+        }
+    },
+    "History of hip fracture in parent": {
+        "vs-id": "History of hip fracture in parent",
+        "clinical-focus": "2.16.840.1.113883.3.464.1003.113.12.1040",
+        "data-element": "The purpose of this value set is to represent concepts for H145 assessments of a family history of hip fracture in a parent.",
+        "incld": "This value set may use a model element related to Assessment.",
+        "excld": "Includes concepts that represent an assessment for family history of hip fracture in a parent.",
+        "codelist": {
+            "SNOMEDCT": [
+                [
+                    "391096007",
+                    "Family history: Maternal hip fracture (situation)"
+                ],
+                [
+                    "416072008",
+                    "Family history: maternal hip fracture before age 75 (situation)"
+                ],
+                [
+                    "445121000124105",
+                    "Family history of paternal hip fracture (situation)"
+                ],
+                [
+                    "445501000124107",
+                    "Family history of hip fracture in parent (situation)"
+                ]
+            ]
+        }
+    },
+    "Malnutrition Assessment": {
+        "vs-id": "Malnutrition Assessment",
+        "clinical-focus": "2.16.840.1.113762.1.4.1095.29",
+        "data-element": "Malnutrition assessment of a patient based upon clinically relevant criteria.",
+        "incld": "These terms will be used for Malnutrition Quality Measures.",
+        "excld": "Clinical nutrition assessment terms included in extensional value sets.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "75285-7",
+                    "Comparative nutrition assessment standards panel"
+                ],
+                [
+                    "75282-4",
+                    "Nutrition assessment panel"
+                ],
+                [
+                    "75303-8",
+                    "Nutrition assessment Narrative"
+                ]
+            ],
+            "SNOMEDCT": [
+                [
+                    "310243009",
+                    "Nutritional assessment (procedure)"
+                ]
+            ]
+        }
+    },
+    "Malnutrition Risk Screening": {
+        "vs-id": "Malnutrition Risk Screening",
+        "clinical-focus": "2.16.840.1.113762.1.4.1095.40",
+        "data-element": "This set of values indicates that a malnutrition screening was done by the health care professional.",
+        "incld": "Data elements included in this set indicate an individual has been screened for malnutrition.",
+        "excld": "Malnutrition Risk Screening criteria from multiple terminologies are included.",
+        "codelist": {
+            "ICD10CM": [
+                [
+                    "Z13.21",
+                    "Encounter for screening for nutritional disorder"
+                ]
+            ],
+            "SNOMEDCT": [
+                [
+                    "414648004",
+                    "Malnutrition universal screening tool (assessment scale)"
+                ],
+                [
+                    "443216009",
+                    "Assessment using malnutrition universal screening tool (procedure)"
+                ],
+                [
+                    "171184005",
+                    "Malnutrition screening (procedure)"
+                ]
+            ]
+        }
+    },
+    "Malnutrition Screening At Risk Result": {
+        "vs-id": "Malnutrition Screening At Risk Result",
+        "clinical-focus": "2.16.840.1.113762.1.4.1095.38",
+        "data-element": "This set of values indicates that a patient was found to be at risk for malnutrition after completing a malnutrition screening done by the health care professional.",
+        "incld": "Data included in this set represent that an individual has been evaluated to be at risk for malnutrition.",
+        "excld": "Malnutrition At Risk criteria from the SNOMED-CT terminology are included.",
+        "codelist": {
+            "SNOMEDCT": [
+                [
+                    "129689002",
+                    "At risk for nutritional problem (finding)"
+                ],
+                [
+                    "284670008",
+                    "Nutritionally compromised (finding)"
+                ],
+                [
+                    "704358009",
+                    "At risk of nutritional deficit (finding)"
+                ]
+            ]
+        }
+    },
+    "Birth Weight": {
+        "vs-id": "Birth Weight",
+        "clinical-focus": "2.16.840.1.113762.1.4.1029.194",
+        "data-element": "The purpose of this value set is to represent concepts for assessments measuring birth weights of newborn.",
+        "incld": "This value set may use a model element related to Assessment.",
+        "excld": "Includes concepts that identify an assessment of the birth weight of a newborn.",
+        "codelist": {
+            "LOINC": [
+                [
+                    "8339-4",
+                    "Birth weight Measured"
+                ],
+                [
+                    "56093-8",
+                    "Birth weight NVSS"
+                ],
+                [
+                    "56092-0",
+                    "Birth weight GNWCH"
+                ],
+                [
+                    "56056-5",
+                    "Birth weight - Reported"
+                ]
+            ]
+        }
+    }
+}

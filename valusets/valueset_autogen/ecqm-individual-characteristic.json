@@ -1,0 +1,773 @@
+{
+    "Ethnicity": {
+        "vs-id": "Ethnicity",
+        "clinical-focus": "2.16.840.1.114222.4.11.837",
+        "data-element": NaN,
+        "incld": NaN,
+        "excld": NaN,
+        "codelist": {
+            "CDCREC": [
+                [
+                    "2186-5",
+                    "Not Hispanic or Latino"
+                ],
+                [
+                    "2135-2",
+                    "Hispanic or Latino"
+                ]
+            ]
+        }
+    },
+    "ONC Administrative Sex": {
+        "vs-id": "ONC Administrative Sex",
+        "clinical-focus": "2.16.840.1.113762.1.4.1",
+        "data-element": "Gender identity restricted to only Male and Female used in administrative situations requiring a restriction to these two categories.",
+        "incld": "Gender",
+        "excld": "Male and Female only.",
+        "codelist": {
+            "AdministrativeGender": [
+                [
+                    "M",
+                    "Male"
+                ],
+                [
+                    "F",
+                    "Female"
+                ]
+            ]
+        }
+    },
+    "Payer": {
+        "vs-id": "Payer",
+        "clinical-focus": "2.16.840.1.114222.4.11.3591",
+        "data-element": "Categories of types of health care payor entities as defined by the US Public Health Data Consortium SOP code system",
+        "incld": "@code in CCDA r2.1 template Planned Coverage [act: identifier urn:oid:2.16.840.1.113883.10.20.22.4.129 (open)] DYNAMIC",
+        "excld": "All codes in the code system",
+        "codelist": {
+            "SOP": [
+                [
+                    "42",
+                    "Corrections State"
+                ],
+                [
+                    "98",
+                    "Other specified but not otherwise classifiable (includes Hospice - Unspecified plan)"
+                ],
+                [
+                    "512",
+                    "Commercial Managed Care - PPO"
+                ],
+                [
+                    "21",
+                    "Medicaid (Managed Care)"
+                ],
+                [
+                    "519",
+                    "Managed Care, Other (non HMO)"
+                ],
+                [
+                    "219",
+                    "Medicaid Managed Care Other"
+                ],
+                [
+                    "32123",
+                    "Contract Nursing Home/Community Nursing Home"
+                ],
+                [
+                    "14",
+                    "Dual Eligibility Medicare/Medicaid Organization"
+                ],
+                [
+                    "122",
+                    "Medicare Drug Benefit"
+                ],
+                [
+                    "34",
+                    "HRSA Program"
+                ],
+                [
+                    "614",
+                    "BC Managed Care - Dental"
+                ],
+                [
+                    "361",
+                    "State SCHIP program (codes for individual states)"
+                ],
+                [
+                    "3811",
+                    "Federal, State, Local not specified - HMO"
+                ],
+                [
+                    "959",
+                    "Worker's Comp, Other unspecified"
+                ],
+                [
+                    "521",
+                    "Commercial Indemnity"
+                ],
+                [
+                    "341",
+                    "Title V (MCH Block Grant)"
+                ],
+                [
+                    "38",
+                    "Other Government (Federal, State, Local not specified)"
+                ],
+                [
+                    "3813",
+                    "Federal, State, Local not specified - POS"
+                ],
+                [
+                    "3812",
+                    "Federal, State, Local not specified - PPO"
+                ],
+                [
+                    "25",
+                    "Medicaid - Out of State"
+                ],
+                [
+                    "113",
+                    "Medicare POS"
+                ],
+                [
+                    "3114",
+                    "TRICARE For Life--Medicare Supplement"
+                ],
+                [
+                    "3819",
+                    "Federal, State, Local not specified - not specified managed care"
+                ],
+                [
+                    "97",
+                    "Legal Liability / Liability Insurance"
+                ],
+                [
+                    "291",
+                    "Medicaid Pharmacy Benefit Manager"
+                ],
+                [
+                    "822",
+                    "Professional Courtesy"
+                ],
+                [
+                    "561",
+                    "Dental"
+                ],
+                [
+                    "3222",
+                    "Spina Bifida Health Care Program (SB)"
+                ],
+                [
+                    "39",
+                    "Other Federal"
+                ],
+                [
+                    "81",
+                    "Self-pay (Includes applicants for insurance and Medicaid applicants)"
+                ],
+                [
+                    "13",
+                    "Medicare Hospice"
+                ],
+                [
+                    "342",
+                    "Migrant Health Program"
+                ],
+                [
+                    "11",
+                    "Medicare Managed Care (Includes Medicare Advantage Plans)"
+                ],
+                [
+                    "19",
+                    "Medicare Other"
+                ],
+                [
+                    "3121",
+                    "Enrolled Prime--HMO"
+                ],
+                [
+                    "212",
+                    "Medicaid PPO"
+                ],
+                [
+                    "71",
+                    "HMO"
+                ],
+                [
+                    "32128",
+                    "Vision Care"
+                ],
+                [
+                    "32125",
+                    "Sharing Agreements"
+                ],
+                [
+                    "79",
+                    "Other Managed Care"
+                ],
+                [
+                    "51",
+                    "Managed Care (Private)"
+                ],
+                [
+                    "562",
+                    "Vision"
+                ],
+                [
+                    "2",
+                    "MEDICAID"
+                ],
+                [
+                    "3119",
+                    "Department of Defense - (other)"
+                ],
+                [
+                    "3116",
+                    "Uniformed Services Family Health Plan (USFHP) -- HMO"
+                ],
+                [
+                    "213",
+                    "Medicaid PCCM (Primary Care Case Management)"
+                ],
+                [
+                    "511",
+                    "Commercial Managed Care - HMO"
+                ],
+                [
+                    "54",
+                    "Organized Delivery System"
+                ],
+                [
+                    "3229",
+                    "Other non-veteran care"
+                ],
+                [
+                    "382",
+                    "Federal, State, Local not specified - FFS"
+                ],
+                [
+                    "372",
+                    "FFS/Indemnity"
+                ],
+                [
+                    "33",
+                    "Indian Health Service or Tribe"
+                ],
+                [
+                    "89",
+                    "No Payment, Other"
+                ],
+                [
+                    "52",
+                    "Private Health Insurance - Indemnity"
+                ],
+                [
+                    "321",
+                    "Veteran care-Care provided to Veterans"
+                ],
+                [
+                    "5",
+                    "PRIVATE HEALTH INSURANCE"
+                ],
+                [
+                    "951",
+                    "Worker's Comp HMO"
+                ],
+                [
+                    "391",
+                    "Federal Employee Health Plan - Use when known"
+                ],
+                [
+                    "53",
+                    "Managed Care (private) or private health insurance (indemnity), not otherwise specified"
+                ],
+                [
+                    "55",
+                    "Small Employer Purchasing Group"
+                ],
+                [
+                    "3211",
+                    "Direct Care-Care provided in VA facilities"
+                ],
+                [
+                    "369",
+                    "State, not otherwise specified (other state)"
+                ],
+                [
+                    "333",
+                    "Indian Health Service - Managed Care"
+                ],
+                [
+                    "72",
+                    "PPO"
+                ],
+                [
+                    "311",
+                    "TRICARE (CHAMPUS)"
+                ],
+                [
+                    "522",
+                    "Self-insured (ERISA) Administrative Services Only (ASO) plan"
+                ],
+                [
+                    "331",
+                    "Indian Health Service - Regular"
+                ],
+                [
+                    "332",
+                    "Indian Health Service - Contract"
+                ],
+                [
+                    "35",
+                    "Black Lung"
+                ],
+                [
+                    "94",
+                    "Long-term Care Insurance"
+                ],
+                [
+                    "32126",
+                    "Other Federal Agency"
+                ],
+                [
+                    "523",
+                    "Medicare supplemental policy (as second payer)"
+                ],
+                [
+                    "99",
+                    "No Typology Code available for payment source"
+                ],
+                [
+                    "529",
+                    "Private health insurance--other commercial Indemnity"
+                ],
+                [
+                    "1",
+                    "MEDICARE"
+                ],
+                [
+                    "23",
+                    "Medicaid/SCHIP"
+                ],
+                [
+                    "619",
+                    "BC Managed Care - Other"
+                ],
+                [
+                    "85",
+                    "Research/Donor"
+                ],
+                [
+                    "43",
+                    "Corrections Local"
+                ],
+                [
+                    "312",
+                    "Military Treatment Facility"
+                ],
+                [
+                    "517",
+                    "Commercial Managed Care - Dental"
+                ],
+                [
+                    "954",
+                    "Worker's Comp Other Managed Care"
+                ],
+                [
+                    "953",
+                    "Worker's Comp Fee-for-Service"
+                ],
+                [
+                    "612",
+                    "BC Managed Care - PPO"
+                ],
+                [
+                    "334",
+                    "Indian Tribe - Sponsored Coverage"
+                ],
+                [
+                    "3122",
+                    "Non-enrolled Space Available"
+                ],
+                [
+                    "119",
+                    "Medicare Managed Care Other"
+                ],
+                [
+                    "299",
+                    "Medicaid - Dental"
+                ],
+                [
+                    "3212",
+                    "Indirect Care-Care provided outside VA facilities"
+                ],
+                [
+                    "349",
+                    "Other"
+                ],
+                [
+                    "629",
+                    "BC Indemnity - Dental"
+                ],
+                [
+                    "121",
+                    "Medicare FFS"
+                ],
+                [
+                    "3223",
+                    "Children of Women Vietnam Veterans (CWVV)"
+                ],
+                [
+                    "371",
+                    "Local - Managed care"
+                ],
+                [
+                    "823",
+                    "Research/Clinical Trial"
+                ],
+                [
+                    "362",
+                    "Specific state programs (list/ local code)"
+                ],
+                [
+                    "56",
+                    "Specialized Stand-Alone Plan"
+                ],
+                [
+                    "621",
+                    "BC Indemnity"
+                ],
+                [
+                    "44",
+                    "Corrections Unknown Level"
+                ],
+                [
+                    "3",
+                    "OTHER GOVERNMENT (Federal/State/Local) (excluding Department of Corrections)"
+                ],
+                [
+                    "8",
+                    "NO PAYMENT from an Organization/Agency/Program/Private Payer Listed"
+                ],
+                [
+                    "3123",
+                    "TRICARE For Life (TFL)"
+                ],
+                [
+                    "623",
+                    "BC Medicare Supplemental Plan"
+                ],
+                [
+                    "83",
+                    "Refusal to Pay/Bad Debt"
+                ],
+                [
+                    "3712",
+                    "PPO"
+                ],
+                [
+                    "36",
+                    "State Government"
+                ],
+                [
+                    "84",
+                    "Hill Burton Free Care"
+                ],
+                [
+                    "513",
+                    "Commercial Managed Care - POS"
+                ],
+                [
+                    "322",
+                    "Non-veteran care"
+                ],
+                [
+                    "31",
+                    "Department of Defense"
+                ],
+                [
+                    "389",
+                    "Federal, State, Local not specified - Other"
+                ],
+                [
+                    "82",
+                    "No Charge"
+                ],
+                [
+                    "12",
+                    "Medicare (Non-managed Care)"
+                ],
+                [
+                    "32122",
+                    "Foreign Fee/Foreign Medical Program (FMP)"
+                ],
+                [
+                    "111",
+                    "Medicare HMO"
+                ],
+                [
+                    "515",
+                    "Gatekeeper PPO (GPPO)"
+                ],
+                [
+                    "7",
+                    "MANAGED CARE, UNSPECIFIED (to be used only if one can't distinguish public from private)"
+                ],
+                [
+                    "37",
+                    "Local Government"
+                ],
+                [
+                    "381",
+                    "Federal, State, Local not specified managed care"
+                ],
+                [
+                    "313",
+                    "Dental --Stand Alone"
+                ],
+                [
+                    "3713",
+                    "POS"
+                ],
+                [
+                    "61",
+                    "BC Managed Care"
+                ],
+                [
+                    "516",
+                    "Commercial Managed Care - Pharmacy Benefit Manager"
+                ],
+                [
+                    "95",
+                    "Worker's Compensation"
+                ],
+                [
+                    "524",
+                    "Indemnity Insurance - Dental"
+                ],
+                [
+                    "379",
+                    "Local, not otherwise specified (other local, county)"
+                ],
+                [
+                    "211",
+                    "Medicaid HMO"
+                ],
+                [
+                    "3113",
+                    "TRICARE Standard - Fee For Service"
+                ],
+                [
+                    "92",
+                    "Other (Non-government)"
+                ],
+                [
+                    "129",
+                    "Medicare Non-managed Care Other"
+                ],
+                [
+                    "123",
+                    "Medicare Medical Savings Account (MSA)"
+                ],
+                [
+                    "112",
+                    "Medicare PPO"
+                ],
+                [
+                    "191",
+                    "Medicare Pharmacy Benefit Manager"
+                ],
+                [
+                    "22",
+                    "Medicaid (Non-managed Care Plan)"
+                ],
+                [
+                    "821",
+                    "Charity"
+                ],
+                [
+                    "514",
+                    "Exclusive Provider Organization"
+                ],
+                [
+                    "611",
+                    "BC Managed Care - HMO"
+                ],
+                [
+                    "3711",
+                    "HMO"
+                ],
+                [
+                    "622",
+                    "BC Self-insured (ERISA) Administrative Services Only (ASO)Plan"
+                ],
+                [
+                    "6",
+                    "BLUE CROSS/BLUE SHIELD"
+                ],
+                [
+                    "29",
+                    "Medicaid Other"
+                ],
+                [
+                    "3111",
+                    "TRICARE Prime--HMO"
+                ],
+                [
+                    "32124",
+                    "State Veterans Home"
+                ],
+                [
+                    "41",
+                    "Corrections Federal"
+                ],
+                [
+                    "3115",
+                    "TRICARE Reserve Select"
+                ],
+                [
+                    "32127",
+                    "Dental Care"
+                ],
+                [
+                    "62",
+                    "BC Insurance Indemnity"
+                ],
+                [
+                    "91",
+                    "Foreign National"
+                ],
+                [
+                    "9999",
+                    "Unavailable / No Payer Specified / Blank"
+                ],
+                [
+                    "4",
+                    "DEPARTMENTS OF CORRECTIONS"
+                ],
+                [
+                    "343",
+                    "Ryan White Act"
+                ],
+                [
+                    "9",
+                    "MISCELLANEOUS/OTHER"
+                ],
+                [
+                    "96",
+                    "Auto Insurance (includes no fault)"
+                ],
+                [
+                    "32121",
+                    "Fee Basis"
+                ],
+                [
+                    "73",
+                    "POS"
+                ],
+                [
+                    "26",
+                    "Medicaid - Long Term Care"
+                ],
+                [
+                    "3221",
+                    "Civilian Health and Medical Program for the VA (CHAMPVA)"
+                ],
+                [
+                    "59",
+                    "Other Private Insurance"
+                ],
+                [
+                    "613",
+                    "BC Managed Care - POS"
+                ],
+                [
+                    "32",
+                    "Department of Veterans Affairs"
+                ],
+                [
+                    "3112",
+                    "TRICARE Extra--PPO"
+                ],
+                [
+                    "93",
+                    "Disability Insurance"
+                ]
+            ]
+        }
+    },
+    "Race": {
+        "vs-id": "Race",
+        "clinical-focus": "2.16.840.1.114222.4.11.836",
+        "data-element": NaN,
+        "incld": NaN,
+        "excld": NaN,
+        "codelist": {
+            "CDCREC": [
+                [
+                    "2054-5",
+                    "Black or African American"
+                ],
+                [
+                    "2106-3",
+                    "White"
+                ],
+                [
+                    "2076-8",
+                    "Native Hawaiian or Other Pacific Islander"
+                ],
+                [
+                    "1002-5",
+                    "American Indian or Alaska Native"
+                ],
+                [
+                    "2028-9",
+                    "Asian"
+                ],
+                [
+                    "2131-1",
+                    "Other Race"
+                ]
+            ]
+        }
+    },
+    "Medicare payer": {
+        "vs-id": "Medicare payer",
+        "clinical-focus": "2.16.840.1.113762.1.4.1104.10",
+        "data-element": "The purpose of this value set is to identify concepts for Medicare Fee-For-Service payer types.",
+        "incld": "This value set may use a model element related to Patient Characteristic.",
+        "excld": "Includes concepts that identify a patient with Medicare Fee-For-Service as a payer source.",
+        "codelist": {
+            "SOP": [
+                [
+                    "12",
+                    "Medicare (Non-managed Care)"
+                ],
+                [
+                    "121",
+                    "Medicare FFS"
+                ],
+                [
+                    "1",
+                    "MEDICARE"
+                ],
+                [
+                    "14",
+                    "Dual Eligibility Medicare/Medicaid Organization"
+                ],
+                [
+                    "122",
+                    "Medicare Drug Benefit"
+                ],
+                [
+                    "129",
+                    "Medicare Non-managed Care Other"
+                ],
+                [
+                    "123",
+                    "Medicare Medical Savings Account (MSA)"
+                ]
+            ]
+        }
+    }
+}

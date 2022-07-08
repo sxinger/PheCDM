@@ -1,0 +1,25 @@
+search_term,search_ont
+nerve conduction,CPT
+nerve conduction,HCPCS
+magnetic resonance imaging,CPT
+magnetic resonance imaging,HCPCS
+computed tomography head brain,CPT
+computed tomography head brain,HCPCS
+electromyography,CPT
+electromyography,HCPCS
+endoscopy larynx,CPT
+endoscopy larynx,HCPCS
+endoscopy esophagus,CPT
+endoscopy esophagus,HCPCS
+laryngoscopy,CPT
+laryngoscopy,HCPCS
+fluoroscopy,CPT
+fluoroscopy,HCPCS
+biopsy muscle,CPT
+biopsy muscle,HCPCS
+
+
+
+
+
+

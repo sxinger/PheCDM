@@ -1,0 +1,35 @@
+search_term,search_ont
+infliximab,RXNORM
+Remicade,RXNORM
+Inflextra,RXNORM
+Renflexis,RXNORM
+adalimumab,RXNORM
+Humira,RXNORM
+Amgevita,RXNORM
+Hulio,RXNORM
+Hadlima,RXNORM
+Hyrimoz,RXNORM
+Idacio,RXNORM
+Irmaldi,RXNORM 
+vedolizumab,RXNORM
+Entyvio,RXNORM
+ustekinumab,RXNORM
+Stelara,RXNORM
+azathioprine,RXNORM
+mercaptopurine,RXNORM
+methotrexate,RXNORM
+hemoglobin,LOINC
+platelet,LOINC
+white blood count,LOINC
+albumin,LOINC
+fecal calprotectin,LOINC
+erythrocyte sedimentation rate,LOINC
+c reactive protein,LOINC
+fecal osteoprotegerin,LOINC
+25-hydroxyvitamin D3,LOINC
+abdominal pain,ICD9CM
+abdominal pain,ICD10CM
+diarrhea,ICD9CM
+diarrhea,ICD10CM
+rectal bleeding,ICD9CM
+rectal bleeding,ICD10CM
