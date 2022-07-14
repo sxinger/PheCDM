@@ -173,18 +173,6 @@
             "lev2":["F51.01","F51.02","F51.09"]
         }
     },
-    "peripheral-arterial-disease":{
-        "icd9":{
-            "lev0":[],
-            "lev1":[],
-            "lev2":[]
-        },
-        "icd10":{
-            "lev0":[],
-            "lev1":[],
-            "lev2":[]
-        }
-    },
     "chronic-obstructive-pulmonary-disease":{
         "icd9":{
             "lev0":["496"],
@@ -213,6 +201,7 @@
         "cpt":{
             "range":["43644-43645","43845-43847"],
             "list":["43770","43775"]
+        }
     },
     "neurotic-disorders":{
         "icd9":{
