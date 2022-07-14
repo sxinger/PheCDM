@@ -173,7 +173,7 @@
             "lev2":["F51.01","F51.02","F51.09"]
         }
     },
-    "peripheral-arterial-occlusive-disease":{
+    "peripheral-arterial-disease":{
         "icd9":{
             "lev0":[],
             "lev1":[],
