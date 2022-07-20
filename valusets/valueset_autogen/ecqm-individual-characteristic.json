@@ -2,9 +2,9 @@
     "Ethnicity": {
         "vs-id": "Ethnicity",
         "clinical-focus": "2.16.840.1.114222.4.11.837",
-        "data-element": NaN,
-        "incld": NaN,
-        "excld": NaN,
+        "data-element": "",
+        "incld": "",
+        "excld": "",
         "codelist": {
             "CDCREC": [
                 [
@@ -699,9 +699,9 @@
     "Race": {
         "vs-id": "Race",
         "clinical-focus": "2.16.840.1.114222.4.11.836",
-        "data-element": NaN,
-        "incld": NaN,
-        "excld": NaN,
+        "data-element": "",
+        "incld": "",
+        "excld": "",
         "codelist": {
             "CDCREC": [
                 [
