@@ -3,13 +3,16 @@ power wheelchair,CPT
 power wheelchair,HCPCS
 continuous positive airway pressure,CPT
 continuous positive airway pressure,HCPCS
-ventilator,CPT
-ventilator,HCPCS
+trilogy,CPT
+trilogy,HCPCS
+ventilat,CPT
+ventilat,HCPCS
+mechanical ventilat,ICD
 tracheostomy,CPT
 tracheostomy,HCPCS
 gastrostomy,CPT
 gastrostomy,HCPCS
-
+riluz,RXNORM
 
 
 
