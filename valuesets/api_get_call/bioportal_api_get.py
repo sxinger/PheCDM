@@ -6,6 +6,12 @@ import time
 import pandas as pd
 from regex import F
 
+'''
+Note: search term has to be searchable, i.e., guarantee of returning at least one
+matching results; otherwise, the program will be aborted. You can do a courtesy 
+search at https://bioportal.bioontology.org/ to determine the right term included
+'''
+
 ##search_str = '&'.join(['%s=%s' % (k,v) for k,v in self.api_params.iteritems()])
 
 def get_access_info(path_to_key):
@@ -47,7 +53,7 @@ class BioPortalSearch:
             '''loop over all items in the collection list'''
             for cls in result["collection"]:
                 # additional filter
-                if search('^'+self.sterm.replace(' ','.*'),cls["prefLabel"].lower()):
+                if search(self.sterm.replace(' ','.*'),cls["prefLabel"].lower()):
                     labels.append(cls["prefLabel"])
                     tuis.append(' '.join(cls.get("semanticType","NA")))
                     cuis.append(' '.join(cls.get("cui","NA")))
