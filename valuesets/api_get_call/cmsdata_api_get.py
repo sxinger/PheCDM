@@ -4,16 +4,12 @@ import requests
 import json
 import os
 import pandas as pd
-
-def get_access_info(path_to_key):
-    with open(path_to_key) as config_file:
-        key = json.load(config_file)
-    return(key)
+import api_call_utils as apiutil
 
 which_cms_open_data = "provider_taxonomy"
 
 # make api request
-url = get_access_info("./.config/config.json")['cmsdata_api'][which_cms_open_data]
+url = apiutil.get_access_info()['cmsdata_api'][which_cms_open_data]
 response_api = requests.get(url)
 print(f'status_code:{response_api.status_code}')
 

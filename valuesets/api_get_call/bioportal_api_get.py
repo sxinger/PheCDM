@@ -1,10 +1,9 @@
-from json import load,loads,dump
+from json import loads,dump
 from re import search
 import urllib.request, urllib.error, urllib.parse
 # import requests #better library for API call
 import time
 import pandas as pd
-from regex import F
 
 '''
 Note: search term has to be searchable, i.e., guarantee of returning at least one
@@ -14,18 +13,14 @@ search at https://bioportal.bioontology.org/ to determine the right term include
 
 ##search_str = '&'.join(['%s=%s' % (k,v) for k,v in self.api_params.iteritems()])
 
-def get_access_info(path_to_key):
-    with open(path_to_key) as config_file:
-        key = load(config_file)
-    return(key)
-
 class BioPortalSearch:
     '''
     search bioportal API and return requested results in human-readable format
     '''
     API_URL = 'http://data.bioontology.org'
 
-    def __init__(self,api_key,sterm,sont):
+    def __init__(self,api_uri,api_key,sterm,sont):
+        self.api_uri = api_uri
         self.api_key = api_key
         self.sterm = sterm
         self.sont = sont
@@ -77,13 +72,13 @@ class BioPortalSearch:
                "cui":cuis}
         return out
         
-'''
-batch run bioportal search and write search results to excel sheets
-'''  
 def batch_write_vs_excel(api_key,
-                          path_to_search_catalog, #absolute path
-                          search_catalog_name,
-                          verbose=True):
+                         path_to_search_catalog, #absolute path
+                         search_catalog_name,
+                         verbose=True):
+    '''
+    batch run bioportal search and write search results to excel sheets
+    '''  
     search_key = pd.read_csv(f'{path_to_search_catalog}/{search_catalog_name}.txt',sep=',').set_index("search_term")
     search_dict = {k: g.to_dict(orient='records') for k, g in search_key.groupby(level=0)}
 
@@ -109,6 +104,9 @@ def batch_write_vs_json(api_key,
                         path_to_search_catalog, #absolute path
                         search_catalog_name,
                         verbose=True):
+    '''
+    batch run bioportal search and write search results to a json file
+    '''  
     search_key = pd.read_csv(f'{path_to_search_catalog}/{search_catalog_name}.txt',sep=',').set_index("search_term")
     search_dict = {k: g.to_dict(orient='records') for k, g in search_key.groupby(level=0)}
     # collect aggregated dict

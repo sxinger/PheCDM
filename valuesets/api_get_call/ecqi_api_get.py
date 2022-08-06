@@ -4,21 +4,8 @@ import requests
 import json
 import os
 import pandas as pd
+import api_call_utils as apiutil
 
-def get_access_info(path_to_key):
-    with open(path_to_key) as config_file:
-        key = json.load(config_file)
-    return(key)
-
-# make api request for two-step-authentication
-# step 1 - get ticket-granting-token
-url_tgt = f'''{get_access_info("./.config/config.json")['vsac-api']['base-url']}/ws/Ticket'''
-apikey = get_access_info("./.config/config.json")['vsac-api']['api-key']
-response_tgt = requests.post(url_tgt,data={"apikey":apikey})
-# step 2 - get service ticket
-url_st = f'''{get_access_info("./.config/config.json")['vsac-api']['base-url']}/ws/Ticket/{response_tgt.text}'''
-response_st = requests.post(url_st,data={"service":"http://umlsks.nlm.nih.gov"})
-print('status_code',response_tgt.status_code)
 
 '''
 # convert json to dataframe

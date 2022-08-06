@@ -1,9 +1,8 @@
 import bioportal_api_get as bps
-import numpy as np
-import pandas as pd
+import api_call_utils as apiutil
 
 # get api key
-api_key=bps.get_access_info("./.config/config.json")['bioportal']['api-key']
+api_key=apiutil.get_access_info()['bioportal']['api-key']
 
 '''
 Note: search term has to be searchable, i.e., guarantee of returning at least one
