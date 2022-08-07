@@ -16,5 +16,5 @@ import api_get_rxnav as apirxnav
 # medications
 sterms = ['riluzole']
 apirxnav.batch_write_ndc_json('C:/repo/PheCDM/valuesets/valueset_autogen',
-                              'als-med-output',sterms)
+                              'als-rx-output',sterms)
      
