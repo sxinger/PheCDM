@@ -50,11 +50,13 @@ def batch_write_ndc_json(path_to_save, #absolute path,
         rxcui_dict = rxcui_search_obj.get_code_list()
 
         # search rxnavf or ndc list of each rxcui code
-        dict_term = {}
-        for key in rxcui_dict["code"]:
+        dict_term = []
+        for idx, key in enumerate(rxcui_dict["code"]):
             rxnav_cls = RxNavSearch()
             ndc_lst = rxnav_cls.get_ndc_list(key)
-            dict_term[key] = ndc_lst
+            dict_term.append({'rxcui': key,
+                              'label': rxcui_dict["label"][idx],
+                              'ndc':ndc_lst})
         dict_agg[term] = dict_term
 
         # report progress
