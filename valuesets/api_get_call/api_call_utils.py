@@ -34,12 +34,12 @@ class two_factor_auth:
         tgt = response_tgt_out.xpath('//form/@action')[0]
         return tgt
 
-    def get_st(self,tgt,verb=True):
+    def get_st(self,tgt,verbose=True):
         # step 2 - get service ticket
         params = {'service': self.st_endpoint}
         headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain", "User-Agent":"python" }
         response_st = requests.post(tgt,data=params,headers=headers)
-        if verb:
+        if verbose:
             print('status_code',response_st.status_code)
         st = response_st.text
         return st

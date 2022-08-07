@@ -1,4 +1,5 @@
 ## https://www.nlm.nih.gov/vsac/support/usingvsac/vsacsvsapiv2.html
+## https://github.com/HHS/uts-rest-api/blob/master/samples/python/retrieve-value-set-info.py
 
 import requests
 import json
