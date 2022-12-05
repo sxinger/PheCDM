@@ -1,6 +1,4 @@
 -- look up RXCUI by generic name string matching
-create schema if not exists lookup_concepts;
-
 -- look up Rxnorm by generic name partial string matching
 create or replace table ConceptSet_Med_APD_RXCUI as
 select distinct

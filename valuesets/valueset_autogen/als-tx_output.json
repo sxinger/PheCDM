@@ -660,12 +660,7 @@
                 "1005949",
                 "31610",
                 "31825",
-                "31820",
-                "AU",
-                "41140",
-                "41145",
-                "31584",
-                "61576"
+                "31820"
             ],
             "label": [
                 "Tracheostomy, planned (separate procedure)",
@@ -679,12 +674,7 @@
                 "Surgical closure tracheostomy or fistula",
                 "Tracheostomy, fenestration procedure with skin flaps",
                 "Surgical closure tracheostomy or fistula; with plastic repair",
-                "Surgical closure tracheostomy or fistula; without plastic repair",
-                "Item furnished in conjunction with a urological, ostomy, or tracheostomy supply",
-                "Glossectomy; complete or total, with or without tracheostomy, without radical neck dissection",
-                "Glossectomy; complete or total, with or without tracheostomy, with unilateral radical neck dissection",
-                "Laryngoplasty; with open reduction and fixation of (eg, plating) fracture, includes tracheostomy, if performed",
-                "Transoral approach to skull base, brain stem or upper spinal cord for biopsy, decompression or excision of lesion; requiring splitting of tongue and/or mandible (including tracheostomy)"
+                "Surgical closure tracheostomy or fistula; without plastic repair"
             ],
             "cui": [
                 "C0189341 C0040590 C3513286",
@@ -698,12 +688,7 @@
                 "C3701633",
                 "C0337339 C3513289",
                 "C0189430 C0189433 C3513330 C0371432",
-                "C3520362 C0371431 C3513329 C3520363",
-                "C0497598",
-                "C0009557 C3703339 C3521370 C0371904",
-                "C0371905 C0192156 C2012241 C3703340",
-                "C3513280 C4292150 C4292149 C4291728",
-                "C0372740 C3523700 C3523705 C3523704 C3523701 C3515165 C3523702 C3523703"
+                "C3520362 C0371431 C3513329 C3520363"
             ]
         },
         {
