@@ -694,7 +694,6 @@
         {
             "code_type": "HCPCS",
             "code": [
-                "Level%203%3A%20A7501-A7527",
                 "A4629",
                 "A4625",
                 "A7525",
@@ -706,14 +705,9 @@
                 "A7526",
                 "A7527",
                 "A7521",
-                "A7522",
-                "AU",
-                "A7520",
-                "E0465",
-                "E0472"
+                "A7522"
             ],
             "label": [
-                "Tracheostomy Supplies",
                 "Tracheostomy care kit for established tracheostomy",
                 "Tracheostomy care kit for new tracheostomy",
                 "Tracheostomy mask, each",
@@ -725,11 +719,7 @@
                 "Tracheostomy tube collar/holder, each",
                 "Tracheostomy/laryngectomy tube plug/stop, each",
                 "Tracheostomy/laryngectomy tube, cuffed, polyvinylchloride (pvc), silicone or equal, each",
-                "Tracheostomy/laryngectomy tube, stainless steel or equal (sterilizable and reusable), each",
-                "Item furnished in conjunction with a urological, ostomy, or tracheostomy supply",
-                "Tracheostomy/laryngectomy tube, non-cuffed, polyvinylchloride (pvc), silicone or equal, each",
-                "Home ventilator, any type, used with invasive interface, (e.g., tracheostomy tube)",
-                "Respiratory assist device, bi-level pressure capability, with backup rate feature, used with invasive interface, e.g., tracheostomy tube (intermittent assist device with continuous positive airway pressure device)"
+                "Tracheostomy/laryngectomy tube, stainless steel or equal (sterilizable and reusable), each"
             ],
             "cui": [
                 "C4316314",
