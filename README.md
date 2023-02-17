@@ -1,2 +1,1 @@
-# PheCDM
-collection of concept sets and computational formula for commonly used condition phenotypes based on PCORnet CDM data structure
+# This repository has been archived. New site is: https://github.com/RWD2E/phecdm
